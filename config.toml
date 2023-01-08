@@ -1,4 +1,4 @@
-baseURL = "dkdc.dev/"
+baseURL = "https://dkdc.dev/"
 languageCode = "en-us"
 title = "dkdc.dev"
 
@@ -61,11 +61,6 @@ weight = -100
 name = 'posts'
 url = '/post/'
 weight = -99
-
-[[menu.main]]
-name = '(not) tweets'
-url = '/tweet/'
-weight = -98
 
 [[menu.main]]
 name = 'musings'

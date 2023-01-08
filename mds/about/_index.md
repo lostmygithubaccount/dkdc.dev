@@ -1,6 +1,5 @@
 ---
 title: about
-description: about me and this website
 ---
 
 ## me
