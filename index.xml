@@ -1,23 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>dkdc.dev</title><link>dkdc.dev/</link><description>Recent content on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 07 Jan 2023 18:29:32 -0800</lastBuildDate><atom:link href="dkdc.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>movie review: The Menu</title><link>dkdc.dev/tweet/the-menu/</link><pubDate>Sat, 07 Jan 2023 18:29:32 -0800</pubDate><guid>dkdc.dev/tweet/the-menu/</guid><description>perfect 5/7</description><content:encoded><![CDATA[<p>this might be the best movie in a generation</p>
-<h2 id="comments">comments</h2>
-<script src="https://giscus.app/client.js"
-        data-repo="lostmygithubaccount/lostmygithubaccount.github.io"
-        data-repo-id="R_kgDOHmPgiQ"
-        data-category="dkdc.ai"
-        data-category-id="DIC_kwDOHmPgic4CTTkT"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="0"
-        data-emit-metadata="1"
-        data-input-position="top"
-        data-theme="dark"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
-
-]]></content:encoded></item><item><title>website</title><link>dkdc.dev/project/website/</link><pubDate>Wed, 28 Dec 2022 16:39:40 -0800</pubDate><guid>dkdc.dev/project/website/</guid><description>the story of this website</description><content:encoded><![CDATA[<p><strong>work in progress</strong></p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>dkdc.dev</title><link>https://dkdc.dev/</link><description>Recent content on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Dec 2022 16:39:40 -0800</lastBuildDate><atom:link href="https://dkdc.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>website</title><link>https://dkdc.dev/project/website/</link><pubDate>Wed, 28 Dec 2022 16:39:40 -0800</pubDate><guid>https://dkdc.dev/project/website/</guid><description>the story of this website</description><content:encoded><![CDATA[<p><strong>work in progress</strong></p>
 <h2 id="why">why?</h2>
 <p>Having a website is cool. Hosting it on a custom domain name is cooler. Why dkdc.ai?</p>
 <p>According to ChatGPT*:</p>
