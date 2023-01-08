@@ -1,9 +1,12 @@
 baseURL = "dkdc.dev/"
 languageCode = "en-us"
 title = "dkdc.dev"
-theme = "PaperMod"
 
 contentDir = "mds"
+
+[module]
+[[module.imports]]
+path = "github.com/adityatelange/hugo-PaperMod"
 
 [params]
 author = "Cody"
