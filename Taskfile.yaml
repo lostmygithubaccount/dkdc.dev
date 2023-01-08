@@ -1,0 +1,24 @@
+# https://taskfile.dev
+version: '3'
+
+tasks:
+
+  # remove generated files
+  clean:
+    cmds:
+      - rm -rf public
+      - rm -rf resources
+
+  # build and deploy
+  build:
+    cmds:
+      - hugo --minify
+
+  served:
+    cmds:
+      - hugo serve -DEF
+
+  serve:
+    cmds:
+      - hugo serve
+

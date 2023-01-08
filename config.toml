@@ -1,0 +1,83 @@
+baseURL = "https://dkdc.ai/"
+languageCode = "en-us"
+title = "dkdc.dev"
+theme = "PaperMod"
+
+contentDir = "mds"
+
+[params]
+author = "Cody"
+defaultTheme = "dark"
+disableThemeToggle = true
+
+showFullTextInRSS = true
+
+# page overrides
+showToc = true
+showReadingTime = true
+showBreadCrumbs = true
+showCodeCopyButton = true
+showShareButtons = false
+
+[params.profileMode]
+enabled = true
+subtitle = """A [website](project/website). - [Cody](about/)"""
+imageUrl = "test.png"
+
+[[params.profileMode.buttons]]
+name = "about me"
+url = "about/"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://linkedin.com/in/codydkdc"
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/lostmygithubaccount"
+
+#[[params.socialIcons]]
+#name = "youtube"
+#url = "https://www.youtube.com/@dkdcai"
+
+[[params.socialIcons]]
+name = "rss"
+url = "index.xml"
+
+[[menu.main]]
+name = 'about'
+url = '/about/'
+weight = -110
+
+[[menu.main]]
+name = 'projects'
+url = '/project/'
+weight = -100
+
+[[menu.main]]
+name = 'posts'
+url = '/post/'
+weight = -99
+
+[[menu.main]]
+name = '(not) tweets'
+url = '/tweet/'
+weight = -98
+
+[[menu.main]]
+name = 'musings'
+url = '/musing/'
+weight = -90
+
+[[menu.main]]
+name = 'contact'
+url = '/contact/'
+weight = -10
+
+#[[menu.main]]
+#name = 'localhost:1313'
+#url = 'http://localhost:1313'
+#weight = -1
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
