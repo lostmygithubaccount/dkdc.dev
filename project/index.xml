@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>projects on dkdc.dev</title><link>https://dkdc.ai/project/</link><description>Recent content in projects on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Dec 2022 16:39:40 -0800</lastBuildDate><atom:link href="https://dkdc.ai/project/index.xml" rel="self" type="application/rss+xml"/><item><title>website</title><link>https://dkdc.ai/project/website/</link><pubDate>Wed, 28 Dec 2022 16:39:40 -0800</pubDate><guid>https://dkdc.ai/project/website/</guid><description>the story of this website</description><content:encoded><![CDATA[<p><strong>work in progress</strong></p>
+<h2 id="why">why?</h2>
+<p>Having a website is cool. Hosting it on a custom domain name is cooler. Why dkdc.ai?</p>
+<p>According to ChatGPT*:</p>
+<blockquote>
+<p>It&rsquo;s possible that someone might want the domain name &ldquo;dkdc.ai&rdquo; because it reflects a casual or relaxed attitude, and they feel that it would be a good fit for their personal or business brand. The phrase &ldquo;don&rsquo;t know, don&rsquo;t care&rdquo; (often abbreviated as &ldquo;DKDC&rdquo;) is often used to express disinterest or apathy towards a particular subject or situation. It&rsquo;s possible that the owner of this domain name might want to convey a sense of ease or simplicity, or they might simply like the sound of the phrase.</p>
+<p>There are many potential reasons why someone might choose a specific domain name, and the ultimate decision will depend on the individual&rsquo;s goals and preferences. It&rsquo;s also possible that the owner of &ldquo;dkdc.ai&rdquo; simply liked the way the domain name sounded and thought it would be memorable and easy to spell.</p>
+</blockquote>
+<p>According to me**:</p>
+<blockquote>
+<p>DKDC</p>
+</blockquote>
+<p>I intend to use this website to:</p>
+<ul>
+<li>practice writing</li>
+<li>practice coding</li>
+<li>document projects</li>
+</ul>
+<h2 id="what">what?</h2>
+<p>A website!</p>
+<p>Goals:</p>
+<ul>
+<li>GitHub-powered commenting system</li>
+<li>works for reading and writing on mobile</li>
+<li>allows for posting content and media to RSS feeds</li>
+</ul>
+<h3 id="secret-roadmap">secret roadmap</h3>
+<p>Use this website as motivation for learning some new languages and creating templates/tools for common automation. Document some past projects.</p>
+<h2 id="how">how?</h2>
+<p>Source code: <a href="https://github.com/lostmygithubaccount/lostmygithubaccount.github.io">https://github.com/lostmygithubaccount/lostmygithubaccount.github.io</a>.</p>
+<p>Static website defined and built by Hugo using the PaperMod theme. Hosted on GitHub Pages as my user page. CI/CD by GitHub Actions. Custom domain used with a CNAME record.</p>
+<h2 id="learnings">learnings</h2>
+<ul>
+<li>GitHub pages are still a bit annoying</li>
+<li>I need to stop restarting from scratch</li>
+<li>I still really dislike front-end development</li>
+</ul>
+<p>I&rsquo;m basically back in the same place as my last website attempt with slightly less custom code and slightly faster build times. I do like the theme a bit better and feel like I have a clearer grasp on the overall tech stack and limitations.</p>
+<p>Hugo is nice compared to mkdocs and the Python families of static website frameworks. Static vs dynamic can still be a blurry line with clever use of GitHub. Go&rsquo;s templating is interesting for other reasons. You probably still need to write a bit of HTML and JavaScript for anything custom, unfortunately. The Hugo shortcuts make this cleaner.</p>
+<p>It&rsquo;s incredibly easy to fiddle with front-end elements and GUI considerations for hours without accomplishing anything meaningful.</p>
+<p>Most of the things I think of and lean toward (re)inventing I come to find out already exist as mature OSS on GitHub. Still, some customization or additional work is needed to fit it to my needs.</p>
+<h2 id="next-steps">next steps</h2>
+<ul>
+<li><input disabled="" type="checkbox"> finish this page</li>
+</ul>
+<h2 id="references">references</h2>
+<p>*<a href="https://help.openai.com/articles/6825453-chatgpt-release-notes">ChatGPT Dec 15 Version</a></p>
+<p>**<a href="/about/">about me</a></p>
+<h2 id="questions-comments-concerns">questions? comments? concerns?</h2>
+<script src="https://giscus.app/client.js"
+        data-repo="lostmygithubaccount/lostmygithubaccount.github.io"
+        data-repo-id="R_kgDOHmPgiQ"
+        data-category="dkdc.ai"
+        data-category-id="DIC_kwDOHmPgic4CTTkT"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+]]></content:encoded></item></channel></rss>
