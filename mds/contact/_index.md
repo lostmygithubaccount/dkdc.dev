@@ -1,6 +1,6 @@
 ---
 title: contact
-description: if you must...
+description: "work and personal contact info"
 ---
 
 ## GitHub
@@ -11,8 +11,7 @@ You can tag me on issues, PRs, or discussions on GitHub using [@lostmygithubacco
 
 Please feel free to reach out to me about dbt! It's part of my job.
 
-I prefer GitHub or Slack, though there are other communication channels. Ensure you follow [the dbt Slack rules of the road](https://docs.getdbt.com/community/resources/slack-rules-of-the-road) and [expectations for OSS contributors](https://docs.getdbt.com/community/resources/oss-expectations).
-
+I prefer GitHub or Slack. Ensure you follow [the dbt Slack rules of the road](https://docs.getdbt.com/community/resources/slack-rules-of-the-road) and [expectations for OSS contributors](https://docs.getdbt.com/community/resources/oss-expectations).
 
 Topics I'm particularly interested in:
 
@@ -26,4 +25,4 @@ Topics I'm particularly interested in:
 
 ## personal
 
-Reach out via [LinkedIn](https://linkedin.com/in/codydkdc) or email.
+Reach out [via email](mailto:cody@dkdc.dev) (preferred) or LinkedIn.
