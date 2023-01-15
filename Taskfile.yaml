@@ -9,6 +9,12 @@ tasks:
       - rm -rf public
       - rm -rf resources
 
+  # theme stuff
+  tidy:
+    cmds:
+      - hugo mod tidy
+
+
   # build and deploy
   build:
     cmds:

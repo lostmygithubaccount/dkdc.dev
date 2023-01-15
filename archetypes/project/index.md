@@ -1,8 +1,8 @@
 ---
-title: "{{ replace .Name '-' ' ' | title | lower }}"
+title: "{{ replace .Name '-' ' ' | lower }}"
 description: "TODO"
-summary: "the story of {{ .Name }}"
-date: {{ .Date }}
+summary: "how I built {{ .Name }}"
+date: {{ now.Format "2006-01-02" }}
 showToc: true
 searchHidden: false
 showReadingTime: true

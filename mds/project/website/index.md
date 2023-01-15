@@ -2,7 +2,7 @@
 title: "website"
 description: "how I built this website"
 summary: "see the footer"
-date: 2022-12-28T16:39:40-08:00
+date: 2022-12-28
 showToc: true
 searchHidden: false
 showReadingTime: true
@@ -20,6 +20,8 @@ I want to use this website to:
 - improve my writing (and reading) skills
 - share my thoughts and ideas publicly on interesting technology topics
 
+Update: see [my first post](/post/im-a-blogger-now) for more details on why I re-created this website.
+
 ## what?
 
 A website! Base requirements:
@@ -29,20 +31,17 @@ A website! Base requirements:
 - dark mode
 - RSS feed
 
-Future ideas:
-
-- comment-based actions (delete comment, delete thread, post content, etc.)
-- proper categorization
-- automated last-updated-at info
-- search
-
-There's a bunch of stuff I could do -- I like having a place I can.
-
 ## how?
     
 Source code: https://github.com/lostmygithubaccount/lostmygithubaccount.github.io.
 
 Static website defined and built by Hugo using the PaperMod theme. Hosted on GitHub Pages as my user page. CI/CD by GitHub Actions. Custom domain used with a CNAME record. Giscus for comments (embedded via Hugo shortcodes, which are cool).
+
+### customization
+
+The footer is customized slightly. The general pattern for customizing a theme is copying its layout over into your own `layouts/` and modifying them as needed.
+
+I initially used a shortcode for adding "Last updated", but this seemed prone to error. Fortunately I found [this post by some random retired judge](https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/) that showed me a better way! I probably could have figured this out on my own, but I'm glad I didn't have to. Little customizations like that can take a lot of time.
 
 ## learnings
 
@@ -59,6 +58,15 @@ It's incredibly easy to fiddle with front-end elements and GUI considerations fo
 I didn't get Hugo modules at first, once I realized they were Go modules (and how that'd interact with themes) that made a lot of sense.
 
 Most of the things I think of and lean toward (re)inventing I come to find out already exist as mature OSS on GitHub. Still, some customization or additional work is needed to fit it to my needs.
+
+### future ideas
+
+- comment-based actions (delete comment, delete thread, post content, etc.)
+- proper categorization
+- automated last-updated-at info
+- search
+
+There's a bunch of stuff I could do -- I like having a place I can.
 
 ## comments
 

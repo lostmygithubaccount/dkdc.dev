@@ -4,6 +4,9 @@ title = "dkdc.dev"
 
 contentDir = "mds"
 
+enableGitInfo = true
+
+
 [module]
 [[module.imports]]
 path = "github.com/adityatelange/hugo-PaperMod"
@@ -21,6 +24,7 @@ showReadingTime = true
 showBreadCrumbs = true
 showCodeCopyButton = true
 showShareButtons = false
+showWordCount = true
 
 [params.profileMode]
 enabled = true

@@ -1,7 +1,7 @@
 ---
-title: "{{ replace .Name '-' ' ' | title | lower }}"
+title: "{{ replace .Name '-' ' ' | lower }}"
 description: "TODO"
-date: {{ .Date }}
+date: {{ now.Format "2006-01-02" }}
 showToc: false
 searchHidden: false
 showReadingTime: true
