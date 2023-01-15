@@ -6,7 +6,7 @@
 <li>improve my writing (and reading) skills</li>
 <li>share my thoughts and ideas publicly on interesting technology topics</li>
 </ul>
-<p>Update: see <a href="/post/im-a-blogger-now">my first post</a> for more details on why I re-created this website.</p>
+<p>Update: see <a href="/post/im-a-blogger-now">my first post</a> for more details on why I (re-)created this website.</p>
 <h2 id="what">what?</h2>
 <p>A website! Base requirements:</p>
 <ul>
@@ -36,7 +36,7 @@
 <ul>
 <li>comment-based actions (delete comment, delete thread, post content, etc.)</li>
 <li>proper categorization</li>
-<li>automated last-updated-at info</li>
+<li><del>automated last-updated-at info</del></li>
 <li>search</li>
 </ul>
 <p>There&rsquo;s a bunch of stuff I could do &ndash; I like having a place I can.</p>
