@@ -35,7 +35,7 @@ There are clear inspirations. [Matthew Rocklin, creator of Dask, recently rethou
 
 Great content is out there. Great communities are out there. Over time they are usually gamified and the quality decreases. I've watched this trend unfold again on LinkedIn, which was and still is a source of useful content posted or amplified by a network of connected professionals -- but is increasingly memes and other noise.
 
-This website is my attempt to cut out noise and contribute learnings publicly.
+This [website](/project/website) is my attempt to cut out noise and contribute learnings publicly.
 
 ## comments
 
