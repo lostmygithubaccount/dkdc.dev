@@ -10,8 +10,6 @@ showShareButtons: true
 draft: false
 ---
 
-## I'm a blogger now
-
 Last year, I attempted to become a LinkedIn influencer. This year, I've decided to become a blogger. This is not my first attempt at a first post or website, there have been a few iterations. But I am committing to this one without restarting again. My goal is to post every week, though I'm already failing at that two weeks into the new year.
 
 I'll focus my content on cool technology and open-source software contributions, however small.
