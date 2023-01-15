@@ -20,7 +20,7 @@ I want to use this website to:
 - improve my writing (and reading) skills
 - share my thoughts and ideas publicly on interesting technology topics
 
-Update: see [my first post](/post/im-a-blogger-now) for more details on why I re-created this website.
+Update: see [my first post](/post/im-a-blogger-now) for more details on why I (re-)created this website.
 
 ## what?
 
@@ -63,7 +63,7 @@ Most of the things I think of and lean toward (re)inventing I come to find out a
 
 - comment-based actions (delete comment, delete thread, post content, etc.)
 - proper categorization
-- automated last-updated-at info
+- ~~automated last-updated-at info~~
 - search
 
 There's a bunch of stuff I could do -- I like having a place I can.
