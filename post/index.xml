@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>posts on dkdc.dev</title><link>https://dkdc.dev/post/</link><description>Recent content in posts on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://dkdc.dev/post/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>posts on dkdc.dev</title><link>https://dkdc.dev/post/</link><description>Recent content in posts on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://dkdc.dev/post/index.xml" rel="self" type="application/rss+xml"/><item><title>I'm a blogger now</title><link>https://dkdc.dev/post/im-a-blogger-now/</link><pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate><guid>https://dkdc.dev/post/im-a-blogger-now/</guid><description>my (not first) first post</description><content:encoded><![CDATA[<h2 id="im-a-blogger-now">I&rsquo;m a blogger now</h2>
+<p>Last year, I attempted to become a LinkedIn influencer. This year, I&rsquo;ve decided to become a blogger. This is not my first attempt at a first post or website, there have been a few iterations. But I am committing to this one without restarting again. My goal is to post every week, though I&rsquo;m already failing at that two weeks into the new year.</p>
+<p>I&rsquo;ll focus my content on cool technology and open-source software contributions, however small.</p>
+<h2 id="the-beauty-of-oss">the beauty of OSS</h2>
+<p>Developing code (and related content) in the open has a number of benefits including:</p>
+<ul>
+<li>public, easily discoverable, and easily shareable</li>
+<li>competitive pressure to product quality work</li>
+<li>coalescing around common standards</li>
+</ul>
+<p>dbt Labs calls this <a href="https://github.com/dbt-labs/corp/blob/main/values.md#we-contribute-to-the-knowledge-loop">contributing to the knowledge loop</a>, and it&rsquo;s certainly not a unique concept. Some other blogger <a href="https://noahpinion.substack.com/p/the-third-magic">calls this the first magic</a>. I&rsquo;ll call this learning.</p>
+<p>By developing in the open and levering public communities, we can build a better platform for ourselves and future people to build on. This is the beauty of OSS.</p>
+<h2 id="inspiration-and-aspiration">inspiration and aspiration</h2>
+<p>I&rsquo;m not calling this a blog because I like to be a contrarian &ndash; this is just my website, and these are just my posts on it. I want to be intentional about what organization of content. Projects are high-effort, long-lived snapshots of something cool I did. Posts are low-effort, medium confidence knowledge sharing. Musings are high-effort, low-confidence knowledge sharing.</p>
+<p>There are some clear inspirations. <a href="https://matthewrocklin.com/redesign-blog.html">Matthew Rocklin recently rethought his website and blog</a> with some interesting points. I found out <a href="https://www.tbray.org/ongoing">Tim Bray, a creator of XML, has an ongoing blog</a> including <a href="https://www.tbray.org/ongoing/When/201x/2013/06/16/Go-Love-Hate">posts on Go written before I larned how to code</a> I&rsquo;ve found relevant for my own learning recently. While figuring out how to have the &ldquo;last updated&rdquo; field, I found <a href="https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/">some random retired judge who told me exactly how with a similar site</a>.</p>
+<p>Great content is out there. Great communities are out there. Unfortunately, over time they are usually gamified and the quality decreases. I&rsquo;ve watched this trend unfold again on LinkedIn, which was and still is a source of useful content posted or amplified by a network of connected professionals &ndash; but is increasingly memes and other noise. This website is my personal attempt to cut out noise without sacrificing.</p>
+<h2 id="comments">comments</h2>
+<script src="https://giscus.app/client.js"
+        data-repo="lostmygithubaccount/lostmygithubaccount.github.io"
+        data-repo-id="R_kgDOIvPjOg"
+        data-category="comments"
+        data-category-id="DIC_kwDOIvPjOs4CTdvB"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+]]></content:encoded></item></channel></rss>

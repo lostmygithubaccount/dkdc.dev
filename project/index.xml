@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>projects on dkdc.dev</title><link>https://dkdc.dev/project/</link><description>Recent content in projects on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 28 Dec 2022 16:39:40 -0800</lastBuildDate><atom:link href="https://dkdc.dev/project/index.xml" rel="self" type="application/rss+xml"/><item><title>website</title><link>https://dkdc.dev/project/website/</link><pubDate>Wed, 28 Dec 2022 16:39:40 -0800</pubDate><guid>https://dkdc.dev/project/website/</guid><description>how I built this website</description><content:encoded><![CDATA[<h2 id="why">why?</h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>projects on dkdc.dev</title><link>https://dkdc.dev/project/</link><description>Recent content in projects on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://dkdc.dev/project/index.xml" rel="self" type="application/rss+xml"/><item><title>website</title><link>https://dkdc.dev/project/website/</link><pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate><guid>https://dkdc.dev/project/website/</guid><description>how I built this website</description><content:encoded><![CDATA[<h2 id="why">why?</h2>
 <p>Having a website is cool. Hosting it on a custom domain name is cooler.</p>
 <p>I want to use this website to:</p>
 <ul>
@@ -6,6 +6,7 @@
 <li>improve my writing (and reading) skills</li>
 <li>share my thoughts and ideas publicly on interesting technology topics</li>
 </ul>
+<p>Update: see <a href="/post/im-a-blogger-now">my first post</a> for more details on why I re-created this website.</p>
 <h2 id="what">what?</h2>
 <p>A website! Base requirements:</p>
 <ul>
@@ -14,17 +15,12 @@
 <li>dark mode</li>
 <li>RSS feed</li>
 </ul>
-<p>Future ideas:</p>
-<ul>
-<li>comment-based actions (delete comment, delete thread, post content, etc.)</li>
-<li>proper categorization</li>
-<li>automated last-updated-at info</li>
-<li>search</li>
-</ul>
-<p>There&rsquo;s a bunch of stuff I could do &ndash; I like having a place I can.</p>
 <h2 id="how">how?</h2>
 <p>Source code: <a href="https://github.com/lostmygithubaccount/lostmygithubaccount.github.io">https://github.com/lostmygithubaccount/lostmygithubaccount.github.io</a>.</p>
 <p>Static website defined and built by Hugo using the PaperMod theme. Hosted on GitHub Pages as my user page. CI/CD by GitHub Actions. Custom domain used with a CNAME record. Giscus for comments (embedded via Hugo shortcodes, which are cool).</p>
+<h3 id="customization">customization</h3>
+<p>The footer is customized slightly. The general pattern for customizing a theme is copying its layout over into your own <code>layouts/</code> and modifying them as needed.</p>
+<p>I initially used a shortcode for adding &ldquo;Last updated&rdquo;, but this seemed prone to error. Fortunately I found <a href="https://www.jacksonlucky.net/posts/use-lastmod-with-papermod/">this post by some random retired judge</a> that showed me a better way! I probably could have figured this out on my own, but I&rsquo;m glad I didn&rsquo;t have to. Little customizations like that can take a lot of time.</p>
 <h2 id="learnings">learnings</h2>
 <ul>
 <li>GitHub pages are still a bit annoying</li>
@@ -36,6 +32,14 @@
 <p>It&rsquo;s incredibly easy to fiddle with front-end elements and GUI considerations for hours without accomplishing anything meaningful.</p>
 <p>I didn&rsquo;t get Hugo modules at first, once I realized they were Go modules (and how that&rsquo;d interact with themes) that made a lot of sense.</p>
 <p>Most of the things I think of and lean toward (re)inventing I come to find out already exist as mature OSS on GitHub. Still, some customization or additional work is needed to fit it to my needs.</p>
+<h3 id="future-ideas">future ideas</h3>
+<ul>
+<li>comment-based actions (delete comment, delete thread, post content, etc.)</li>
+<li>proper categorization</li>
+<li>automated last-updated-at info</li>
+<li>search</li>
+</ul>
+<p>There&rsquo;s a bunch of stuff I could do &ndash; I like having a place I can.</p>
 <h2 id="comments">comments</h2>
 <script src="https://giscus.app/client.js"
         data-repo="lostmygithubaccount/lostmygithubaccount.github.io"
