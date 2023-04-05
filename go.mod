@@ -1,5 +1,5 @@
 module github.com/lostmygithubaccount/lostmygithubaccount.github.io
 
-go 1.19
+go 1.20
 
-require github.com/adityatelange/hugo-PaperMod v0.0.0-20221224152110-d3d90be8a4ea // indirect
+require github.com/adityatelange/hugo-PaperMod v0.0.0-20230401190456-031e2ba57ea2 // indirect

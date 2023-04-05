@@ -24,7 +24,7 @@ Developing code (and related content) in the open has a number of benefits inclu
 
 dbt Labs calls this [contributing to the knowledge loop](https://github.com/dbt-labs/corp/blob/main/values.md#we-contribute-to-the-knowledge-loop), and it's certainly not a unique concept. Some other blogger [calls this the first magic](https://noahpinion.substack.com/p/the-third-magic). I'll call this learning.
 
-By developing in the open and levering public communities, we can build a better platform for ourselves and future people to build on. This is the beauty of OSS.
+By developing in the open and leveraging public communities, we can build a better platform for ourselves and future people to build on. This is the beauty of OSS.
 
 ## inspiration and aspiration
 
