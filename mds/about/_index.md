@@ -6,7 +6,7 @@ title: about
 
 Hello! My name is Cody (he/him). I'm passionate about progress via technology.
 
-Currently for hire! Formerly a Product Manager at [dbt Labs](https://getdbt.com) focusing on OSS (Python models) and Cloud (internal platform). Formerly a Product Manager at [Azure ML (Microsoft)](https://azure.microsoft.com/products/machine-learning) focusing on data, MLOps, and v2 developer experiences. See my [GitHub](https://github.com/lostmygithubaccount) and/or [LinkedIn](https://www.linkedin.com/in/codydkdc) for more details on my experience.
+Formerly a Product Manager at [dbt Labs](https://getdbt.com) focusing on OSS (Python models) and Cloud (internal platform). Formerly a Product Manager at [Azure ML (Microsoft)](https://azure.microsoft.com/products/machine-learning) focusing on data, MLOps, and v2 developer experiences. See my [GitHub](https://github.com/lostmygithubaccount) and/or [LinkedIn](https://www.linkedin.com/in/codydkdc) for more details on my experience.
 
 I care about (in addition to product management):
 
