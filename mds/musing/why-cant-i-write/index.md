@@ -1,5 +1,5 @@
 ---
-title: "why can't I write"
+title: "why can't I write?"
 description: "a musing on my inability to write these past months"
 summary: "many factors, many excuses"
 date: 2023-05-20
