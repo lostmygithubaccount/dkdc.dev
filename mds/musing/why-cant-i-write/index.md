@@ -10,7 +10,7 @@ showShareButtons: false
 draft: false
 ---
 
-For months, I've had "write SOMETHING" in my GitHub project TODO list. I've had several drafts sitting around for even longer. To some extent, writing is easy -- writing well and publishing is harder.
+For months, I've had "write SOMETHING" in my GitHub TODO project. I've had several drafts sitting around for even longer. To some extent, writing is easy -- writing well and publishing is harder.
 
 Every day, I open my reader application and read Matt Rickard's daily post. Some are good, some are great, some are amazing, and some are lackluster. But every day, without fail, something is posted. I'm sure it's automated to some extent, and there's some backlog of pre-written articles to choose from. But why can't I even hit a tenth of the frequency? What's holding me back?
 
