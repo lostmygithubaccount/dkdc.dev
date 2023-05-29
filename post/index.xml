@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>posts on dkdc.dev</title><link>https://dkdc.dev/post/</link><description>Recent content in posts on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://dkdc.dev/post/index.xml" rel="self" type="application/rss+xml"/><item><title>I'm a blogger now</title><link>https://dkdc.dev/post/im-a-blogger-now/</link><pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate><guid>https://dkdc.dev/post/im-a-blogger-now/</guid><description>my (not first) first post</description><content:encoded><![CDATA[<p>Last year, I attempted to become a LinkedIn influencer. This year, I&rsquo;ve decided to become a blogger. This is not my first attempt at a first post or website, there have been a few iterations. But I am committing to this one without restarting again. My goal is to post every week, though I&rsquo;m already failing at that two weeks into the new year.</p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>posts on dkdc.dev</title><link>https://dkdc.dev/post/</link><description>Recent content in posts on dkdc.dev</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://dkdc.dev/post/index.xml" rel="self" type="application/rss+xml"/><item><title>on perfection</title><link>https://dkdc.dev/post/perfect-is-the-enemy/</link><pubDate>Mon, 29 May 2023 00:00:00 +0000</pubDate><guid>https://dkdc.dev/post/perfect-is-the-enemy/</guid><description>on perfection</description><content:encoded><![CDATA[<p>&ldquo;&lsquo;Perfect&rsquo; is the enemy of &lsquo;good and done&rsquo;.&rdquo; - Confucius</p>
+<h2 id="comments">comments</h2>
+<script src="https://giscus.app/client.js"
+        data-repo="lostmygithubaccount/lostmygithubaccount.github.io"
+        data-repo-id="R_kgDOIvPjOg"
+        data-category="comments"
+        data-category-id="DIC_kwDOIvPjOs4CTdvB"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="0"
+        data-emit-metadata="1"
+        data-input-position="top"
+        data-theme="dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+
+]]></content:encoded></item><item><title>I'm a blogger now</title><link>https://dkdc.dev/post/im-a-blogger-now/</link><pubDate>Sat, 14 Jan 2023 00:00:00 +0000</pubDate><guid>https://dkdc.dev/post/im-a-blogger-now/</guid><description>my (not first) first post</description><content:encoded><![CDATA[<p>Last year, I attempted to become a LinkedIn influencer. This year, I&rsquo;ve decided to become a blogger. This is not my first attempt at a first post or website, there have been a few iterations. But I am committing to this one without restarting again. My goal is to post every week, though I&rsquo;m already failing at that two weeks into the new year.</p>
 <p>I&rsquo;ll focus my content on cool technology and open-source software contributions, however small.</p>
 <h2 id="the-beauty-of-oss">the beauty of OSS</h2>
 <p>Developing code (and related content) in the open has a number of benefits including:</p>
