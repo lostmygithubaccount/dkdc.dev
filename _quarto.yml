@@ -43,7 +43,7 @@ website:
       - icon: github
         href: https://github.com/lostmygithubaccount
       - icon: rss
-        href: https://dkdc.dev/index.xml
+        href: https://dkdc.dev/blog.xml
 
 # theme
 format:

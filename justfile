@@ -29,3 +29,7 @@ config:
 clean:
     rm -r _freeze || true
     rm -r _site || true
+
+# gh
+repo:
+    gh repo view --web
