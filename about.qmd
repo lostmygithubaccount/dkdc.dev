@@ -12,7 +12,7 @@ Previously a Product Manager at [dbt Labs](https://getdbt.com) focusing on OSS (
 
 See my [GitHub](https://github.com/lostmygithubaccount) and/or [LinkedIn](https://www.linkedin.com/in/codydkdc) for more details on my experience.
 
-I care about (in addition to product management, relevant to work stuff):
+I care about:
 
 - OSS & scale
 - beautiful design

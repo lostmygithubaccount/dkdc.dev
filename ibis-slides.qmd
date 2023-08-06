@@ -10,20 +10,6 @@ format:
     theme: dark
 ---
 
-# introduction
-
-## who are we?
-
-employees of Voltron Data paid to work on Ibis
-
-## agenda
-
-- what?
-- why?
-- how?
-- demo
-- Q&A
-
 # what
 
 ## Ibis is a Python frontend for:
