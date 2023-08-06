@@ -3,7 +3,9 @@ title: "posts"
 listing:
   contents: posts
   sort: "date desc"
-  type: default
+  #type: default
+  image-placeholder: logo.png
+  type: grid
   categories: true
   sort-ui: true
   filter-ui: true

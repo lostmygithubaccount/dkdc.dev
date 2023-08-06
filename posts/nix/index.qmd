@@ -1,0 +1,15 @@
+---
+title: "Nix the dog"
+author: "Cody"
+date: "2023-04-01"
+image: "nix1.jpeg"
+categories: 
+    - dogs
+    - life
+---
+
+Nix the dog. Short for "Phoenix", no relation to the OS/package manager.
+
+![](nix2.jpeg)
+![](nix3.jpeg)
+![](nix4.jpeg)

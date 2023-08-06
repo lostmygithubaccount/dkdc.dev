@@ -1,9 +1,12 @@
 ---
 title: "testing"
 author: "Cody"
-date: "2023-08-06"
-categories: [news]
+date: "0001-04-01"
+image: "404.png"
+categories: [archive]
 ---
+
+Testing in soon-to-be-past.
 
 ::: {.callout-note}
 If not rendered properly, [view on dkdc.dev](./index.qmd).

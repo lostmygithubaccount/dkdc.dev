@@ -1,0 +1,10 @@
+---
+title: "I redid my website again..."
+author: "Cody"
+date: "2023-08-05"
+categories: [news]
+---
+
+I mean, why not at this point...
+
+[Quarto](https://quarto.org) is nice!

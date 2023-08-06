@@ -9,6 +9,10 @@ ibis-framework[duckdb,polars,deltalake] @ git+https://github.com/ibis-project/ib
 #matplotlib
 #seaborn
 plotly
+plotly-geo
+geopandas
+pyshp
+shapely
 #altair @ git+https://github.com/altair-viz/altair.git@main
 streamlit
 

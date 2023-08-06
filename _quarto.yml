@@ -20,14 +20,43 @@ website:
   navbar:
     logo: logo.png
     fontcolor: fuchsia
+    left:
+      - posts.qmd
     right:
+      - sidebar:localhosts
+      - sidebar:links
       - sidebar:dashboards
       - sidebar:slides
-      - posts.qmd
       - about.qmd
       - contact.qmd
   sidebar:
     - id: ""
+    - id: localhosts
+      title: "localhost:"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - text: "8000 (something)"
+          href: http://localhost:8000
+    - id: links
+      title: "external links"
+      style: "docked"
+      collapse-level: 2
+      contents:
+        - text: dkdc.dev
+          href: https://dkdc.dev
+        - text: Ibis
+          href: https://ibis-project.org
+        - text: GitHub
+          href: https://github.com
+        - text: GitHub - dkdc.dev
+          href: https://github.com/lostmygithubaccount/lostmygithubaccount.github.io
+        - text: GitHub - Ibis
+          href: https://github.com/ibis-project/ibis
+        - text: Streamlit
+          href: https://share.streamlit.io
+        - text: MotherDuck
+          href: https://app.motherduck.com
     - id: dashboards
       title: "dashboards"
       style: "docked"

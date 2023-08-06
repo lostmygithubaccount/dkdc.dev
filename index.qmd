@@ -12,7 +12,7 @@ about:
       href: https://github.com/lostmygithubaccount
     - icon: rss
       text: RSS
-      href: https://dkdc.dev/blog.xml
+      href: https://dkdc.dev/posts.xml
 ---
 
 A [website](about.qmd#website). - [Cody](about.qmd#me)

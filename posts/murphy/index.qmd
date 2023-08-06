@@ -1,0 +1,15 @@
+---
+title: "Murphy the dog"
+author: "Cody"
+date: "2017-10-18"
+image: "murphy1.jpeg"
+categories: 
+    - dogs
+    - life
+---
+
+Murphy the dog.
+
+![](murphy1.jpeg)
+![](murphy2.jpeg)
+![](murphy3.jpeg)

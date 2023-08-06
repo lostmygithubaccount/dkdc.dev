@@ -1,0 +1,27 @@
+---
+title: "on: Vegas"
+author: "Cody"
+date: "2023-03-01"
+categories: 
+    - life
+    - "on:"
+image: "vegas.jpg"
+execute:
+  echo: false
+---
+
+I moved to Las Vegas, NV!
+
+
+```{python}
+import plotly.io as pio
+import plotly.express as px
+
+
+pio.templates.default = "plotly_dark"
+
+cool_states = ["FL", "TX", "WA", "NV"]
+
+px.choropleth(title="cool states", locations=cool_states, locationmode="USA-states", scope="usa")
+```
+
