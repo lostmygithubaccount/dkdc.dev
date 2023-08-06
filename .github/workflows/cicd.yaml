@@ -21,6 +21,8 @@ jobs:
         with:
           python-version: 3.11
 
+      - uses: quarto-dev/quarto-actions/setup@v2
+
       - name: install requirements
         run: just setup
 
