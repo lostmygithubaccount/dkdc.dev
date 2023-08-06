@@ -42,11 +42,25 @@
     "text": "Back to top"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dkdc.dev",
+    "objectID": "pypi-metrics.html",
+    "href": "pypi-metrics.html",
+    "title": "PyPI metrics",
     "section": "",
-    "text": "A website. - Cody\n\n\n Back to top"
+    "text": "Back to top"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\ntesting\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nCody\n\n\n\n\n\n\n  \n\n\n\n\nI redid my website again…\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCody\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "test-slides.html#slides",
+    "href": "test-slides.html#slides",
+    "title": "testing",
+    "section": "slides",
+    "text": "slides\ntesting slides"
   },
   {
     "objectID": "ibis-slides.html#who-are-we",
@@ -224,25 +238,11 @@
     "text": "try it out now\nInstall:\npip install 'ibis-framework[duckdb]'\n\nThen run:\nimport ibis\n\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\n\nt"
   },
   {
-    "objectID": "test-slides.html#slides",
-    "href": "test-slides.html#slides",
-    "title": "testing",
-    "section": "slides",
-    "text": "slides\ntesting slides"
-  },
-  {
-    "objectID": "pypi-metrics.html",
-    "href": "pypi-metrics.html",
-    "title": "PyPI metrics",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
     "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "blog",
-    "section": "",
-    "text": "testing\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nCody\n\n\n\n\n\n\n  \n\n\n\n\nI redid my website again…\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCody\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "A website. - Cody\n\n\n Back to top"
   },
   {
     "objectID": "about.html",

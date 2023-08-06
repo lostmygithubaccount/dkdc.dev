@@ -2,46 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dkdc.dev/posts/welcome/index.html</loc>
-    <lastmod>2023-08-06T04:41:26.468Z</lastmod>
+    <lastmod>2023-08-06T04:56:22.140Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/contact.html</loc>
-    <lastmod>2023-08-06T04:41:25.264Z</lastmod>
+    <lastmod>2023-08-06T04:56:20.912Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/ibis-metrics.html</loc>
-    <lastmod>2023-08-06T04:41:24.452Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2023-08-06T04:41:22.304Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/ibis-slides.html</loc>
-    <lastmod>2023-08-06T04:41:21.048Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2023-08-06T04:41:14.804Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/test-slides.html</loc>
-    <lastmod>2023-08-06T04:41:19.228Z</lastmod>
+    <lastmod>2023-08-06T04:56:20.060Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/pypi-metrics.html</loc>
-    <lastmod>2023-08-06T04:41:21.920Z</lastmod>
+    <lastmod>2023-08-06T04:56:19.308Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/blog.html</loc>
-    <lastmod>2023-08-06T04:41:24.088Z</lastmod>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2023-08-06T04:56:18.192Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
+    <lastmod>2023-08-06T04:56:11.580Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/test-slides.html</loc>
+    <lastmod>2023-08-06T04:56:14.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/ibis-slides.html</loc>
+    <lastmod>2023-08-06T04:56:18.940Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/index.html</loc>
+    <lastmod>2023-08-06T04:56:19.692Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2023-08-06T04:41:24.840Z</lastmod>
+    <lastmod>2023-08-06T04:56:20.480Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2023-08-06T04:41:26.088Z</lastmod>
+    <lastmod>2023-08-06T04:56:21.752Z</lastmod>
   </url>
 </urlset>

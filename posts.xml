@@ -6,8 +6,8 @@
       version="2.0">
 <channel>
 <title>dkdc.dev</title>
-<link>https://dkdc.dev/blog.html</link>
-<atom:link href="https://dkdc.dev/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://dkdc.dev/posts.html</link>
+<atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
 <lastBuildDate>Sun, 06 Aug 2023 00:00:00 GMT</lastBuildDate>
