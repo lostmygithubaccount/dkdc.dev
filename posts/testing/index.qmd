@@ -10,8 +10,12 @@ Some Python code:
 ```{python}
 import ibis
 import ibis.selectors as s
+import plotly.io as pio
+import plotly.express as px
 
-# for demo purposes
+
+# configuration
+pio.templates.default = "plotly_dark"
 ibis.options.interactive = True
 
 t = ibis.examples.penguins.fetch()
@@ -24,6 +28,45 @@ t.group_by("species").agg(ibis._.count().name("count"))
 
 ```{python}
 t["species"].topk(5)
+```
+
+```{python}
+px.scatter(t, title="penguins", x="bill_length_mm", y="bill_depth_mm", color="species")
+```
+
+```{python}
+def transform(t):
+    # compute the z score
+    t = t.mutate(
+        s.across(s.numeric(), {"zscore": lambda x: (x - x.mean()) / x.std()})
+    ).dropna()  # drop rows with missing values
+    return t
+
+
+f = transform(t)
+f
+```
+
+```{python}
+from sklearn.decomposition import PCA
+
+# select "features" as X
+X = f.select(s.contains("zscore"))
+
+# get the the first 2 principal components to visualize
+n_components = 3
+pca = PCA(n_components=n_components).fit(X)
+
+# transform the table to get the principal components
+t_pca = ibis.memtable(pca.transform(X)).relabel({"col0": "pc1", "col1": "pc2", "col2": "pc3"})
+
+# join the original table with the PCA table, assuming the order is the same
+f = f.mutate(row_number=ibis.row_number().over()).join(
+    t_pca.mutate(row_number=ibis.row_number().over()), "row_number"
+)
+
+# plot the first 3 principal components
+px.scatter_3d(f, title="penguins PCA", x="pc1", y="pc2", z="pc3", color="species")
 ```
 
 ```{mermaid}

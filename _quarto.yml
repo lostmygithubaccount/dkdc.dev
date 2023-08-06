@@ -10,7 +10,7 @@ website:
   favicon: logo.png
 
   # options
-  reader-mode: true
+  reader-mode: false
   twitter-card: true
   back-to-top-navigation: true
   repo-url: https://github.com/lostmygithubaccount/lostmygithubaccount.github.io
@@ -21,9 +21,17 @@ website:
     logo: logo.png
     fontcolor: fuchsia
     right:
+      - sidebar:dashboards
       - blog.qmd
       - about.qmd
       - contact.qmd
+  sidebar:
+    - id: ""
+    - id: dashboards
+      title: "dashboards"
+      style: "docked"
+      collapse-level: 2
+      contents: "*-metrics.qmd"
 
   # footer
   page-footer:

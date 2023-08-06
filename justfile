@@ -24,3 +24,8 @@ build:
 # config
 config:
     $EDITOR _quarto.yml
+
+# clean
+clean:
+    rm -r _freeze || true
+    rm -r _site || true
