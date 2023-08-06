@@ -45,3 +45,7 @@ format:
     linkcolor: fuchsia
     css: styles.css
     toc: true
+
+# resources
+resources:
+  - CNAME
