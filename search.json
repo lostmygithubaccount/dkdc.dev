@@ -1,66 +1,52 @@
 [
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
+    "objectID": "posts/nix/index.html",
+    "href": "posts/nix/index.html",
+    "title": "Nix the dog",
+    "section": "",
+    "text": "Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.\n  \n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/website/index.html",
+    "href": "posts/website/index.html",
     "title": "I redid my website again…",
     "section": "",
     "text": "I mean, why not at this point…\nQuarto is nice!\n\n\n\n Back to top"
   },
   {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "contact",
+    "objectID": "posts/vegas/index.html",
+    "href": "posts/vegas/index.html",
+    "title": "on: Vegas",
     "section": "",
-    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+    "text": "I moved to Las Vegas, NV!\n\n\n\n                                                \n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "contact.html#github",
-    "href": "contact.html#github",
-    "title": "contact",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "about",
     "section": "",
-    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently a Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis.\nPreviously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at Azure ML (Microsoft) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about (in addition to product management, relevant to work stuff):\n\nOSS & scale\nbeautiful design\nelegant engineering"
   },
   {
-    "objectID": "contact.html#work",
-    "href": "contact.html#work",
-    "title": "contact",
-    "section": "work",
-    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
-  },
-  {
-    "objectID": "contact.html#personal",
-    "href": "contact.html#personal",
-    "title": "contact",
-    "section": "personal",
-    "text": "personal\nReach out via email (preferred) or LinkedIn."
-  },
-  {
-    "objectID": "ibis-metrics.html",
-    "href": "ibis-metrics.html",
-    "title": "Ibis metrics",
+    "objectID": "about.html#me",
+    "href": "about.html#me",
+    "title": "about",
     "section": "",
-    "text": "Back to top"
+    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently a Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis.\nPreviously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at Azure ML (Microsoft) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about (in addition to product management, relevant to work stuff):\n\nOSS & scale\nbeautiful design\nelegant engineering"
   },
   {
-    "objectID": "pypi-metrics.html",
-    "href": "pypi-metrics.html",
-    "title": "PyPI metrics",
+    "objectID": "about.html#website",
+    "href": "about.html#website",
+    "title": "about",
+    "section": "website",
+    "text": "website\nThis is my personal website. My views are separate from my employer’s.\nThe purpose of this website is to practice writing, coding, and documenting projects."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
     "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n  \n\n\n\n\ntesting\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nCody\n\n\n\n\n\n\n  \n\n\n\n\nI redid my website again…\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCody\n\n\n\n\n\n\nNo matching items\n\n Back to top"
-  },
-  {
-    "objectID": "test-slides.html#slides",
-    "href": "test-slides.html#slides",
-    "title": "testing",
-    "section": "slides",
-    "text": "slides\ntesting slides"
+    "text": "A website. - Cody\n\n\n Back to top"
   },
   {
     "objectID": "ibis-slides.html#who-are-we",
@@ -238,38 +224,73 @@
     "text": "try it out now\nInstall:\npip install 'ibis-framework[duckdb]'\n\nThen run:\nimport ibis\n\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\n\nt"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dkdc.dev",
-    "section": "",
-    "text": "A website. - Cody\n\n\n Back to top"
+    "objectID": "test-slides.html#slides",
+    "href": "test-slides.html#slides",
+    "title": "testing",
+    "section": "slides",
+    "text": "slides\ntesting slides"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "about",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
     "section": "",
-    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently a Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis.\nPreviously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at Azure ML (Microsoft) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about (in addition to product management, relevant to work stuff):\n\nOSS & scale\nbeautiful design\nelegant engineering"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: Vegas\n\n\n\nlife\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "about.html#me",
-    "href": "about.html#me",
-    "title": "about",
+    "objectID": "pypi-metrics.html",
+    "href": "pypi-metrics.html",
+    "title": "PyPI metrics",
     "section": "",
-    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently a Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis.\nPreviously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at Azure ML (Microsoft) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about (in addition to product management, relevant to work stuff):\n\nOSS & scale\nbeautiful design\nelegant engineering"
+    "text": "Back to top"
   },
   {
-    "objectID": "about.html#website",
-    "href": "about.html#website",
-    "title": "about",
-    "section": "website",
-    "text": "website\nThis is my personal website. My views are separate from my employer’s.\nThe purpose of this website is to practice writing, coding, and documenting projects."
+    "objectID": "ibis-metrics.html",
+    "href": "ibis-metrics.html",
+    "title": "Ibis metrics",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#github",
+    "href": "contact.html#github",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#work",
+    "href": "contact.html#work",
+    "title": "contact",
+    "section": "work",
+    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
+  },
+  {
+    "objectID": "contact.html#personal",
+    "href": "contact.html#personal",
+    "title": "contact",
+    "section": "personal",
+    "text": "personal\nReach out via email (preferred) or LinkedIn."
   },
   {
     "objectID": "posts/testing/index.html",
     "href": "posts/testing/index.html",
     "title": "testing",
     "section": "",
-    "text": "Note\n\n\n\nIf not rendered properly, view on dkdc.dev.\n\n\nSome Python code:\n\nimport ibis\nimport ibis.selectors as s\nimport plotly.io as pio\nimport plotly.express as px\n\n\n# configuration\npio.templates.default = \"plotly_dark\"\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\nt\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │\n│ Adelie  │ Torgersen │            nan │           nan │              NULL │        NULL │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │\n│ Adelie  │ Torgersen │           34.1 │          18.1 │               193 │        3475 │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           42.0 │          20.2 │               190 │        4250 │ NULL   │  2007 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┘\n\n\n\n\nt.group_by(\"species\").agg(ibis._.count().name(\"count\"))\n\n┏━━━━━━━━━━━┳━━━━━━━┓\n┃ species   ┃ count ┃\n┡━━━━━━━━━━━╇━━━━━━━┩\n│ string    │ int64 │\n├───────────┼───────┤\n│ Adelie    │   152 │\n│ Gentoo    │   124 │\n│ Chinstrap │    68 │\n└───────────┴───────┘\n\n\n\n\nt[\"species\"].topk(5)\n\n┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓\n┃ species   ┃ Count(species) ┃\n┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩\n│ string    │ int64          │\n├───────────┼────────────────┤\n│ Adelie    │            152 │\n│ Gentoo    │            124 │\n│ Chinstrap │             68 │\n└───────────┴────────────────┘\n\n\n\n\npx.scatter(t, title=\"penguins\", x=\"bill_length_mm\", y=\"bill_depth_mm\", color=\"species\")\n\n\n                                                \n\n\n\ndef transform(t):\n    # compute the z score\n    t = t.mutate(\n        s.across(s.numeric(), {\"zscore\": lambda x: (x - x.mean()) / x.std()})\n    ).dropna()  # drop rows with missing values\n    return t\n\n\nf = transform(t)\nf\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃ bill_length_mm_zscore ┃ bill_depth_mm_zscore ┃ flipper_length_mm_zscore ┃ body_mass_g_zscore ┃ year_zscore ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │ float64               │ float64              │ float64                  │ float64            │ float64     │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┼───────────────────────┼──────────────────────┼──────────────────────────┼────────────────────┼─────────────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │             -0.883137 │             0.784218 │                -1.416243 │          -0.563316 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │             -0.809877 │             0.125990 │                -1.060674 │          -0.500969 │   -1.258032 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │             -0.663357 │             0.429788 │                -0.420652 │          -1.186793 │   -1.258032 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │             -1.322698 │             1.088015 │                -0.562879 │          -0.937402 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │             -0.846507 │             1.746243 │                -0.776220 │          -0.688012 │   -1.258032 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │             -0.919767 │             0.328522 │                -1.416243 │          -0.719185 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │             -0.864822 │             1.239914 │                -0.420652 │           0.590115 │   -1.258032 │\n│ Adelie  │ Torgersen │           41.1 │          17.6 │               182 │        3200 │ female │  2007 │             -0.516837 │             0.227256 │                -1.345129 │          -1.249140 │   -1.258032 │\n│ Adelie  │ Torgersen │           38.6 │          21.2 │               191 │        3800 │ male   │  2007 │             -0.974712 │             2.050041 │                -0.705106 │          -0.500969 │   -1.258032 │\n│ Adelie  │ Torgersen │           34.6 │          21.1 │               198 │        4400 │ male   │  2007 │             -1.707313 │             1.999408 │                -0.207311 │           0.247203 │   -1.258032 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │                     … │                    … │                        … │                  … │           … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┴───────────────────────┴──────────────────────┴──────────────────────────┴────────────────────┴─────────────┘\n\n\n\n\nfrom sklearn.decomposition import PCA\n\n# select \"features\" as X\nX = f.select(s.contains(\"zscore\"))\n\n# get the the first 2 principal components to visualize\nn_components = 3\npca = PCA(n_components=n_components).fit(X)\n\n# transform the table to get the principal components\nt_pca = ibis.memtable(pca.transform(X)).relabel({\"col0\": \"pc1\", \"col1\": \"pc2\", \"col2\": \"pc3\"})\n\n# join the original table with the PCA table, assuming the order is the same\nf = f.mutate(row_number=ibis.row_number().over()).join(\n    t_pca.mutate(row_number=ibis.row_number().over()), \"row_number\"\n)\n\n# plot the first 3 principal components\npx.scatter_3d(f, title=\"penguins PCA\", x=\"pc1\", y=\"pc2\", z=\"pc3\", color=\"species\")\n\n\n                                                \n\n\n\n\n\n\ngraph TD\n\n  %% Extraction\n  JSON --&gt;|Extract| CLOUDSTORAGE\n  PARQUET --&gt;|Extract| CLOUDSTORAGE\n  DELTASRC --&gt;|Extract| CLOUDSTORAGE\n  \n  %% Transformation\n  CLOUDSTORAGE --&gt;|Transform| DUCKDB\n  CLOUDSTORAGE --&gt;|Transform| POLARS\n  \n  %% Load\n  DUCKDB --&gt;|Load| DELTADST\n  DUCKDB --&gt;|Load| DBOUTPUT\n  POLARS --&gt;|Load| DELTADST\n  POLARS --&gt;|Load| DBOUTPUT\n  \n  classDef dataFormat fill:#f9d,stroke:#333,stroke-width:2px;\n  classDef storage fill:#9df,stroke:#333,stroke-width:2px;\n  classDef processing fill:#fd9,stroke:#333,stroke-width:2px;\n  classDef output fill:#d9f,stroke:#333,stroke-width:2px;\n\n  class JSON,PARQUET,DELTASRC dataFormat;\n  class CLOUDSTORAGE storage;\n  class DUCKDB,POLARS processing;\n  class DELTADST,DBOUTPUT output;\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "Testing in soon-to-be-past.\n\n\n\n\n\n\nNote\n\n\n\nIf not rendered properly, view on dkdc.dev.\n\n\nSome Python code:\n\nimport ibis\nimport ibis.selectors as s\nimport plotly.io as pio\nimport plotly.express as px\n\n\n# configuration\npio.templates.default = \"plotly_dark\"\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\nt\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │\n│ Adelie  │ Torgersen │            nan │           nan │              NULL │        NULL │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │\n│ Adelie  │ Torgersen │           34.1 │          18.1 │               193 │        3475 │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           42.0 │          20.2 │               190 │        4250 │ NULL   │  2007 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┘\n\n\n\n\nt.group_by(\"species\").agg(ibis._.count().name(\"count\"))\n\n┏━━━━━━━━━━━┳━━━━━━━┓\n┃ species   ┃ count ┃\n┡━━━━━━━━━━━╇━━━━━━━┩\n│ string    │ int64 │\n├───────────┼───────┤\n│ Adelie    │   152 │\n│ Gentoo    │   124 │\n│ Chinstrap │    68 │\n└───────────┴───────┘\n\n\n\n\nt[\"species\"].topk(5)\n\n┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓\n┃ species   ┃ Count(species) ┃\n┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩\n│ string    │ int64          │\n├───────────┼────────────────┤\n│ Adelie    │            152 │\n│ Gentoo    │            124 │\n│ Chinstrap │             68 │\n└───────────┴────────────────┘\n\n\n\n\npx.scatter(t, title=\"penguins\", x=\"bill_length_mm\", y=\"bill_depth_mm\", color=\"species\")\n\n\n                                                \n\n\n\ndef transform(t):\n    # compute the z score\n    t = t.mutate(\n        s.across(s.numeric(), {\"zscore\": lambda x: (x - x.mean()) / x.std()})\n    ).dropna()  # drop rows with missing values\n    return t\n\n\nf = transform(t)\nf\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃ bill_length_mm_zscore ┃ bill_depth_mm_zscore ┃ flipper_length_mm_zscore ┃ body_mass_g_zscore ┃ year_zscore ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │ float64               │ float64              │ float64                  │ float64            │ float64     │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┼───────────────────────┼──────────────────────┼──────────────────────────┼────────────────────┼─────────────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │             -0.883137 │             0.784218 │                -1.416243 │          -0.563316 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │             -0.809877 │             0.125990 │                -1.060674 │          -0.500969 │   -1.258032 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │             -0.663357 │             0.429788 │                -0.420652 │          -1.186793 │   -1.258032 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │             -1.322698 │             1.088015 │                -0.562879 │          -0.937402 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │             -0.846507 │             1.746243 │                -0.776220 │          -0.688012 │   -1.258032 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │             -0.919767 │             0.328522 │                -1.416243 │          -0.719185 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │             -0.864822 │             1.239914 │                -0.420652 │           0.590115 │   -1.258032 │\n│ Adelie  │ Torgersen │           41.1 │          17.6 │               182 │        3200 │ female │  2007 │             -0.516837 │             0.227256 │                -1.345129 │          -1.249140 │   -1.258032 │\n│ Adelie  │ Torgersen │           38.6 │          21.2 │               191 │        3800 │ male   │  2007 │             -0.974712 │             2.050041 │                -0.705106 │          -0.500969 │   -1.258032 │\n│ Adelie  │ Torgersen │           34.6 │          21.1 │               198 │        4400 │ male   │  2007 │             -1.707313 │             1.999408 │                -0.207311 │           0.247203 │   -1.258032 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │                     … │                    … │                        … │                  … │           … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┴───────────────────────┴──────────────────────┴──────────────────────────┴────────────────────┴─────────────┘\n\n\n\n\nfrom sklearn.decomposition import PCA\n\n# select \"features\" as X\nX = f.select(s.contains(\"zscore\"))\n\n# get the the first 2 principal components to visualize\nn_components = 3\npca = PCA(n_components=n_components).fit(X)\n\n# transform the table to get the principal components\nt_pca = ibis.memtable(pca.transform(X)).relabel({\"col0\": \"pc1\", \"col1\": \"pc2\", \"col2\": \"pc3\"})\n\n# join the original table with the PCA table, assuming the order is the same\nf = f.mutate(row_number=ibis.row_number().over()).join(\n    t_pca.mutate(row_number=ibis.row_number().over()), \"row_number\"\n)\n\n# plot the first 3 principal components\npx.scatter_3d(f, title=\"penguins PCA\", x=\"pc1\", y=\"pc2\", z=\"pc3\", color=\"species\")\n\n\n                                                \n\n\n\n\n\n\ngraph TD\n\n  %% Extraction\n  JSON --&gt;|Extract| CLOUDSTORAGE\n  PARQUET --&gt;|Extract| CLOUDSTORAGE\n  DELTASRC --&gt;|Extract| CLOUDSTORAGE\n  \n  %% Transformation\n  CLOUDSTORAGE --&gt;|Transform| DUCKDB\n  CLOUDSTORAGE --&gt;|Transform| POLARS\n  \n  %% Load\n  DUCKDB --&gt;|Load| DELTADST\n  DUCKDB --&gt;|Load| DBOUTPUT\n  POLARS --&gt;|Load| DELTADST\n  POLARS --&gt;|Load| DBOUTPUT\n  \n  classDef dataFormat fill:#f9d,stroke:#333,stroke-width:2px;\n  classDef storage fill:#9df,stroke:#333,stroke-width:2px;\n  classDef processing fill:#fd9,stroke:#333,stroke-width:2px;\n  classDef output fill:#d9f,stroke:#333,stroke-width:2px;\n\n  class JSON,PARQUET,DELTASRC dataFormat;\n  class CLOUDSTORAGE storage;\n  class DUCKDB,POLARS processing;\n  class DELTADST,DBOUTPUT output;\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/murphy/index.html",
+    "href": "posts/murphy/index.html",
+    "title": "Murphy the dog",
+    "section": "",
+    "text": "Murphy the dog.\n  \n\n\n\n Back to top"
   }
 ]

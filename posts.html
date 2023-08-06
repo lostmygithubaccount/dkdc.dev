@@ -72,9 +72,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -97,7 +97,10 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <link rel="alternate" type="application/rss+xml" title="dkdc.dev" href="posts.xml"><meta name="twitter:title" content="dkdc.dev - posts">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://dkdc.dev/logo.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed">
@@ -119,7 +122,59 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./posts.html" rel="" target="" aria-current="page">
+ <span class="menu-text">posts</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-localhost" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">localhost:</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-localhost">    
+        <li>
+    <a class="dropdown-item" href="http://localhost:8000" rel="" target="">
+ <span class="dropdown-text">8000 (something)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-external-links" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">external links</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-external-links">    
+        <li>
+    <a class="dropdown-item" href="https://dkdc.dev" rel="" target="">
+ <span class="dropdown-text">dkdc.dev</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://ibis-project.org" rel="" target="">
+ <span class="dropdown-text">Ibis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com" rel="" target="">
+ <span class="dropdown-text">GitHub</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/lostmygithubaccount/lostmygithubaccount.github.io" rel="" target="">
+ <span class="dropdown-text">GitHub - dkdc.dev</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://github.com/ibis-project/ibis" rel="" target="">
+ <span class="dropdown-text">GitHub - Ibis</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://share.streamlit.io" rel="" target="">
+ <span class="dropdown-text">Streamlit</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://app.motherduck.com" rel="" target="">
+ <span class="dropdown-text">MotherDuck</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dashboards" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">dashboards</span>
@@ -155,10 +210,6 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" rel="" target="" aria-current="page">
- <span class="menu-text">posts</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
@@ -179,7 +230,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="archive">archive <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dogs">dogs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="life">life <span class="quarto-category-count">(3)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="on:">on: <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
 
@@ -204,7 +255,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
      <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
@@ -230,76 +281,165 @@ ul.task-list li input[type="checkbox"] {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="news" data-listing-date-sort="1691280000000" data-listing-file-modified-sort="1691297657276" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/testing/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/testing/index.html">
-<h3 class="no-anchor listing-title">
-testing
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="news" data-listing-date-sort="1691193600000" data-listing-file-modified-sort="1691330633432" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/website/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+I redid my website again…
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
 news
 </div>
 </div>
-<a href="./posts/testing/index.html">
-<div class="listing-description">
-If not rendered properly, view on dkdc.dev.
+<div class="card-text listing-description">
+I mean, why not at this point…
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/testing/index.html">
-<div class="listing-date">
-Aug 6, 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Cody
 </div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="news" data-listing-date-sort="1691193600000" data-listing-file-modified-sort="1691297657276" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
-I redid my website again…
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
-I mean, why not at this point…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
 <div class="listing-date">
 Aug 5, 2023
 </div>
-<div class="listing-author">
-Cody
+</div>
+</div>
 </div>
 </a>
 </div>
+<div class="g-col-1" data-index="1" data-categories="dogs,life" data-listing-date-sort="1680307200000" data-listing-file-modified-sort="1691330633400" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/nix/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/nix/nix1.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Nix the dog
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('dogs'); return false;">
+dogs
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('life'); return false;">
+life
+</div>
+</div>
+<div class="card-text listing-description">
+Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Cody
+</div>
+<div class="listing-date">
+Apr 1, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="life,on:" data-listing-date-sort="1677628800000" data-listing-file-modified-sort="1691330633432" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/vegas/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/vegas/vegas.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+on: Vegas
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('life'); return false;">
+life
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('on:'); return false;">
+on:
+</div>
+</div>
+<div class="card-text listing-description">
+I moved to Las Vegas, NV!
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Cody
+</div>
+<div class="listing-date">
+Mar 1, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="dogs,life" data-listing-date-sort="1508284800000" data-listing-file-modified-sort="1691330633392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="./posts/murphy/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/murphy/murphy1.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Murphy the dog
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('dogs'); return false;">
+dogs
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('life'); return false;">
+life
+</div>
+</div>
+<div class="card-text listing-description">
+Murphy the dog.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Cody
+</div>
+<div class="listing-date">
+Oct 18, 2017
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="archive" data-listing-date-sort="-62127820800000" data-listing-file-modified-sort="1691330633432" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="./posts/testing/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./posts/testing/404.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+testing
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('archive'); return false;">
+archive
+</div>
+</div>
+<div class="card-text listing-description">
+Testing in soon-to-be-past.
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Cody
+</div>
+<div class="listing-date">
+Apr 1, 1
+</div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">

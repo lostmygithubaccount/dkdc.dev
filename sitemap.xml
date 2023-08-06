@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dkdc.dev/posts/welcome/index.html</loc>
-    <lastmod>2023-08-06T04:56:22.140Z</lastmod>
+    <loc>https://dkdc.dev/posts/nix/index.html</loc>
+    <lastmod>2023-08-06T14:05:33.019Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/contact.html</loc>
-    <lastmod>2023-08-06T04:56:20.912Z</lastmod>
+    <loc>https://dkdc.dev/posts/website/index.html</loc>
+    <lastmod>2023-08-06T14:05:32.427Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/ibis-metrics.html</loc>
-    <lastmod>2023-08-06T04:56:20.060Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/pypi-metrics.html</loc>
-    <lastmod>2023-08-06T04:56:19.308Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts.html</loc>
-    <lastmod>2023-08-06T04:56:18.192Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2023-08-06T04:56:11.580Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/test-slides.html</loc>
-    <lastmod>2023-08-06T04:56:14.896Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/ibis-slides.html</loc>
-    <lastmod>2023-08-06T04:56:18.940Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2023-08-06T04:56:19.692Z</lastmod>
+    <loc>https://dkdc.dev/posts/vegas/index.html</loc>
+    <lastmod>2023-08-06T14:05:31.463Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2023-08-06T04:56:20.480Z</lastmod>
+    <lastmod>2023-08-06T14:05:30.671Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/index.html</loc>
+    <lastmod>2023-08-06T14:05:30.075Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/ibis-slides.html</loc>
+    <lastmod>2023-08-06T14:05:29.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/test-slides.html</loc>
+    <lastmod>2023-08-06T14:05:25.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
+    <lastmod>2023-08-06T14:05:21.687Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2023-08-06T14:05:28.935Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/pypi-metrics.html</loc>
+    <lastmod>2023-08-06T14:05:29.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/ibis-metrics.html</loc>
+    <lastmod>2023-08-06T14:05:30.363Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/contact.html</loc>
+    <lastmod>2023-08-06T14:05:30.951Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2023-08-06T04:56:21.752Z</lastmod>
+    <lastmod>2023-08-06T14:05:32.099Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/murphy/index.html</loc>
+    <lastmod>2023-08-06T14:05:32.723Z</lastmod>
   </url>
 </urlset>
