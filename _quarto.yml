@@ -22,8 +22,8 @@ website:
     fontcolor: fuchsia
     right:
       - sidebar:dashboards
-      - sidebar:presentations
-      - blog.qmd
+      - sidebar:slides
+      - posts.qmd
       - about.qmd
       - contact.qmd
   sidebar:
@@ -33,8 +33,8 @@ website:
       style: "docked"
       collapse-level: 2
       contents: "*-metrics.qmd"
-    - id: presentations
-      title: "presentations"
+    - id: slides
+      title: "slides"
       style: "docked"
       collapse-level: 2
       contents: "*-slides.qmd"
@@ -49,7 +49,7 @@ website:
       - icon: github
         href: https://github.com/lostmygithubaccount
       - icon: rss
-        href: https://dkdc.dev/blog.xml
+        href: https://dkdc.dev/posts.xml
 
 # theme
 format:

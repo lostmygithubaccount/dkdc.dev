@@ -1,12 +1,12 @@
 ---
-title: "blog"
+title: "posts"
 listing:
   contents: posts
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
-  filter-ui: false
+  sort-ui: true
+  filter-ui: true
   feed: true
 page-layout: full
 ---
