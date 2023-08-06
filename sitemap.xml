@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dkdc.dev/posts/welcome/index.html</loc>
-    <lastmod>2023-08-06T02:05:48.982Z</lastmod>
+    <lastmod>2023-08-06T02:59:07.709Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/contact.html</loc>
-    <lastmod>2023-08-06T02:05:48.106Z</lastmod>
+    <lastmod>2023-08-06T02:59:06.745Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/blog.html</loc>
-    <lastmod>2023-08-06T02:05:47.454Z</lastmod>
+    <loc>https://dkdc.dev/ibis-metrics.html</loc>
+    <lastmod>2023-08-06T02:59:06.129Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2023-08-06T02:05:46.094Z</lastmod>
+    <lastmod>2023-08-06T02:59:04.497Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/pypi-metrics.html</loc>
+    <lastmod>2023-08-06T02:59:04.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/blog.html</loc>
+    <lastmod>2023-08-06T02:59:05.833Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2023-08-06T02:05:47.794Z</lastmod>
+    <lastmod>2023-08-06T02:59:06.445Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2023-08-06T02:05:48.670Z</lastmod>
+    <lastmod>2023-08-06T02:59:07.369Z</lastmod>
   </url>
 </urlset>
