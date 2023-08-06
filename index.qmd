@@ -1,0 +1,18 @@
+---
+title: "dkdc.dev"
+about:
+  template: jolla
+  image: logo.png
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/codydkdc
+    - icon: github
+      text: GitHub
+      href: https://github.com/lostmygithubaccount
+    - icon: rss
+      text: RSS
+      href: https://dkdc.dev/index.xml
+---
+
+A [website](https://dkdc.dev). - [Cody](about.qmd)

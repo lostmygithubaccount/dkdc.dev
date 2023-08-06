@@ -1,0 +1,26 @@
+# Justfile
+
+# load environment variables
+set dotenv-load
+
+# aliases
+
+# list justfile recipes
+default:
+    just --list
+
+# setup
+setup:
+    @pip install -r requirements.txt
+
+# preview
+preview:
+    quarto preview
+
+# build
+build:
+    quarto render
+
+# config
+config:
+    $EDITOR _quarto.yml
