@@ -20,6 +20,6 @@ I care about (in addition to product management, relevant to work stuff):
 
 ## website
 
-**This is my personal website. My views are separate from my (potential) employer's.**
+**This is my personal website. My views are separate from my employer's.**
 
 The purpose of this website is to practice writing, coding, and documenting projects.

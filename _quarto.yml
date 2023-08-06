@@ -22,6 +22,7 @@ website:
     fontcolor: fuchsia
     right:
       - sidebar:dashboards
+      - sidebar:presentations
       - blog.qmd
       - about.qmd
       - contact.qmd
@@ -32,6 +33,11 @@ website:
       style: "docked"
       collapse-level: 2
       contents: "*-metrics.qmd"
+    - id: presentations
+      title: "presentations"
+      style: "docked"
+      collapse-level: 2
+      contents: "*-slides.qmd"
 
   # footer
   page-footer:

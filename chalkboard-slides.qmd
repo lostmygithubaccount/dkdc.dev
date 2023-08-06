@@ -1,0 +1,11 @@
+---
+title: "chalkboard"
+format:
+  revealjs: 
+    preview-links: true
+    chalkboard: true
+    # https://quarto.org/docs/presentations/revealjs/themes.html#using-themes
+    theme: dark
+---
+
+##

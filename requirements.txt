@@ -1,11 +1,11 @@
 # python
 python-dotenv
+jupyter
 
 # data
-ibis-framework[duckdb,polars,deltalake,bigquery] @ git+https://github.com/ibis-project/ibis.git@master
+ibis-framework[duckdb,polars,deltalake] @ git+https://github.com/ibis-project/ibis.git@master
 
 # viz
-jupyter
 #matplotlib
 #seaborn
 plotly

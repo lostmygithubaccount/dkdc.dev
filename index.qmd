@@ -15,4 +15,4 @@ about:
       href: https://dkdc.dev/blog.xml
 ---
 
-A [website](https://dkdc.dev). - [Cody](about.qmd)
+A [website](about.qmd#website). - [Cody](about.qmd#me)
