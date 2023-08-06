@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "I redid my website again…",
+    "section": "",
+    "text": "I mean, why not at this point…\nQuarto is nice!\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#github",
+    "href": "contact.html#github",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#work",
+    "href": "contact.html#work",
+    "title": "contact",
+    "section": "work",
+    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
+  },
+  {
+    "objectID": "contact.html#personal",
+    "href": "contact.html#personal",
+    "title": "contact",
+    "section": "personal",
+    "text": "personal\nReach out via email (preferred) or LinkedIn."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "blog",
+    "section": "",
+    "text": "testing\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nCody\n\n\n\n\n\n\n  \n\n\n\n\nI redid my website again…\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCody\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
+    "section": "",
+    "text": "A website. - Cody\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "about",
+    "section": "",
+    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently a Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis.\nPreviously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at Azure ML (Microsoft) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about (in addition to product management, relevant to work stuff):\n\nOSS & scale\nbeautiful design\nelegant engineering"
+  },
+  {
+    "objectID": "about.html#me",
+    "href": "about.html#me",
+    "title": "about",
+    "section": "",
+    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently a Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis.\nPreviously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at Azure ML (Microsoft) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about (in addition to product management, relevant to work stuff):\n\nOSS & scale\nbeautiful design\nelegant engineering"
+  },
+  {
+    "objectID": "about.html#website",
+    "href": "about.html#website",
+    "title": "about",
+    "section": "website",
+    "text": "website\nThis is my personal website. My views are separate from my (potential) employer’s.\nThe purpose of this website is to practice writing, coding, and documenting projects. You can read more about my website project here. Use the menu at the top to navigate."
+  },
+  {
+    "objectID": "posts/testing/index.html",
+    "href": "posts/testing/index.html",
+    "title": "testing",
+    "section": "",
+    "text": "Some Python code:\n\nimport ibis\nimport ibis.selectors as s\n\n# for demo purposes\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\nt\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │\n│ Adelie  │ Torgersen │            nan │           nan │              NULL │        NULL │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │\n│ Adelie  │ Torgersen │           34.1 │          18.1 │               193 │        3475 │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           42.0 │          20.2 │               190 │        4250 │ NULL   │  2007 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┘\n\n\n\n\nt.group_by(\"species\").agg(ibis._.count().name(\"count\"))\n\n┏━━━━━━━━━━━┳━━━━━━━┓\n┃ species   ┃ count ┃\n┡━━━━━━━━━━━╇━━━━━━━┩\n│ string    │ int64 │\n├───────────┼───────┤\n│ Adelie    │   152 │\n│ Gentoo    │   124 │\n│ Chinstrap │    68 │\n└───────────┴───────┘\n\n\n\n\nt[\"species\"].topk(5)\n\n┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓\n┃ species   ┃ Count(species) ┃\n┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩\n│ string    │ int64          │\n├───────────┼────────────────┤\n│ Adelie    │            152 │\n│ Gentoo    │            124 │\n│ Chinstrap │             68 │\n└───────────┴────────────────┘\n\n\n\n\n\n\n\ngraph TD\n\n  %% Extraction\n  JSON --&gt;|Extract| CLOUDSTORAGE\n  PARQUET --&gt;|Extract| CLOUDSTORAGE\n  DELTASRC --&gt;|Extract| CLOUDSTORAGE\n  \n  %% Transformation\n  CLOUDSTORAGE --&gt;|Transform| DUCKDB\n  CLOUDSTORAGE --&gt;|Transform| POLARS\n  \n  %% Load\n  DUCKDB --&gt;|Load| DELTADST\n  DUCKDB --&gt;|Load| DBOUTPUT\n  POLARS --&gt;|Load| DELTADST\n  POLARS --&gt;|Load| DBOUTPUT\n  \n  classDef dataFormat fill:#f9d,stroke:#333,stroke-width:2px;\n  classDef storage fill:#9df,stroke:#333,stroke-width:2px;\n  classDef processing fill:#fd9,stroke:#333,stroke-width:2px;\n  classDef output fill:#d9f,stroke:#333,stroke-width:2px;\n\n  class JSON,PARQUET,DELTASRC dataFormat;\n  class CLOUDSTORAGE storage;\n  class DUCKDB,POLARS processing;\n  class DELTADST,DBOUTPUT output;\n\n\n\n\n\n\n\n\n Back to top"
+  }
+]
