@@ -49,6 +49,188 @@
     "text": "A website. - Cody\n\n\n Back to top"
   },
   {
+    "objectID": "ibis-slides.html#who-are-we",
+    "href": "ibis-slides.html#who-are-we",
+    "title": "Ibis",
+    "section": "who are we?",
+    "text": "who are we?\nemployees of Voltron Data paid to work on Ibis"
+  },
+  {
+    "objectID": "ibis-slides.html#agenda",
+    "href": "ibis-slides.html#agenda",
+    "title": "Ibis",
+    "section": "agenda",
+    "text": "agenda\n\nwhat?\nwhy?\nhow?\ndemo\nQ&A"
+  },
+  {
+    "objectID": "ibis-slides.html#ibis-is-a-python-frontend-for",
+    "href": "ibis-slides.html#ibis-is-a-python-frontend-for",
+    "title": "Ibis",
+    "section": "Ibis is a Python frontend for:",
+    "text": "Ibis is a Python frontend for:\n\nexploratory data analysis (EDA)\nanalytics\ndata engineering\nmachine learning"
+  },
+  {
+    "objectID": "ibis-slides.html#ibis-analytics",
+    "href": "ibis-slides.html#ibis-analytics",
+    "title": "Ibis",
+    "section": "ibis-analytics",
+    "text": "ibis-analytics\nAnalyzing and predicting on 10M+ rows from 4+ sources."
+  },
+  {
+    "objectID": "ibis-slides.html#dataframe-lore",
+    "href": "ibis-slides.html#dataframe-lore",
+    "title": "Ibis",
+    "section": "dataframe lore",
+    "text": "dataframe lore\n\nDataframes first appeared in the S programming language, then evolved into the R calculator programming language.\n\n\nThen pandas perfected the dataframe in Python…or did it?\n\n\nSince, dozens of Python dataframes libraries have come and gone…\n\n\nThe pandas API remains the de facto standard for dataframes in Python (alongside PySpark), but it doesn’t scale.\n\n\nThis leads to data scientists frequently “throwing their work over the wall” to data engineers and ML engineers.\n\n\nBut what if there were a new standard?"
+  },
+  {
+    "objectID": "ibis-slides.html#ibis-origins",
+    "href": "ibis-slides.html#ibis-origins",
+    "title": "Ibis",
+    "section": "Ibis origins",
+    "text": "Ibis origins\n\nfrom Apache Arrow and the “10 Things I Hate About pandas” by Wes McKinney\n\n\n\n…in 2015, I started the Ibis project…to create a pandas-friendly deferred expression system for static analysis and compilation [of] these types of [query planned, multicore execution] operations. Since an efficient multithreaded in-memory engine for pandas was not available when I started Ibis, I instead focused on building compilers for SQL engines (Impala, PostgreSQL, SQLite), similar to the R dplyr package. Phillip Cloud from the pandas core team has been actively working on Ibis with me for quite a long time."
+  },
+  {
+    "objectID": "ibis-slides.html#dataframe-history",
+    "href": "ibis-slides.html#dataframe-history",
+    "title": "Ibis",
+    "section": "dataframe history",
+    "text": "dataframe history\n\npandas (2008): dataframes in Python\nSpark (2009): distributed dataframes with PySpark\nDask (2014): distributed dataframes with Python\ndplyr (2014): dataframes in R with SQL-like syntax\nIbis (2015): dataframes in Python with SQL-like syntax\ncuDF (2017): pandas on GPUs\nModin (2018): pandas on Ray/Dask\nKoalas (2019): pandas on Spark\nPolars (2020): multicore dataframes in Python"
+  },
+  {
+    "objectID": "ibis-slides.html#two-world-problem",
+    "href": "ibis-slides.html#two-world-problem",
+    "title": "Ibis",
+    "section": "two world problem",
+    "text": "two world problem\n\n\n\nSQL:\n\nPython:"
+  },
+  {
+    "objectID": "ibis-slides.html#two-world-problem-1",
+    "href": "ibis-slides.html#two-world-problem-1",
+    "title": "Ibis",
+    "section": "two world problem",
+    "text": "two world problem\n\n\n\nSQL:\n\ndatabases & tables\n\n\nPython:\n\nfiles & dataframes"
+  },
+  {
+    "objectID": "ibis-slides.html#two-world-problem-2",
+    "href": "ibis-slides.html#two-world-problem-2",
+    "title": "Ibis",
+    "section": "two world problem",
+    "text": "two world problem\n\n\n\nSQL:\n\ndatabases & tables\nanalytics\n\n\nPython:\n\nfiles & dataframes\ndata science"
+  },
+  {
+    "objectID": "ibis-slides.html#two-world-problem-3",
+    "href": "ibis-slides.html#two-world-problem-3",
+    "title": "Ibis",
+    "section": "two world problem",
+    "text": "two world problem\n\n\n\nSQL:\n\ndatabases & tables\nanalytics\nmetrics\n\n\nPython:\n\nfiles & dataframes\ndata science\nstatistics"
+  },
+  {
+    "objectID": "ibis-slides.html#two-world-problem-4",
+    "href": "ibis-slides.html#two-world-problem-4",
+    "title": "Ibis",
+    "section": "two world problem",
+    "text": "two world problem\n\n\n\nSQL:\n\ndatabases & tables\nanalytics\nmetrics\ndashboards\n\n\nPython:\n\nfiles & dataframes\ndata science\nstatistics\nnotebooks"
+  },
+  {
+    "objectID": "ibis-slides.html#two-world-problem-5",
+    "href": "ibis-slides.html#two-world-problem-5",
+    "title": "Ibis",
+    "section": "two world problem",
+    "text": "two world problem\n\n\n\nSQL:\n\ndatabases & tables\nanalytics\nmetrics\ndashboards\n\n\nPython:\n\nfiles & dataframes\ndata science\nstatistics\nnotebooks\n\n\n\n\n\nIbis bridges the gap."
+  },
+  {
+    "objectID": "ibis-slides.html#database-history",
+    "href": "ibis-slides.html#database-history",
+    "title": "Ibis",
+    "section": "database history",
+    "text": "database history\n\nthey got faster"
+  },
+  {
+    "objectID": "ibis-slides.html#duckdb",
+    "href": "ibis-slides.html#duckdb",
+    "title": "Ibis",
+    "section": "DuckDB",
+    "text": "DuckDB\nimport ibis\ncon = ibis.duckdb.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nAn embeddable, zero-dependency, C++ SQL database engine."
+  },
+  {
+    "objectID": "ibis-slides.html#datafusion",
+    "href": "ibis-slides.html#datafusion",
+    "title": "Ibis",
+    "section": "DataFusion",
+    "text": "DataFusion\nimport ibis\ncon = ibis.datafusion.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA Rust SQL query engine."
+  },
+  {
+    "objectID": "ibis-slides.html#clickhouse",
+    "href": "ibis-slides.html#clickhouse",
+    "title": "Ibis",
+    "section": "ClickHouse",
+    "text": "ClickHouse\nimport ibis\ncon = ibis.clickhouse.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA C++ column-oriented database management system."
+  },
+  {
+    "objectID": "ibis-slides.html#polars",
+    "href": "ibis-slides.html#polars",
+    "title": "Ibis",
+    "section": "Polars",
+    "text": "Polars\nimport ibis\ncon = ibis.polars.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA Rust DataFrame library."
+  },
+  {
+    "objectID": "ibis-slides.html#bigquery",
+    "href": "ibis-slides.html#bigquery",
+    "title": "Ibis",
+    "section": "BigQuery",
+    "text": "BigQuery\nimport ibis\ncon = ibis.bigquery.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA serverless, highly scalable, and cost-effective cloud data warehouse."
+  },
+  {
+    "objectID": "ibis-slides.html#snowflake",
+    "href": "ibis-slides.html#snowflake",
+    "title": "Ibis",
+    "section": "Snowflake",
+    "text": "Snowflake\nimport ibis\ncon = ibis.snowflake.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA cloud data platform."
+  },
+  {
+    "objectID": "ibis-slides.html#oracle",
+    "href": "ibis-slides.html#oracle",
+    "title": "Ibis",
+    "section": "Oracle",
+    "text": "Oracle\nimport ibis\ncon = ibis.oracle.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA relational database management system."
+  },
+  {
+    "objectID": "ibis-slides.html#spark",
+    "href": "ibis-slides.html#spark",
+    "title": "Ibis",
+    "section": "Spark",
+    "text": "Spark\nimport ibis\ncon = ibis.pyspark.connect(session)\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA unified analytics engine for large-scale data processing."
+  },
+  {
+    "objectID": "ibis-slides.html#trino",
+    "href": "ibis-slides.html#trino",
+    "title": "Ibis",
+    "section": "Trino",
+    "text": "Trino\nimport ibis\ncon = ibis.trino.connect()\npenguins = con.table(\"penguins\")\npenguins.group_by([\"species\", \"island\"]).agg(ibis._.count().name(\"count\"))\nA distributed SQL query engine."
+  },
+  {
+    "objectID": "ibis-slides.html#and-more",
+    "href": "ibis-slides.html#and-more",
+    "title": "Ibis",
+    "section": "and more!",
+    "text": "and more!\n\n\n\n\nSQLite\nPostgreSQL\nMySQL\nMSSQL\n\n\n\n\n\nDruid\npandas\nImpala\nDask\n\n\n\n\n\nNew backends are easy to add!*\n\n\n*usually"
+  },
+  {
+    "objectID": "ibis-slides.html#try-it-out-now",
+    "href": "ibis-slides.html#try-it-out-now",
+    "title": "Ibis",
+    "section": "try it out now",
+    "text": "try it out now\nInstall:\npip install 'ibis-framework[duckdb]'\n\nThen run:\nimport ibis\n\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\n\nt"
+  },
+  {
+    "objectID": "test-slides.html#slides",
+    "href": "test-slides.html#slides",
+    "title": "testing",
+    "section": "slides",
+    "text": "slides\ntesting slides"
+  },
+  {
     "objectID": "pypi-metrics.html",
     "href": "pypi-metrics.html",
     "title": "PyPI metrics",
@@ -81,7 +263,7 @@
     "href": "about.html#website",
     "title": "about",
     "section": "website",
-    "text": "website\nThis is my personal website. My views are separate from my (potential) employer’s.\nThe purpose of this website is to practice writing, coding, and documenting projects."
+    "text": "website\nThis is my personal website. My views are separate from my employer’s.\nThe purpose of this website is to practice writing, coding, and documenting projects."
   },
   {
     "objectID": "posts/testing/index.html",
