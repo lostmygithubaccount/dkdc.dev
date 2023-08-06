@@ -22,4 +22,4 @@ I care about (in addition to product management, relevant to work stuff):
 
 **This is my personal website. My views are separate from my (potential) employer's.**
 
-The purpose of this website is to practice writing, coding, and documenting projects. You can [read more about my website project here](/project/website). Use the menu at the top to navigate.
+The purpose of this website is to practice writing, coding, and documenting projects.
