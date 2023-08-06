@@ -10,32 +10,26 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
 
-      - name: setup Go
-        uses: actions/setup-go@v3
-        with:
-          go-version: 1.19
+      - uses: extractions/setup-just@v1
 
-      - name: setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      - uses: actions/setup-python@v4
         with:
-          hugo-version: 'latest'
-          # extended: true
+          python-version: 3.11
 
-      - name: build
-        run: hugo --minify
+      - name: install requirements
+        run: just setup
+
+      - name: build site
+        run: just build
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-
-      #- name: setup taskfile.dev
-      #  run: |
-      #    sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+          publish_dir: _site

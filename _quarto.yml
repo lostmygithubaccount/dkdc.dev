@@ -1,0 +1,47 @@
+project:
+  type: website
+
+# website
+website:
+  # basics
+  title: "dkdc.dev"
+  site-url: https://dkdc.dev
+  description: "Cody's website"
+  favicon: logo.png
+
+  # options
+  reader-mode: true
+  twitter-card: true
+  back-to-top-navigation: true
+  repo-url: https://github.com/lostmygithubaccount/lostmygithubaccount.github.io
+  # repo-actions: [edit, issue]
+
+  # nav
+  navbar:
+    logo: logo.png
+    fontcolor: fuchsia
+    right:
+      - blog.qmd
+      - about.qmd
+      - contact.qmd
+
+  # footer
+  page-footer:
+    border: false
+    center: "Cody's website"
+    right:
+      - icon: linkedin
+        href: https://linkedin.com/in/codydkdc
+      - icon: github
+        href: https://github.com/lostmygithubaccount
+      - icon: rss
+        href: https://dkdc.dev/index.xml
+
+# theme
+format:
+  html:
+    theme: vapor
+    fontcolor: fuchsia
+    linkcolor: fuchsia
+    css: styles.css
+    toc: true

@@ -1,0 +1,11 @@
+{
+  "hash": "2bb2d54bd0a7dbd5218e70d9d496a31a",
+  "result": {
+    "markdown": "---\ntitle: \"testing\"\nauthor: \"Cody\"\ndate: \"2023-08-06\"\ncategories: [news]\n---\n\nSome Python code:\n\n::: {.cell execution_count=1}\n``` {.python .cell-code}\nimport ibis\n\nprint(ibis.__version__)\n\nt = ibis.examples.penguins.fetch()\n\nprint(t)\n\nfor i in range(100):\n    print(i)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n6.1.1.dev23\nDatabaseTable: _ibis_examples_penguins_7y3gv4t675e5fdouebsibpd74y\n  species           string\n  island            string\n  bill_length_mm    float64\n  bill_depth_mm     float64\n  flipper_length_mm int64\n  body_mass_g       int64\n  sex               string\n  year              int64\n0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n```\n:::\n\n::: {.cell-output .cell-output-stderr}\n```\nDownloading file 'penguins.csv.gz' from 'https://storage.googleapis.com/ibis-examples/data/penguins.csv.gz' to '/Users/cody/Library/Caches/ibis-framework/6.1.1.dev23'.\n\r  0%|                                              | 0.00/2.96k [00:00<?, ?B/s]\r  0%|                                              | 0.00/2.96k [00:00<?, ?B/s]\r100%|█████████████████████████████████████| 2.96k/2.96k [00:00<00:00, 7.93MB/s]\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

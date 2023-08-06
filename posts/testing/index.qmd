@@ -1,0 +1,57 @@
+---
+title: "testing"
+author: "Cody"
+date: "2023-08-06"
+categories: [news]
+---
+
+Some Python code:
+
+```{python}
+import ibis
+import ibis.selectors as s
+
+# for demo purposes
+ibis.options.interactive = True
+
+t = ibis.examples.penguins.fetch()
+t
+```
+
+```{python}
+t.group_by("species").agg(ibis._.count().name("count"))
+```
+
+```{python}
+t["species"].topk(5)
+```
+
+```{mermaid}
+graph TD
+
+  %% Extraction
+  JSON -->|Extract| CLOUDSTORAGE
+  PARQUET -->|Extract| CLOUDSTORAGE
+  DELTASRC -->|Extract| CLOUDSTORAGE
+  
+  %% Transformation
+  CLOUDSTORAGE -->|Transform| DUCKDB
+  CLOUDSTORAGE -->|Transform| POLARS
+  
+  %% Load
+  DUCKDB -->|Load| DELTADST
+  DUCKDB -->|Load| DBOUTPUT
+  POLARS -->|Load| DELTADST
+  POLARS -->|Load| DBOUTPUT
+  
+  classDef dataFormat fill:#f9d,stroke:#333,stroke-width:2px;
+  classDef storage fill:#9df,stroke:#333,stroke-width:2px;
+  classDef processing fill:#fd9,stroke:#333,stroke-width:2px;
+  classDef output fill:#d9f,stroke:#333,stroke-width:2px;
+
+  class JSON,PARQUET,DELTASRC dataFormat;
+  class CLOUDSTORAGE storage;
+  class DUCKDB,POLARS processing;
+  class DELTADST,DBOUTPUT output;
+```
+
