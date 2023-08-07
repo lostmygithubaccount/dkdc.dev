@@ -37,8 +37,12 @@ website:
       style: "docked"
       collapse-level: 2
       contents:
-        - text: "8000 (something)"
+        - text: "8000 (mkdocs)"
           href: http://localhost:8000
+        - text: "8501 (streamlit)"
+          href: http://localhost:8501
+        - text: "3000 (dagster)"
+          href: http://localhost:3000
     - id: links
       title: "external links"
       style: "docked"
@@ -58,6 +62,8 @@ website:
           href: https://share.streamlit.io
         - text: MotherDuck
           href: https://app.motherduck.com
+        - text: OpenAI
+          href: https://platform.openai.com
     - id: dashboards
       title: "dashboards"
       style: "docked"
