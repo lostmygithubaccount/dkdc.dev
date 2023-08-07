@@ -22,7 +22,6 @@ website:
     fontcolor: fuchsia
     left:
       - posts.qmd
-      - chat.qmd
     right:
       - sidebar:localhosts
       - sidebar:links
@@ -30,6 +29,7 @@ website:
       - sidebar:slides
       - about.qmd
       - contact.qmd
+      - chat.qmd
   sidebar:
     - id: ""
     - id: localhosts
