@@ -49,12 +49,14 @@ website:
           href: https://github.com/ibis-project/ibis
         - text: Azure
           href: https://portal.azure.com
+        - text: Azure OpenAI
+          href: https://oai.azure.com/portal
+        - text: OpenAI
+          href: https://platform.openai.com
         - text: Streamlit
           href: https://share.streamlit.io
         - text: MotherDuck
           href: https://app.motherduck.com
-        - text: OpenAI
-          href: https://platform.openai.com
         - text: "localhost:8000 (mkdocs)"
           href: http://localhost:8000
         - text: "localhost:8501 (streamlit)"
