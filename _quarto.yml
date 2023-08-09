@@ -47,6 +47,8 @@ website:
           href: https://github.com/lostmygithubaccount/lostmygithubaccount.github.io
         - text: GitHub - Ibis
           href: https://github.com/ibis-project/ibis
+        - text: Azure
+          href: https://portal.azure.com
         - text: Streamlit
           href: https://share.streamlit.io
         - text: MotherDuck
