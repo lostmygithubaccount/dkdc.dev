@@ -24,7 +24,6 @@ website:
     left:
       - posts.qmd
     right:
-      - sidebar:localhosts
       - sidebar:links
       - sidebar:dashboards
       - sidebar:slides
@@ -33,17 +32,6 @@ website:
       - ai.qmd
   sidebar:
     - id: ""
-    - id: localhosts
-      title: "localhost:"
-      style: "docked"
-      collapse-level: 2
-      contents:
-        - text: "8000 (mkdocs)"
-          href: http://localhost:8000
-        - text: "8501 (streamlit)"
-          href: http://localhost:8501
-        - text: "3000 (dagster)"
-          href: http://localhost:3000
     - id: links
       title: "links"
       style: "docked"
@@ -65,6 +53,12 @@ website:
           href: https://app.motherduck.com
         - text: OpenAI
           href: https://platform.openai.com
+        - text: "localhost:8000 (mkdocs)"
+          href: http://localhost:8000
+        - text: "localhost:8501 (streamlit)"
+          href: http://localhost:8501
+        - text: "localhost:3000 (dagster)"
+          href: http://localhost:3000
     - id: dashboards
       title: "dashboards"
       style: "docked"
