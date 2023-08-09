@@ -13,8 +13,9 @@ website:
   reader-mode: false
   twitter-card: true
   back-to-top-navigation: true
-  repo-url: https://github.com/lostmygithubaccount/lostmygithubaccount.github.io
+  repo-url: https://github.com/lostmygithubaccount/dkdc.dev
   # repo-actions: [edit, issue]
+
 
   # nav
   navbar:
@@ -29,7 +30,7 @@ website:
       - sidebar:slides
       - about.qmd
       - contact.qmd
-      - chat.qmd
+      - ai.qmd
   sidebar:
     - id: ""
     - id: localhosts
