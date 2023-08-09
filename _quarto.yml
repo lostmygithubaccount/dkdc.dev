@@ -45,7 +45,7 @@ website:
         - text: "3000 (dagster)"
           href: http://localhost:3000
     - id: links
-      title: "external links"
+      title: "links"
       style: "docked"
       collapse-level: 2
       contents:
