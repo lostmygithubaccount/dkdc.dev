@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/is-small-data-dead/index.html",
       "/posts/website/index.html",
       "/posts/nix/index.html",
       "/posts/vegas/index.html",

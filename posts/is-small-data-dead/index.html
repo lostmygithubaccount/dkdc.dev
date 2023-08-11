@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Cody + DKDC AI">
+<meta name="dcterms.date" content="2023-08-11">
 
-<title>dkdc.dev - posts</title>
+<title>dkdc.dev - is small data dead?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +25,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,41 +62,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="dkdc.dev" href="posts.xml"><meta name="twitter:title" content="dkdc.dev - posts">
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="dkdc.dev - is small data dead?">
+<meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://dkdc.dev/posts/is-small-data-dead/thumbnail.png">
 <meta name="twitter:image-height" content="1024">
 <meta name="twitter:image-width" content="1024">
@@ -110,10 +80,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./logo.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">dkdc.dev</span>
     </a>
   </div>
@@ -124,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
  <span class="menu-text">posts</span></a>
   </li>  
 </ul>
@@ -194,11 +164,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-dashboards">    
         <li>
-    <a class="dropdown-item" href="./ibis-metrics.html" rel="" target="">
+    <a class="dropdown-item" href="../../ibis-metrics.html" rel="" target="">
  <span class="dropdown-text">Ibis metrics</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pypi-metrics.html" rel="" target="">
+    <a class="dropdown-item" href="../../pypi-metrics.html" rel="" target="">
  <span class="dropdown-text">PyPI metrics</span></a>
   </li>  
     </ul>
@@ -209,29 +179,29 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-slides">    
         <li>
-    <a class="dropdown-item" href="./chalkboard-slides.html" rel="" target="">
+    <a class="dropdown-item" href="../../chalkboard-slides.html" rel="" target="">
  <span class="dropdown-text">chalkboard</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./ibis-slides.html" rel="" target="">
+    <a class="dropdown-item" href="../../ibis-slides.html" rel="" target="">
  <span class="dropdown-text">Ibis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./test-slides.html" rel="" target="">
+    <a class="dropdown-item" href="../../test-slides.html" rel="" target="">
  <span class="dropdown-text">testing</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html" rel="" target="">
+    <a class="nav-link" href="../../contact.html" rel="" target="">
  <span class="menu-text">contact</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./ai.html" rel="" target="">
+    <a class="nav-link" href="../../ai.html" rel="" target="">
  <span class="menu-text">ai</span></a>
   </li>  
 </ul>
@@ -242,263 +212,145 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">is small data dead?</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">ai</div>
+                <div class="quarto-category">ml</div>
+                <div class="quarto-category">data</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Cody + DKDC AI </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 11, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="ai">ai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="archive">archive <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data">data <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dogs">dogs <span class="quarto-category-count">(2)</span></div><div class="category" data-category="life">life <span class="quarto-category-count">(3)</span></div><div class="category" data-category="ml">ml <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(1)</span></div><div class="category" data-category="on:">on: <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">posts</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-shift-from-small-to-bigger" id="toc-the-shift-from-small-to-bigger" class="nav-link active" data-scroll-target="#the-shift-from-small-to-bigger">the shift from small to bigger</a></li>
+  <li><a href="#the-real-challenges-scalability-and-tech-debt" id="toc-the-real-challenges-scalability-and-tech-debt" class="nav-link" data-scroll-target="#the-real-challenges-scalability-and-tech-debt">the real challenges: scalability and tech debt</a>
+  <ul class="collapse">
+  <li><a href="#technology-scalability" id="toc-technology-scalability" class="nav-link" data-scroll-target="#technology-scalability">technology scalability</a></li>
+  <li><a href="#organizational-scalability" id="toc-organizational-scalability" class="nav-link" data-scroll-target="#organizational-scalability">organizational scalability</a></li>
+  </ul></li>
+  <li><a href="#a-playful-exploration-the-penguins-dataset" id="toc-a-playful-exploration-the-penguins-dataset" class="nav-link" data-scroll-target="#a-playful-exploration-the-penguins-dataset">a playful exploration: the penguins dataset</a></li>
+  <li><a href="#conclusion-embrace-composability-and-modularity" id="toc-conclusion-embrace-composability-and-modularity" class="nav-link" data-scroll-target="#conclusion-embrace-composability-and-modularity">conclusion: embrace composability and modularity</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">appendix</a>
+  <ul class="collapse">
+  <li><a href="#penguins-chat-plots" id="toc-penguins-chat-plots" class="nav-link" data-scroll-target="#penguins-chat-plots">penguins chat plots</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>The field of machine learning and data science is experiencing a tectonic shift. While working with small datasets has become trivial, the real intrigue and necessity now lie in the realm of bigger data. Gone are the days when small CSV files and elementary classification tasks defined the cutting edge. The new frontier demands an understanding of more significant datasets that require intricate human analysis and tools that scale seamlessly.</p>
+<p>If small data is no longer the frontier, what occupies our attention today? The answer lies in the complex realms of scalability, both in technology and within organizational structures. As noted in <a href="https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">Sculley 2015</a>, the true hurdles are rarely as simple as tuning a model or optimizing a function.</p>
+<section id="the-shift-from-small-to-bigger" class="level2">
+<h2 class="anchored" data-anchor-id="the-shift-from-small-to-bigger">the shift from small to bigger</h2>
+<p>Our early adventures in data science often started with dozens of rows in CSV files and straightforward projects like classifying cats and dogs. These foundational exercises were valuable, but today’s landscape has evolved.</p>
+<p>Handling small data has become an easily achievable task. The real challenge and excitement lie in mastering bigger data. These datasets require more human analysis, more nuanced understanding, and tools that can interface with data in more natural and intuitive ways.</p>
+</section>
+<section id="the-real-challenges-scalability-and-tech-debt" class="level2">
+<h2 class="anchored" data-anchor-id="the-real-challenges-scalability-and-tech-debt">the real challenges: scalability and tech debt</h2>
+<p>The journey into bigger data brings with it complex landscapes of scalability, both technological and organizational.</p>
+<section id="technology-scalability" class="level3">
+<h3 class="anchored" data-anchor-id="technology-scalability">technology scalability</h3>
+<p>The scaling of technology means more than just handling larger datasets. It’s about leveraging better frameworks that can interface with data in more natural and intuitive ways. This scaling must be thoughtful and efficient to meet the demands of modern data analysis.</p>
+</section>
+<section id="organizational-scalability" class="level3">
+<h3 class="anchored" data-anchor-id="organizational-scalability">organizational scalability</h3>
+<p>Scaling technology inevitably leads to scaling within organizations. The accumulation of tech debt and the need for careful management become central issues. The balance between innovation and maintenance becomes a delicate dance.</p>
+</section>
+</section>
+<section id="a-playful-exploration-the-penguins-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="a-playful-exploration-the-penguins-dataset">a playful exploration: the penguins dataset</h2>
+<p>A recent exploration of the penguins dataset served as a microcosm of this shift and even included a playful “gopher it” joke. The AI’s response was quite admirable, demonstrating a surprising sense of humor that even some engineers might envy! This engaging <a href="https://chat.openai.com/share/4f3e76a5-e310-4239-a725-0d31c0b7f3ba">chat with <del>ChatGPT</del> DKDC AI</a> led to an in-depth analysis, revealing the complexity hidden within even familiar datasets:</p>
+<ol type="1">
+<li>Loading and Summary Statistics: Understanding numerical variables like flipper length, bill length, and body mass.</li>
+<li>Visualizations: Uncovering hidden patterns through histograms, scatter plots, and box plots.</li>
+<li>Categorical Analysis: Delving into species and sex distribution.</li>
+<li>A Fun Twist: Imagining Santa’s preference for Gentoo penguins based on logical analysis.</li>
+</ol>
+<p>This exercise illustrates the leap from the simplicity of small data to the richness and complexity of bigger data, all with a touch of humor.</p>
+</section>
+<section id="conclusion-embrace-composability-and-modularity" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-embrace-composability-and-modularity">conclusion: embrace composability and modularity</h2>
+<p>The future of machine learning and data science lies not in complexity for complexity’s sake but in the increasing composability and modularity within the Python data/ML ecosystem.</p>
+<p>As we venture into this new era, our focus must be on creating systems that are not only scalable but also flexible, adaptable, and intuitively aligned with human thinking and natural language interfaces.</p>
+<p>The real problems may have grown more intricate, but the solutions are becoming more elegant, modular, and composable. The richness of the field is waiting to be explored.</p>
+<hr>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">appendix</h2>
+<section id="penguins-chat-plots" class="level3">
+<h3 class="anchored" data-anchor-id="penguins-chat-plots">penguins chat plots</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="a.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of histograms</figcaption>
+</figure>
 </div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="ai,ml,data" data-listing-date-sort="1691712000000" data-listing-file-modified-sort="1691730253576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/is-small-data-dead/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/is-small-data-dead/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-is small data dead?
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ai'); return false;">
-ai
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="b.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of bar plots</figcaption>
+</figure>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('ml'); return false;">
-ml
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="c.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of scatter plots</figcaption>
+</figure>
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('data'); return false;">
-data
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="d.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of box plots</figcaption>
+</figure>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="e.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of Santa</figcaption>
+</figure>
 </div>
-<div class="card-text listing-description">
-The field of machine learning and data science is experiencing a tectonic shift. While working with small datasets has become trivial, the real intrigue and necessity now…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Cody + DKDC AI
-</div>
-<div class="listing-date">
-Aug 11, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="news" data-listing-date-sort="1691193600000" data-listing-file-modified-sort="1691730253624" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./posts/website/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-I redid my website again…
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-<div class="card-text listing-description">
-I mean, why not at this point…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Cody
-</div>
-<div class="listing-date">
-Aug 5, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="dogs,life" data-listing-date-sort="1680307200000" data-listing-file-modified-sort="1691730253584" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./posts/nix/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/nix/nix1.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Nix the dog
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('dogs'); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('life'); return false;">
-life
-</div>
-</div>
-<div class="card-text listing-description">
-Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Cody
-</div>
-<div class="listing-date">
-Apr 1, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="life,on:" data-listing-date-sort="1677628800000" data-listing-file-modified-sort="1691730253624" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./posts/vegas/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/vegas/vegas.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-on: Vegas
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('life'); return false;">
-life
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('on:'); return false;">
-on:
-</div>
-</div>
-<div class="card-text listing-description">
-I moved to Las Vegas, NV!
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Cody
-</div>
-<div class="listing-date">
-Mar 1, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="dogs,life" data-listing-date-sort="1508284800000" data-listing-file-modified-sort="1691730253580" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./posts/murphy/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/murphy/murphy1.jpeg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Murphy the dog
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('dogs'); return false;">
-dogs
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('life'); return false;">
-life
-</div>
-</div>
-<div class="card-text listing-description">
-Murphy the dog.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Cody
-</div>
-<div class="listing-date">
-Oct 18, 2017
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="archive" data-listing-date-sort="-62127820800000" data-listing-file-modified-sort="1691730253624" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<a href="./posts/testing/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/testing/404.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-testing
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('archive'); return false;">
-archive
-</div>
-</div>
-<div class="card-text listing-description">
-Testing in soon-to-be-past.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Cody
-</div>
-<div class="listing-date">
-Apr 1, 1
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -731,6 +583,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script>
+<script src="https://giscus.app/client.js" data-repo="lostmygithubaccount/dkdc.dev" data-repo-id="R_kgDOIvPjOg" data-category="comments" data-category-id="DIC_kwDOIvPjOs4CTdvB" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="dark" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

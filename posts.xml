@@ -10,7 +10,100 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sat, 05 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 11 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>is small data dead?</title>
+  <dc:creator>Cody + DKDC AI</dc:creator>
+  <link>https://dkdc.dev/posts/is-small-data-dead/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>The field of machine learning and data science is experiencing a tectonic shift. While working with small datasets has become trivial, the real intrigue and necessity now lie in the realm of bigger data. Gone are the days when small CSV files and elementary classification tasks defined the cutting edge. The new frontier demands an understanding of more significant datasets that require intricate human analysis and tools that scale seamlessly.</p>
+<p>If small data is no longer the frontier, what occupies our attention today? The answer lies in the complex realms of scalability, both in technology and within organizational structures. As noted in <a href="https://proceedings.neurips.cc/paper_files/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf">Sculley 2015</a>, the true hurdles are rarely as simple as tuning a model or optimizing a function.</p>
+<section id="the-shift-from-small-to-bigger" class="level2">
+<h2 class="anchored" data-anchor-id="the-shift-from-small-to-bigger">the shift from small to bigger</h2>
+<p>Our early adventures in data science often started with dozens of rows in CSV files and straightforward projects like classifying cats and dogs. These foundational exercises were valuable, but today’s landscape has evolved.</p>
+<p>Handling small data has become an easily achievable task. The real challenge and excitement lie in mastering bigger data. These datasets require more human analysis, more nuanced understanding, and tools that can interface with data in more natural and intuitive ways.</p>
+</section>
+<section id="the-real-challenges-scalability-and-tech-debt" class="level2">
+<h2 class="anchored" data-anchor-id="the-real-challenges-scalability-and-tech-debt">the real challenges: scalability and tech debt</h2>
+<p>The journey into bigger data brings with it complex landscapes of scalability, both technological and organizational.</p>
+<section id="technology-scalability" class="level3">
+<h3 class="anchored" data-anchor-id="technology-scalability">technology scalability</h3>
+<p>The scaling of technology means more than just handling larger datasets. It’s about leveraging better frameworks that can interface with data in more natural and intuitive ways. This scaling must be thoughtful and efficient to meet the demands of modern data analysis.</p>
+</section>
+<section id="organizational-scalability" class="level3">
+<h3 class="anchored" data-anchor-id="organizational-scalability">organizational scalability</h3>
+<p>Scaling technology inevitably leads to scaling within organizations. The accumulation of tech debt and the need for careful management become central issues. The balance between innovation and maintenance becomes a delicate dance.</p>
+</section>
+</section>
+<section id="a-playful-exploration-the-penguins-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="a-playful-exploration-the-penguins-dataset">a playful exploration: the penguins dataset</h2>
+<p>A recent exploration of the penguins dataset served as a microcosm of this shift and even included a playful “gopher it” joke. The AI’s response was quite admirable, demonstrating a surprising sense of humor that even some engineers might envy! This engaging <a href="https://chat.openai.com/share/4f3e76a5-e310-4239-a725-0d31c0b7f3ba">chat with <del>ChatGPT</del> DKDC AI</a> led to an in-depth analysis, revealing the complexity hidden within even familiar datasets:</p>
+<ol type="1">
+<li>Loading and Summary Statistics: Understanding numerical variables like flipper length, bill length, and body mass.</li>
+<li>Visualizations: Uncovering hidden patterns through histograms, scatter plots, and box plots.</li>
+<li>Categorical Analysis: Delving into species and sex distribution.</li>
+<li>A Fun Twist: Imagining Santa’s preference for Gentoo penguins based on logical analysis.</li>
+</ol>
+<p>This exercise illustrates the leap from the simplicity of small data to the richness and complexity of bigger data, all with a touch of humor.</p>
+</section>
+<section id="conclusion-embrace-composability-and-modularity" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-embrace-composability-and-modularity">conclusion: embrace composability and modularity</h2>
+<p>The future of machine learning and data science lies not in complexity for complexity’s sake but in the increasing composability and modularity within the Python data/ML ecosystem.</p>
+<p>As we venture into this new era, our focus must be on creating systems that are not only scalable but also flexible, adaptable, and intuitively aligned with human thinking and natural language interfaces.</p>
+<p>The real problems may have grown more intricate, but the solutions are becoming more elegant, modular, and composable. The richness of the field is waiting to be explored.</p>
+<hr>
+</section>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">appendix</h2>
+<section id="penguins-chat-plots" class="level3">
+<h3 class="anchored" data-anchor-id="penguins-chat-plots">penguins chat plots</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/is-small-data-dead/a.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of histograms</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/is-small-data-dead/b.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of bar plots</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/is-small-data-dead/c.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of scatter plots</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/is-small-data-dead/d.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of box plots</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/is-small-data-dead/e.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of Santa</figcaption>
+</figure>
+</div>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <category>ml</category>
+  <category>data</category>
+  <guid>https://dkdc.dev/posts/is-small-data-dead/index.html</guid>
+  <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/is-small-data-dead/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>I redid my website again…</title>
   <dc:creator>Cody </dc:creator>
