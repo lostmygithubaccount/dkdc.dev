@@ -322,10 +322,17 @@
     "text": "conclusion: embrace composability and modularity\nThe future of machine learning and data science lies not in complexity for complexity’s sake but in the increasing composability and modularity within the Python data/ML ecosystem.\nAs we venture into this new era, our focus must be on creating systems that are not only scalable but also flexible, adaptable, and intuitively aligned with human thinking and natural language interfaces.\nThe real problems may have grown more intricate, but the solutions are becoming more elegant, modular, and composable. The richness of the field is waiting to be explored."
   },
   {
+    "objectID": "posts/is-small-data-dead/index.html#addendum-a-tale-of-mnist-and-memory-constraints",
+    "href": "posts/is-small-data-dead/index.html#addendum-a-tale-of-mnist-and-memory-constraints",
+    "title": "is small data dead?",
+    "section": "addendum: a tale of MNIST and memory constraints",
+    "text": "addendum: a tale of MNIST and memory constraints\nAfter posting, I decided to push the boundaries a bit further by applying the same exploration to the MNIST dataset, a well-known collection of handwritten digits. The results were both enlightening and humbling. While handling small data has become a more routine task, this medium-sized dataset presented unexpected memory constraints. You can take a closer look at the chat here.\nThis stumble is a clear reminder that we still have some ground to cover in the world of medium and larger data. Even with all the advancements in machine learning, there are still problems that are closer than we think but remain just out of reach. The future must focus on building standards, frameworks, and solutions that are not only powerful but also scalable and adaptable to the complexities of larger datasets. It’s an exciting journey, and the way forward is filled with opportunities for growth and discovery."
+  },
+  {
     "objectID": "posts/is-small-data-dead/index.html#appendix",
     "href": "posts/is-small-data-dead/index.html#appendix",
     "title": "is small data dead?",
     "section": "appendix",
-    "text": "appendix\n\npenguins chat plots\n\n\n\nImage of histograms\n\n\n\n\n\nImage of bar plots\n\n\n\n\n\nImage of scatter plots\n\n\n\n\n\nImage of box plots\n\n\n\n\n\nImage of Santa"
+    "text": "appendix\n\npenguins chat plots\n\n\n\nImage of histograms\n\n\n\n\n\nImage of bar plots\n\n\n\n\n\nImage of scatter plots\n\n\n\n\n\nImage of box plots\n\n\n\n\n\nImage of Santa\n\n\n\n\nMNIST chat plots\n\n\n\nImage of MNIST samples"
   }
 ]

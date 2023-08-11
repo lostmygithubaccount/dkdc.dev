@@ -55,7 +55,11 @@
 <p>The future of machine learning and data science lies not in complexity for complexity’s sake but in the increasing composability and modularity within the Python data/ML ecosystem.</p>
 <p>As we venture into this new era, our focus must be on creating systems that are not only scalable but also flexible, adaptable, and intuitively aligned with human thinking and natural language interfaces.</p>
 <p>The real problems may have grown more intricate, but the solutions are becoming more elegant, modular, and composable. The richness of the field is waiting to be explored.</p>
-<hr>
+</section>
+<section id="addendum-a-tale-of-mnist-and-memory-constraints" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-a-tale-of-mnist-and-memory-constraints">addendum: a tale of MNIST and memory constraints</h2>
+<p>After posting, I decided to push the boundaries a bit further by applying the same exploration to the MNIST dataset, a well-known collection of handwritten digits. The results were both enlightening and humbling. While handling small data has become a more routine task, this medium-sized dataset presented unexpected memory constraints. You can take a closer look at the <a href="https://chat.openai.com/share/81deff84-f86e-4402-83f8-4e19c071acbd">chat here</a>.</p>
+<p>This stumble is a clear reminder that we still have some ground to cover in the world of medium and larger data. Even with all the advancements in machine learning, there are still problems that are closer than we think but remain just out of reach. The future must focus on building standards, frameworks, and solutions that are not only powerful but also scalable and adaptable to the complexities of larger datasets. It’s an exciting journey, and the way forward is filled with opportunities for growth and discovery.</p>
 </section>
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">appendix</h2>
@@ -89,6 +93,15 @@
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/e.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Image of Santa</figcaption>
+</figure>
+</div>
+</section>
+<section id="mnist-chat-plots" class="level3">
+<h3 class="anchored" data-anchor-id="mnist-chat-plots">MNIST chat plots</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/is-small-data-dead/f.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image of MNIST samples</figcaption>
 </figure>
 </div>
 
