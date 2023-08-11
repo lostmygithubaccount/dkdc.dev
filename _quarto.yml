@@ -41,6 +41,8 @@ website:
           href: https://dkdc.dev
         - text: Ibis
           href: https://ibis-project.org
+        - text: Ibis (preview)
+          href: https://ibisdocs.z5.web.core.windows.net/
         - text: GitHub
           href: https://github.com
         - text: GitHub - dkdc.dev
