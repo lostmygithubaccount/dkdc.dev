@@ -56,7 +56,7 @@ After posting, I decided to push the boundaries a bit further by applying the sa
 
 This stumble is a clear reminder that we still have some ground to cover in the world of medium and larger data. Even with all the advancements in machine learning, there are still problems that are closer than we think but remain just out of reach. The future must focus on building standards, frameworks, and solutions that are not only powerful but also scalable and adaptable to the complexities of larger datasets. It's an exciting journey, and the way forward is filled with opportunities for growth and discovery.
 
-## appendix
+## screenshots
 
 ### penguins chat plots
 
