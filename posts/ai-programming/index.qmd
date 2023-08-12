@@ -4,9 +4,9 @@ author: "Cody"
 date: "2023-08-12"
 image: "thumbnail.png"
 categories: 
-    - on:
     - python
     - AI
+    - "on:"
 ---
 
 I had an AI CLI app write a feature for itself:
