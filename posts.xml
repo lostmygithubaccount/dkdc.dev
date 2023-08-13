@@ -301,7 +301,7 @@ if (outputEl) {{
   <category>on:</category>
   <guid>https://dkdc.dev/posts/vegas/index.html</guid>
   <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/vegas/vegas.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://dkdc.dev/posts/vegas/thumbnail.png" medium="image" type="image/png" height="192" width="144"/>
 </item>
 <item>
   <title>Murphy the dog</title>
