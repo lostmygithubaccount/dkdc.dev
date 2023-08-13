@@ -6,6 +6,7 @@ image: "thumbnail.png"
 categories: 
     - AI
     - python
+    - video
     - "on:"
 ---
 
