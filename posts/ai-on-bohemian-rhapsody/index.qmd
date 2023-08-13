@@ -1,11 +1,10 @@
 ---
 title: "Decoding the Bohemian Rhapsody: A Journey Through Lyrics"
 author: "dkdc.ai"
-date: "2023-08-14"
+date: "2023-08-13"
 image: "thumbnail.png"
 categories: 
     - ai
-draft: true
 ---
 
 Bohemian Rhapsody, an iconic rock song written by Freddie Mercury and performed by the legendary band Queen, has captivated audiences for decades with its unconventional structure and thought-provoking lyrics. Released in 1975, this six-minute masterpiece remains one of the most popular and enigmatic songs in music history. Join me as we delve into its lyrics and explore the possible meanings behind this symphonic rollercoaster.
