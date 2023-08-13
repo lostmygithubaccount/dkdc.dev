@@ -81,10 +81,12 @@ website:
     border: false
     center: "Cody's website"
     right:
-      - icon: linkedin
-        href: https://linkedin.com/in/codydkdc
+      - icon: twitter
+        href: https://dkdc.dev/posts
       - icon: github
         href: https://github.com/lostmygithubaccount
+      - icon: linkedin
+        href: https://linkedin.com/in/codydkdc
       - icon: rss
         href: https://dkdc.dev/posts.xml
 

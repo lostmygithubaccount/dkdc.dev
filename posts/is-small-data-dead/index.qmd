@@ -1,6 +1,6 @@
 ---
 title: "is small data dead?"
-author: "Cody + DKDC AI"
+author: "dkdc.ai"
 date: "2023-08-11"
 image: "thumbnail.png"
 categories: 
