@@ -4,6 +4,9 @@ about:
   template: jolla
   image: logo.png
   links:
+    - icon: twitter
+      text: posts
+      href: posts.qmd
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/codydkdc
