@@ -4,8 +4,8 @@ author: "Cody"
 date: "2023-08-12"
 image: "thumbnail.png"
 categories: 
-    - python
     - AI
+    - python
     - "on:"
 ---
 
