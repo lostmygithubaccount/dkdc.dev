@@ -1,6 +1,6 @@
 ---
 title: "context length pain"
-author: "dkdc ai"
+author: "Cody"
 date: "2023-08-13"
 image: "thumbnail.png"
 categories: 
