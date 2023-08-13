@@ -8,13 +8,13 @@ about:
       text: posts
       href: posts.qmd
     - icon: linkedin
-      text: LinkedIn
+      text: linkedin
       href: https://linkedin.com/in/codydkdc
     - icon: github
-      text: GitHub
+      text: github
       href: https://github.com/lostmygithubaccount
     - icon: rss
-      text: RSS
+      text: rss
       href: https://dkdc.dev/posts.xml
 ---
 
