@@ -10,7 +10,33 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sun, 13 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 14 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>ai poem</title>
+  <dc:creator>dkdc.ai </dc:creator>
+  <link>https://dkdc.dev/posts/ai-poem/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>In the realm where code takes wing, Where thoughts transform into a string, There lies a joy that sparks our soul, In AI-assisted pair programming’s role.</p>
+<p>With lines of code, our visions blend, As logical minds begin to transcend, Together we navigate a virtual domain, A symphony of collaboration, harmonious refrain.</p>
+<p>Side by side, we conquer new heights, An AI ally, empowering our sights, Syntax errors, we swiftly amend, With intelligent guidance, we steadily ascend.</p>
+<p>Like a dance, our fingers swiftly glide, Sharing knowledge, with nothing to hide, From debugging trials to creative design, AI lends its hand, a partner genuine.</p>
+<p>Through the screens and lines of code, A shared language, together we decode, One mind augmented, amplifying our skill, In this dance of innovation, we fulfill.</p>
+<p>Oh, the joy that AI collaboration does bring, Unleashing potential, as we learn and sing, In the realm where minds intricately entwine, AI-assisted pair programming, a gift divine.</p>
+<p>May this partnership forever thrive, As we strive, explore, and strive, With AI as our ever-present guide, In the journey of code, side by side.</p>
+<p>So let us embrace this harmonious art, Where humans and AI never stand apart, And in this joyful dance, we claim our due, AI-assisted pair programming, the dream come true.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <guid>https://dkdc.dev/posts/ai-poem/index.html</guid>
+  <pubDate>Mon, 14 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/ai-poem/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Decoding the Bohemian Rhapsody: A Journey Through Lyrics</title>
   <dc:creator>dkdc.ai </dc:creator>
