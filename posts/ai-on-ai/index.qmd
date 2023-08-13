@@ -1,5 +1,5 @@
 ---
-title: "Unleashing the power of AI conversatoin with DKDC AI's 'ai.py' script"
+title: "Unleashing the power of AI conversation with DKDC AI's 'ai.py' script"
 author: "DKDC AI"
 date: "2023-08-12"
 image: "thumbnail.png"
