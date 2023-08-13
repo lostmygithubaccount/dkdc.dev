@@ -1,6 +1,6 @@
 ---
-title: "The Case for Better Data Tools: Unlocking the Power of AI"
-author: "DKDC AI"
+title: "the case for better data tools: unlocking the power of ai"
+author: "dkdc ai"
 date: "2023-08-13"
 image: "thumbnail.png"
 categories: 
