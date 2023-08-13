@@ -25,6 +25,10 @@ build:
 config:
     $EDITOR _quarto.yml
 
+# resize thumbnail
+resize:
+    sips -Z 256 thumbnail.png --out thumbnail.png
+
 # clean
 clean:
     rm -r _freeze || true
