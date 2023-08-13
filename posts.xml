@@ -28,8 +28,8 @@
 
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>python</category>
   <category>AI</category>
+  <category>python</category>
   <category>on:</category>
   <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
