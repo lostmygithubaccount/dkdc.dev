@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/ai-on-ai/index.html",
       "/posts/ai-programming/index.html",
       "/posts/grass-dog/index.html",
       "/posts/is-small-data-dead/index.html",

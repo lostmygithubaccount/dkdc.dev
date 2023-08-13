@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dkdc.dev/ai.html</loc>
-    <lastmod>2023-08-13T00:35:35.568Z</lastmod>
+    <lastmod>2023-08-13T01:58:00.286Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/nix/index.html</loc>
-    <lastmod>2023-08-13T00:35:34.172Z</lastmod>
+    <lastmod>2023-08-13T01:57:58.842Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/ai-programming/index.html</loc>
-    <lastmod>2023-08-13T00:35:32.552Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2023-08-13T00:35:30.900Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/grass-dog/index.html</loc>
-    <lastmod>2023-08-13T00:35:28.575Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2023-08-13T00:35:27.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2023-08-13T00:35:26.399Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/ibis-slides.html</loc>
-    <lastmod>2023-08-13T00:35:25.531Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/test-slides.html</loc>
-    <lastmod>2023-08-13T00:35:20.211Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2023-08-13T00:35:15.707Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts.html</loc>
-    <lastmod>2023-08-13T00:35:24.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/pypi-metrics.html</loc>
-    <lastmod>2023-08-13T00:35:25.955Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/ibis-metrics.html</loc>
-    <lastmod>2023-08-13T00:35:26.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/contact.html</loc>
-    <lastmod>2023-08-13T00:35:27.691Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/vegas/index.html</loc>
-    <lastmod>2023-08-13T00:35:29.647Z</lastmod>
+    <lastmod>2023-08-13T01:57:57.370Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/website/index.html</loc>
-    <lastmod>2023-08-13T00:35:31.792Z</lastmod>
+    <lastmod>2023-08-13T01:57:54.970Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/vegas/index.html</loc>
+    <lastmod>2023-08-13T01:57:52.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/contact.html</loc>
+    <lastmod>2023-08-13T01:57:51.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/ibis-metrics.html</loc>
+    <lastmod>2023-08-13T01:57:50.202Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/pypi-metrics.html</loc>
+    <lastmod>2023-08-13T01:57:49.410Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2023-08-13T01:57:48.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
+    <lastmod>2023-08-13T01:57:40.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/test-slides.html</loc>
+    <lastmod>2023-08-13T01:57:44.054Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/ibis-slides.html</loc>
+    <lastmod>2023-08-13T01:57:49.038Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/index.html</loc>
+    <lastmod>2023-08-13T01:57:49.790Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/about.html</loc>
+    <lastmod>2023-08-13T01:57:50.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/grass-dog/index.html</loc>
+    <lastmod>2023-08-13T01:57:51.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/testing/index.html</loc>
+    <lastmod>2023-08-13T01:57:54.178Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/ai-on-ai/index.html</loc>
+    <lastmod>2023-08-13T01:57:56.094Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/murphy/index.html</loc>
-    <lastmod>2023-08-13T00:35:33.392Z</lastmod>
+    <lastmod>2023-08-13T01:57:58.106Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/is-small-data-dead/index.html</loc>
-    <lastmod>2023-08-13T00:35:35.144Z</lastmod>
+    <lastmod>2023-08-13T01:57:59.930Z</lastmod>
   </url>
 </urlset>
