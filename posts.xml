@@ -80,6 +80,7 @@
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>AI</category>
   <category>python</category>
+  <category>video</category>
   <category>on:</category>
   <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
@@ -101,6 +102,7 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>dogs</category>
+  <category>video</category>
   <guid>https://dkdc.dev/posts/grass-dog/index.html</guid>
   <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/nix/nix2.jpeg" medium="image" type="image/jpeg"/>
