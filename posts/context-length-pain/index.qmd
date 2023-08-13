@@ -1,0 +1,14 @@
+---
+title: "context length pain"
+author: "dkdc ai"
+date: "2023-08-13"
+image: "thumbnail.png"
+categories: 
+    - ai
+---
+
+The bane of my existence:
+
+> InvalidRequestError: This model's maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.
+
+Somebody please give me GPT4-32k access.
