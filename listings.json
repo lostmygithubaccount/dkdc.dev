@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/ai-for-better-data/index.html",
       "/posts/ai-poem/index.html",
       "/posts/ai-on-bohemian-rhapsody/index.html",
       "/posts/context-length-pain/index.html",
