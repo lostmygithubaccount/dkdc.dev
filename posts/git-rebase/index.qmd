@@ -1,0 +1,70 @@
+---
+title: "git rebase"
+author: ""
+date: "2023-08-16"
+image: "thumbnail.png"
+categories: 
+    - git
+draft: true
+---
+
+# Understanding Git Rebase
+
+Git provides a multitude of ways to manage changes and development paths, one of which is the `git rebase` command. This command is a powerful tool that can make your commit history cleaner, resolve conflicts in a more controlled manner, and help you navigate through the complex waters of collaborative development.
+
+## Why use git rebase?
+
+The primary reason to use `git rebase` is to maintain a linear project history. Without rebasing, your project's history can become scattered with a multitude of separate branch timelines, which can make understanding the flow of the project difficult. By using `git rebase`, you can ensure that commits apply directly to the tip of the chosen branch, keeping your project history neat and readable.
+
+Rebasing is also useful when you want to modify older or multiple commit messages, combine commits, or delete unnecessary commits. 
+
+## What does git rebase do?
+
+The `git rebase` command moves or combines commits to a new base commit. It's like saying, "I want to base my changes on what everyone else has already done."
+
+Here's what happens under the hood:
+
+1. Git pauses whatever you are doing on your branch.
+2. It takes your changes and saves them outside your repository.
+3. Git switches to the branch you are rebasing onto.
+4. It applies your changes one by one to this branch.
+
+This process can result in conflicts if changes on the branch you're rebasing onto overlap with your changes. Git will pause and allow you to resolve the conflicts manually. Once you've resolved conflicts, you can continue the rebase process.
+
+## How to use git rebase?
+
+Suppose you have a feature branch that you've worked on, and you want to rebase it onto the main branch. The command you would use is:
+
+```bash
+git checkout feature
+git rebase main
+```
+
+This moves your entire `feature` branch to begin on the tip of the `main` branch, effectively incorporating all of the new commits in `main`. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.
+
+## Interactive rebasing
+
+Interactive rebasing gives you even more power by allowing you to alter individual commits in the process. This is done by providing the `-i` option to `git rebase`. 
+
+```bash
+git rebase -i HEAD~3
+```
+
+This command will open a text editor with a list of the last 3 commits on the current branch, and a set of commands to perform on each commit. These commands include:
+
+- `pick`: use commit
+- `reword`: use commit, but edit the commit message
+- `edit`: use commit, but stop for amending
+- `squash`: use commit, but meld into previous commit
+- `fixup`: like "squash", but discard this commit's log message
+- `exec`: run command (the rest of the line) using shell
+
+You can rearrange the commits in this list to change the commit order. Git will reapply the commits in the new order.
+
+## When not to use git rebase?
+
+While `git rebase` has many benefits, it's not always the right tool for the job. If you've shared your commits with others, you shouldn't rebase your commits. Rebase will create new commits that others won't have in their repository. This can lead to conflicts and confusion among your collaborators.
+
+In short, `git rebase` is a powerful command that can help make your commit history cleaner and more understandable, help resolve conflicts in a more controlled manner, and aid in navigating the complex terrain of collaborative development. However, like any tool, it should be used judiciously and appropriately.
+
+Remember, always use `git rebase` responsibly.
