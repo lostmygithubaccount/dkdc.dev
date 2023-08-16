@@ -46,28 +46,32 @@ website:
       contents:
         - text: dkdc.dev
           href: https://dkdc.dev
-        - text: Ibis
+        - text: reader
+          href: https://read.readwise.io/feed/unseen
+        - text: ibis
           href: https://ibis-project.org
-        - text: Ibis (preview)
-          href: https://ibisdocs.z5.web.core.windows.net/
-        - text: GitHub
+        - text: ibis (preview)
+          href: https://ibisdocs.z5.web.core.windows.net
+        - text: github
           href: https://github.com
-        - text: GitHub - dkdc.dev
+        - text: github - dkdc.dev
           href: https://github.com/lostmygithubaccount/dkdc.dev
-        - text: GitHub - Ibis
+        - text: github - ibis
           href: https://github.com/ibis-project/ibis
-        - text: Azure
+        - text: azure
           href: https://portal.azure.com
-        - text: Azure OpenAI
+        - text: azure openai
           href: https://oai.azure.com/portal
-        - text: OpenAI
+        - text: openai
           href: https://platform.openai.com
-        - text: GCP
+        - text: gcp
           href: https://console.cloud.google.com
-        - text: Streamlit
+        - text: streamlit
           href: https://share.streamlit.io
-        - text: MotherDuck
+        - text: motherduck
           href: https://app.motherduck.com
+        - text: keyboard
+          href: https://configure.zsa.io/moonlander
         - text: "localhost:8000 (mkdocs)"
           href: http://localhost:8000
         - text: "localhost:8501 (streamlit)"
