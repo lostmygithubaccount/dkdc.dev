@@ -46,6 +46,10 @@ website:
       contents:
         - text: dkdc.dev
           href: https://dkdc.dev
+        - text: email
+          href: https://mail.google.com/mail
+        - text: calendar
+          href: https://calendar.google.com/calendar
         - text: reader
           href: https://read.readwise.io/feed/unseen
         - text: ibis
