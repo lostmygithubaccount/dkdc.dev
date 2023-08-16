@@ -50,6 +50,8 @@ website:
           href: https://mail.google.com/mail
         - text: calendar
           href: https://calendar.google.com/calendar
+        - text: drive
+          href: https://drive.google.com/drive/my-drive
         - text: reader
           href: https://read.readwise.io/feed/unseen
         - text: ibis
