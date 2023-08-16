@@ -133,18 +133,11 @@
     "text": "personal\nReach out via email (preferred) or LinkedIn."
   },
   {
-    "objectID": "ibis-metrics.html",
-    "href": "ibis-metrics.html",
-    "title": "Ibis metrics",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
     "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "pypi-metrics.html",
-    "href": "pypi-metrics.html",
-    "title": "PyPI metrics",
-    "section": "",
-    "text": "Back to top"
+    "text": "A website. - Cody\n\n\n Back to top"
   },
   {
     "objectID": "posts.html",
@@ -320,13 +313,6 @@
     "title": "Ibis",
     "section": "try it out now",
     "text": "try it out now\nInstall:\npip install 'ibis-framework[duckdb]'\n\nThen run:\nimport ibis\n\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\n\nt"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dkdc.dev",
-    "section": "",
-    "text": "A website. - Cody\n\n\n Back to top"
   },
   {
     "objectID": "about.html",
