@@ -86,7 +86,11 @@ website:
       title: "dashboards"
       style: "docked"
       collapse-level: 2
-      contents: "*-metrics.qmd"
+      contents:
+        - text: ibis-analytics
+          href: https://ibis-analytics.streamlit.app
+        - text: pypi-analytics
+          href: https://pypi-analytics.streamlit.app
     - id: slides
       title: "slides"
       style: "docked"
