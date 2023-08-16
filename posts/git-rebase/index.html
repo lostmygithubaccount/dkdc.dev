@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Cody">
-<meta name="dcterms.date" content="2023-08-13">
+<meta name="author" content="">
+<meta name="dcterms.date" content="2023-08-16">
 
-<title>dkdc.dev - context length pain</title>
+<title>dkdc.dev - git rebase</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -65,11 +99,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="dkdc.dev - context length pain">
+<meta name="twitter:title" content="dkdc.dev - git rebase">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="https://dkdc.dev/posts/context-length-pain/thumbnail.png">
-<meta name="twitter:image-height" content="512">
-<meta name="twitter:image-width" content="512">
+<meta name="twitter:image" content="https://dkdc.dev/posts/git-rebase/thumbnail.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -238,9 +270,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">context length pain</h1>
+      <h1 class="title">git rebase</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">ai</div>
+                <div class="quarto-category">git</div>
               </div>
                   </div>
   </div>
@@ -248,17 +280,11 @@ ul.task-list li input[type="checkbox"] {
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Cody </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 13, 2023</p>
+        <p class="date">August 16, 2023</p>
       </div>
     </div>
     
@@ -270,7 +296,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#understanding-git-rebase" id="toc-understanding-git-rebase" class="nav-link active" data-scroll-target="#understanding-git-rebase">Understanding Git Rebase</a>
+  <ul class="collapse">
+  <li><a href="#why-use-git-rebase" id="toc-why-use-git-rebase" class="nav-link" data-scroll-target="#why-use-git-rebase">Why use git rebase?</a></li>
+  <li><a href="#what-does-git-rebase-do" id="toc-what-does-git-rebase-do" class="nav-link" data-scroll-target="#what-does-git-rebase-do">What does git rebase do?</a></li>
+  <li><a href="#how-to-use-git-rebase" id="toc-how-to-use-git-rebase" class="nav-link" data-scroll-target="#how-to-use-git-rebase">How to use git rebase?</a></li>
+  <li><a href="#interactive-rebasing" id="toc-interactive-rebasing" class="nav-link" data-scroll-target="#interactive-rebasing">Interactive rebasing</a></li>
+  <li><a href="#when-not-to-use-git-rebase" id="toc-when-not-to-use-git-rebase" class="nav-link" data-scroll-target="#when-not-to-use-git-rebase">When not to use git rebase?</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -278,14 +317,57 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>The bane of my existence:</p>
-<blockquote class="blockquote">
-<p>InvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.</p>
-</blockquote>
-<p>Somebody please give me GPT4-32k access.</p>
-<p><strong>Updates:</strong> See <a href="../../posts/context-length-pain-pt2">part 2</a>.</p>
+<section id="understanding-git-rebase" class="level1">
+<h1>Understanding Git Rebase</h1>
+<p>Git provides a multitude of ways to manage changes and development paths, one of which is the <code>git rebase</code> command. This command is a powerful tool that can make your commit history cleaner, resolve conflicts in a more controlled manner, and help you navigate through the complex waters of collaborative development.</p>
+<section id="why-use-git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-git-rebase">Why use git rebase?</h2>
+<p>The primary reason to use <code>git rebase</code> is to maintain a linear project history. Without rebasing, your project’s history can become scattered with a multitude of separate branch timelines, which can make understanding the flow of the project difficult. By using <code>git rebase</code>, you can ensure that commits apply directly to the tip of the chosen branch, keeping your project history neat and readable.</p>
+<p>Rebasing is also useful when you want to modify older or multiple commit messages, combine commits, or delete unnecessary commits.</p>
+</section>
+<section id="what-does-git-rebase-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-git-rebase-do">What does git rebase do?</h2>
+<p>The <code>git rebase</code> command moves or combines commits to a new base commit. It’s like saying, “I want to base my changes on what everyone else has already done.”</p>
+<p>Here’s what happens under the hood:</p>
+<ol type="1">
+<li>Git pauses whatever you are doing on your branch.</li>
+<li>It takes your changes and saves them outside your repository.</li>
+<li>Git switches to the branch you are rebasing onto.</li>
+<li>It applies your changes one by one to this branch.</li>
+</ol>
+<p>This process can result in conflicts if changes on the branch you’re rebasing onto overlap with your changes. Git will pause and allow you to resolve the conflicts manually. Once you’ve resolved conflicts, you can continue the rebase process.</p>
+</section>
+<section id="how-to-use-git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-git-rebase">How to use git rebase?</h2>
+<p>Suppose you have a feature branch that you’ve worked on, and you want to rebase it onto the main branch. The command you would use is:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout feature</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rebase main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This moves your entire <code>feature</code> branch to begin on the tip of the <code>main</code> branch, effectively incorporating all of the new commits in <code>main</code>. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.</p>
+</section>
+<section id="interactive-rebasing" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-rebasing">Interactive rebasing</h2>
+<p>Interactive rebasing gives you even more power by allowing you to alter individual commits in the process. This is done by providing the <code>-i</code> option to <code>git rebase</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rebase <span class="at">-i</span> HEAD~3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This command will open a text editor with a list of the last 3 commits on the current branch, and a set of commands to perform on each commit. These commands include:</p>
+<ul>
+<li><code>pick</code>: use commit</li>
+<li><code>reword</code>: use commit, but edit the commit message</li>
+<li><code>edit</code>: use commit, but stop for amending</li>
+<li><code>squash</code>: use commit, but meld into previous commit</li>
+<li><code>fixup</code>: like “squash”, but discard this commit’s log message</li>
+<li><code>exec</code>: run command (the rest of the line) using shell</li>
+</ul>
+<p>You can rearrange the commits in this list to change the commit order. Git will reapply the commits in the new order.</p>
+</section>
+<section id="when-not-to-use-git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="when-not-to-use-git-rebase">When not to use git rebase?</h2>
+<p>While <code>git rebase</code> has many benefits, it’s not always the right tool for the job. If you’ve shared your commits with others, you shouldn’t rebase your commits. Rebase will create new commits that others won’t have in their repository. This can lead to conflicts and confusion among your collaborators.</p>
+<p>In short, <code>git rebase</code> is a powerful command that can help make your commit history cleaner and more understandable, help resolve conflicts in a more controlled manner, and aid in navigating the complex terrain of collaborative development. However, like any tool, it should be used judiciously and appropriately.</p>
+<p>Remember, always use <code>git rebase</code> responsibly.</p>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
