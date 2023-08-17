@@ -10,7 +10,128 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Wed, 16 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 17 Aug 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>git rebase</title>
+  <link>https://dkdc.dev/posts/git-rebase/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="understanding-git-rebase" class="level1">
+<h1>Understanding Git Rebase</h1>
+<p>Git provides a multitude of ways to manage changes and development paths, one of which is the <code>git rebase</code> command. This command is a powerful tool that can make your commit history cleaner, resolve conflicts in a more controlled manner, and help you navigate through the complex waters of collaborative development.</p>
+<p>To better visualize and understand the concept, let’s consider the following diagram:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[Initial Commit] --&gt; B[Commit 2]
+    B --&gt; C[Commit 3]
+    C --&gt; D[Commit 4]
+    B --&gt; E[Commit 5 on Feature Branch]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>In this diagram, we have a main branch with commits up to <code>Commit 4</code>, and a feature branch diverging from <code>Commit 2</code> with <code>Commit 5</code>.</p>
+<section id="why-use-git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-git-rebase">Why use git rebase?</h2>
+<p>The primary reason to use <code>git rebase</code> is to maintain a linear project history. Without rebasing, your project’s history can become scattered with a multitude of separate branch timelines, which can make understanding the flow of the project difficult. By using <code>git rebase</code>, you can ensure that commits apply directly to the tip of the chosen branch, keeping your project history neat and readable.</p>
+<p>Rebasing is also useful when you want to modify older or multiple commit messages, combine commits, or delete unnecessary commits.</p>
+</section>
+<section id="what-does-git-rebase-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-git-rebase-do">What does git rebase do?</h2>
+<p>The <code>git rebase</code> command moves or combines commits to a new base commit. It’s like saying, “I want to base my changes on what everyone else has already done.”</p>
+<p>Here’s what happens under the hood:</p>
+<ol type="1">
+<li>Git pauses whatever you are doing on your branch.</li>
+<li>It takes your changes and saves them outside your repository.</li>
+<li>Git switches to the branch you are rebasing onto.</li>
+<li>It applies your changes one by one to this branch.</li>
+</ol>
+<p>This process can be visualized as follows:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant Git
+    participant Your Branch
+    participant Base Branch
+    Git-&gt;&gt;Your Branch: Pause and save changes
+    Git-&gt;&gt;Base Branch: Switch and apply changes
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>This process can result in conflicts if changes on the branch you’re rebasing onto overlap with your changes. Git will pause and allow you to resolve the conflicts manually. Once you’ve resolved conflicts, you can continue the rebase process.</p>
+</section>
+<section id="how-to-use-git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-use-git-rebase">How to use git rebase?</h2>
+<p>Suppose you have a feature branch that you’ve worked on, and you want to rebase it onto the main branch. The command you would use is:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> checkout feature</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> rebase main</span></code></pre></div>
+<p>This moves your entire <code>feature</code> branch to begin on the tip of the <code>main</code> branch, effectively incorporating all of the new commits in <code>main</code>. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.</p>
+<p>The diagram below illustrates this concept:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[Initial Commit] --&gt; B[Commit 2]
+    B --&gt; C[Commit 3]
+    C --&gt; D[Commit 4]
+    D --&gt; E[Commit 5 on Feature Branch - After Rebase]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="interactive-rebasing" class="level2">
+<h2 class="anchored" data-anchor-id="interactive-rebasing">Interactive rebasing</h2>
+<p>Interactive rebasing gives you even more power by allowing you to alter individual commits in the process. This is done by providing the <code>-i</code> option to <code>git rebase</code>.</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> rebase <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
+<p>This command will open a text editor with a list of the last 3 commits on the current branch, and a set of commands to perform on each commit. These commands include:</p>
+<ul>
+<li><code>pick</code>: use commit</li>
+<li><code>reword</code>: use commit, but edit the commit message</li>
+<li><code>edit</code>: use commit, but stop for amending</li>
+<li><code>squash</code>: use commit, but meld into previous commit</li>
+<li><code>fixup</code>: like “squash”, but discard this commit’s log message</li>
+<li><code>exec</code>: run command (the rest of the line) using shell</li>
+</ul>
+<p>You can rearrange the commits in this list to change the commit order. Git will reapply the commits in the new order.</p>
+</section>
+<section id="when-not-to-use-git-rebase" class="level2">
+<h2 class="anchored" data-anchor-id="when-not-to-use-git-rebase">When not to use git rebase?</h2>
+<p>While <code>git rebase</code> has many benefits, it’s not always the right tool for the job. If you’ve shared your commits with others, you shouldn’t rebase your commits. Rebase will create new commits that others won’t have in their repository. This can lead to conflicts and confusion among your collaborators.</p>
+<p>In short, <code>git rebase</code> is a powerful command that can help make your commit history cleaner and more understandable, help resolve conflicts in a more controlled manner, and aid in navigating the complex terrain of collaborative development. However, like any tool, it should be used judiciously and appropriately.</p>
+<p>Remember, always use <code>git rebase</code> responsibly.</p>
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>git</category>
+  <guid>https://dkdc.dev/posts/git-rebase/index.html</guid>
+  <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/git-rebase/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>context length pain pt2</title>
   <dc:creator>Cody </dc:creator>
@@ -110,30 +231,6 @@
   <media:content url="https://dkdc.dev/posts/ai-poem/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>context length pain</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/context-length-pain/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The bane of my existence:</p>
-<blockquote class="blockquote">
-<p>InvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.</p>
-</blockquote>
-<p>Somebody please give me GPT4-32k access.</p>
-<p><strong>Updates:</strong> See <a href="../../posts/context-length-pain-pt2">part 2</a>.</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>ai</category>
-  <guid>https://dkdc.dev/posts/context-length-pain/index.html</guid>
-  <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/context-length-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
   <title>Decoding the Bohemian Rhapsody: A Journey Through Lyrics</title>
   <dc:creator>dkdc.ai </dc:creator>
   <link>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/index.html</link>
@@ -161,29 +258,28 @@
   <media:content url="https://dkdc.dev/posts/ai-on-bohemian-rhapsody/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>on: AI-assisted programming</title>
+  <title>context length pain</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
+  <link>https://dkdc.dev/posts/context-length-pain/index.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>I had an AI CLI app write a feature for itself:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
-<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
+<p>The bane of my existence:</p>
+<blockquote class="blockquote">
+<p>InvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.</p>
+</blockquote>
+<p>Somebody please give me GPT4-32k access.</p>
+<p><strong>Updates:</strong> See <a href="../../posts/context-length-pain-pt2">part 2</a>.</p>
 
 
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <category>python</category>
-  <category>video</category>
-  <category>on:</category>
-  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
-  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+  <guid>https://dkdc.dev/posts/context-length-pain/index.html</guid>
+  <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/context-length-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Unleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script</title>
@@ -234,6 +330,31 @@
   <guid>https://dkdc.dev/posts/ai-on-ai/index.html</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-on-ai/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>on: AI-assisted programming</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I had an AI CLI app write a feature for itself:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
+<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <category>python</category>
+  <category>video</category>
+  <category>on:</category>
+  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
+  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>grass dog</title>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="">
-<meta name="dcterms.date" content="2023-08-16">
+<meta name="dcterms.date" content="2023-08-17">
 
 <title>dkdc.dev - git rebase</title>
 <style>
@@ -96,12 +96,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
 <meta name="twitter:title" content="dkdc.dev - git rebase">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://dkdc.dev/posts/git-rebase/thumbnail.png">
+<meta name="twitter:image-height" content="256">
+<meta name="twitter:image-width" content="256">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -304,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 16, 2023</p>
+        <p class="date">August 17, 2023</p>
       </div>
     </div>
     
@@ -340,6 +345,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="understanding-git-rebase" class="level1">
 <h1>Understanding Git Rebase</h1>
 <p>Git provides a multitude of ways to manage changes and development paths, one of which is the <code>git rebase</code> command. This command is a powerful tool that can make your commit history cleaner, resolve conflicts in a more controlled manner, and help you navigate through the complex waters of collaborative development.</p>
+<p>To better visualize and understand the concept, let’s consider the following diagram:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[Initial Commit] --&gt; B[Commit 2]
+    B --&gt; C[Commit 3]
+    C --&gt; D[Commit 4]
+    B --&gt; E[Commit 5 on Feature Branch]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<p>In this diagram, we have a main branch with commits up to <code>Commit 4</code>, and a feature branch diverging from <code>Commit 2</code> with <code>Commit 5</code>.</p>
 <section id="why-use-git-rebase" class="level2">
 <h2 class="anchored" data-anchor-id="why-use-git-rebase">Why use git rebase?</h2>
 <p>The primary reason to use <code>git rebase</code> is to maintain a linear project history. Without rebasing, your project’s history can become scattered with a multitude of separate branch timelines, which can make understanding the flow of the project difficult. By using <code>git rebase</code>, you can ensure that commits apply directly to the tip of the chosen branch, keeping your project history neat and readable.</p>
@@ -355,6 +376,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Git switches to the branch you are rebasing onto.</li>
 <li>It applies your changes one by one to this branch.</li>
 </ol>
+<p>This process can be visualized as follows:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">sequenceDiagram
+    participant Git
+    participant Your Branch
+    participant Base Branch
+    Git-&gt;&gt;Your Branch: Pause and save changes
+    Git-&gt;&gt;Base Branch: Switch and apply changes
+</pre>
+</div>
+</div>
+</div>
+</div>
 <p>This process can result in conflicts if changes on the branch you’re rebasing onto overlap with your changes. Git will pause and allow you to resolve the conflicts manually. Once you’ve resolved conflicts, you can continue the rebase process.</p>
 </section>
 <section id="how-to-use-git-rebase" class="level2">
@@ -363,6 +400,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout feature</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rebase main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This moves your entire <code>feature</code> branch to begin on the tip of the <code>main</code> branch, effectively incorporating all of the new commits in <code>main</code>. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.</p>
+<p>The diagram below illustrates this concept:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    A[Initial Commit] --&gt; B[Commit 2]
+    B --&gt; C[Commit 3]
+    C --&gt; D[Commit 4]
+    D --&gt; E[Commit 5 on Feature Branch - After Rebase]
+</pre>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="interactive-rebasing" class="level2">
 <h2 class="anchored" data-anchor-id="interactive-rebasing">Interactive rebasing</h2>
