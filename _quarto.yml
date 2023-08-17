@@ -24,7 +24,7 @@ website:
     tools:
       - icon: github
         menu:
-          - text: Home
+          - text: Source code
             url: https://github.com/lostmygithubaccount/dkdc.dev
           - text: Discussions
             url: https://github.com/lostmygithubaccount/dkdc.dev/discussions/categories/comments
