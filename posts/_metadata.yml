@@ -13,3 +13,4 @@ comments:
     repo: lostmygithubaccount/dkdc.dev
     theme: purple_dark
     category: comments
+    reactions-enabled: false
