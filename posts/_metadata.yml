@@ -11,5 +11,5 @@ title-block-banner: true
 comments:
   giscus:
     repo: lostmygithubaccount/dkdc.dev
-    theme: dark
+    theme: purple_dark
     category: comments
