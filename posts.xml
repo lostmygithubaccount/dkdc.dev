@@ -272,30 +272,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <media:content url="https://dkdc.dev/posts/ai-poem/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>context length pain</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/context-length-pain/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>The bane of my existence:</p>
-<blockquote class="blockquote">
-<p>InvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.</p>
-</blockquote>
-<p>Somebody please give me GPT4-32k access.</p>
-<p><strong>Updates:</strong> See <a href="../../posts/context-length-pain-pt2">part 2</a>.</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>ai</category>
-  <guid>https://dkdc.dev/posts/context-length-pain/index.html</guid>
-  <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/context-length-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
   <title>Decoding the Bohemian Rhapsody: A Journey Through Lyrics</title>
   <dc:creator>dkdc.ai </dc:creator>
   <link>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/index.html</link>
@@ -323,29 +299,28 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <media:content url="https://dkdc.dev/posts/ai-on-bohemian-rhapsody/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>on: AI-assisted programming</title>
+  <title>context length pain</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
+  <link>https://dkdc.dev/posts/context-length-pain/index.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p>I had an AI CLI app write a feature for itself:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
-<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
+<p>The bane of my existence:</p>
+<blockquote class="blockquote">
+<p>InvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.</p>
+</blockquote>
+<p>Somebody please give me GPT4-32k access.</p>
+<p><strong>Updates:</strong> See <a href="../../posts/context-length-pain-pt2">part 2</a>.</p>
 
 
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <category>python</category>
-  <category>video</category>
-  <category>on:</category>
-  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
-  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+  <guid>https://dkdc.dev/posts/context-length-pain/index.html</guid>
+  <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/context-length-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Unleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script</title>
@@ -396,6 +371,31 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <guid>https://dkdc.dev/posts/ai-on-ai/index.html</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-on-ai/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>on: AI-assisted programming</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I had an AI CLI app write a feature for itself:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
+<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <category>python</category>
+  <category>video</category>
+  <category>on:</category>
+  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
+  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>grass dog</title>
