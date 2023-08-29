@@ -57,7 +57,7 @@ website:
         - text: ibis
           href: https://ibis-project.org
         - text: ibis (preview)
-          href: https://ibisdocs.z5.web.core.windows.net
+          href: https://ibis-quarto.netlify.app
         - text: github
           href: https://github.com
         - text: github - dkdc.dev
