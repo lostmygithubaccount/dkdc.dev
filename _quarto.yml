@@ -56,8 +56,6 @@ website:
           href: https://drive.google.com/drive/my-drive
         - text: ibis
           href: https://ibis-project.org
-        - text: ibis (preview)
-          href: https://ibis-quarto.netlify.app
         - text: github
           href: https://github.com
         - text: github - dkdc.dev
@@ -78,8 +76,6 @@ website:
           href: https://app.motherduck.com
         - text: keyboard
           href: https://configure.zsa.io/moonlander
-        - text: "localhost:8000 (mkdocs)"
-          href: http://localhost:8000
         - text: "localhost:8501 (streamlit)"
           href: http://localhost:8501
         - text: "localhost:3000 (dagster)"
