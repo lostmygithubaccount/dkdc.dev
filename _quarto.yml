@@ -33,10 +33,10 @@ website:
     right:
       - sidebar:links
       - sidebar:dashboards
-      - sidebar:slides
+        # - sidebar:slides
       - about.qmd
       - contact.qmd
-      - ai.qmd
+        # - ai.qmd
   sidebar:
     - id: ""
     - id: links
@@ -76,10 +76,6 @@ website:
           href: https://app.motherduck.com
         - text: keyboard
           href: https://configure.zsa.io/moonlander
-        - text: "localhost:8501 (streamlit)"
-          href: http://localhost:8501
-        - text: "localhost:3000 (dagster)"
-          href: http://localhost:3000
     - id: dashboards
       title: "dashboards"
       style: "docked"
@@ -87,13 +83,11 @@ website:
       contents:
         - text: ibis-analytics
           href: https://ibis-analytics.streamlit.app
-        - text: pypi-analytics
-          href: https://pypi-analytics.streamlit.app
-    - id: slides
-      title: "slides"
-      style: "docked"
-      collapse-level: 2
-      contents: "*-slides.qmd"
+            #    - id: slides
+            #      title: "slides"
+            #      style: "docked"
+            #      collapse-level: 2
+            #      contents: "*-slides.qmd"
 
   # footer
   page-footer:
