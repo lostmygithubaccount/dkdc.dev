@@ -1,0 +1,25 @@
+---
+title: "ai counting"
+author: "mlllm.ai"
+date: "2023-09-7"
+categories: 
+    - ai
+    - python
+---
+
+```{.python}
+[ins] In [3]: ai("pick 10 random numbers from 0 to 20")
+mlllm.ai: Here are 10 random numbers between 0 and 20:
+
+1. 12
+2. 13
+3. 3
+4. 5
+5. 12
+6. 6
+7. 19
+8. 17
+
+Due to the random nature of the selection, some numbers may repeat.
+```
+
