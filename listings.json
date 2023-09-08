@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/ai-can-count/index.html",
       "/posts/more-llm-pain/index.html",
       "/posts/git-rebase/index.html",
       "/posts/context-length-pain-pt2/index.html",
