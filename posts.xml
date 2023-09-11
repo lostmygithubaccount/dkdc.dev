@@ -10,7 +10,30 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 07 Sep 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 11 Sep 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>beware the metagame</title>
+  <dc:creator>Amjad Masad</dc:creator>
+  <link>https://dkdc.dev/posts/beware-the-metagame/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://amasad.me/meta">https://amasad.me/meta</a></p>
+<blockquote class="blockquote">
+<p>I’ve first noticed this problem in the startup world where you see famous people that sell books, talk at conferences, and tweet advice to founders, but when you take a closer look, they’ve never done much founding themselves. They’re like the “entrepreneurship” professor that never built a business. They’re experts in the metagame – they’re polished speakers, engaging writers, and thought-leadering tweeters. The problem, though, is that they’re not judged by customers, the market, or nature, instead they’re judged by their peers. I call them metapreneurs.</p>
+<p>This is an instance of what Nassim Taleb calls “The Expert Problem” – when other experts and meta-experts judge experts. Eventually the lack of contact with reality will corrupt the field. In the sciences, that lead to the replication crisis and the absurdities of the humanities.</p>
+<p>If you find yourself going to a lot of conferences, opining too much on the latest fad in your field, and talking more about doing the thing than doing the job itself, then you, my friend, are getting sucked into the metagame.</p>
+</blockquote>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>meta</category>
+  <guid>https://dkdc.dev/posts/beware-the-metagame/index.html</guid>
+  <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>ai counting</title>
   <dc:creator>mlllm.ai </dc:creator>

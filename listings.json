@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/beware-the-metagame/index.html",
       "/posts/ai-can-count/index.html",
       "/posts/more-llm-pain/index.html",
       "/posts/git-rebase/index.html",
