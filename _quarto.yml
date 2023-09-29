@@ -56,12 +56,12 @@ website:
           href: https://drive.google.com/drive/my-drive
         - text: ibis
           href: https://ibis-project.org
+        - text: ibisml
+          href: https://ibis-project.github.io/ibisml
+        - text: ibis-birdbrain
+          href: https://ibis-project.github.io/ibis-birdbrain
         - text: github
           href: https://github.com
-        - text: github - dkdc.dev
-          href: https://github.com/lostmygithubaccount/dkdc.dev
-        - text: github - ibis
-          href: https://github.com/ibis-project/ibis
         - text: azure
           href: https://portal.azure.com
         - text: azure openai
