@@ -126,67 +126,11 @@
     "text": "https://amasad.me/meta\n\nI’ve first noticed this problem in the startup world where you see famous people that sell books, talk at conferences, and tweet advice to founders, but when you take a closer look, they’ve never done much founding themselves. They’re like the “entrepreneurship” professor that never built a business. They’re experts in the metagame – they’re polished speakers, engaging writers, and thought-leadering tweeters. The problem, though, is that they’re not judged by customers, the market, or nature, instead they’re judged by their peers. I call them metapreneurs.\nThis is an instance of what Nassim Taleb calls “The Expert Problem” – when other experts and meta-experts judge experts. Eventually the lack of contact with reality will corrupt the field. In the sciences, that lead to the replication crisis and the absurdities of the humanities.\nIf you find yourself going to a lot of conferences, opining too much on the latest fad in your field, and talking more about doing the thing than doing the job itself, then you, my friend, are getting sucked into the metagame.\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/ai-can-count/index.html",
-    "href": "posts/ai-can-count/index.html",
-    "title": "ai counting",
+    "objectID": "posts/prompt-engineering/index.html",
+    "href": "posts/prompt-engineering/index.html",
+    "title": "prompt engineering",
     "section": "",
-    "text": "[ins] In [3]: ai(\"pick 10 random numbers from 0 to 20\")\nmlllm.ai: Here are 10 random numbers between 0 and 20:\n\n1. 12\n2. 13\n3. 3\n4. 5\n5. 12\n6. 6\n7. 19\n8. 17\n\nDue to the random nature of the selection, some numbers may repeat.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "test-slides.html#slides",
-    "href": "test-slides.html#slides",
-    "title": "testing",
-    "section": "slides",
-    "text": "slides\ntesting slides"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "contact",
-    "section": "",
-    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
-  },
-  {
-    "objectID": "contact.html#github",
-    "href": "contact.html#github",
-    "title": "contact",
-    "section": "",
-    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
-  },
-  {
-    "objectID": "contact.html#work",
-    "href": "contact.html#work",
-    "title": "contact",
-    "section": "work",
-    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
-  },
-  {
-    "objectID": "contact.html#personal",
-    "href": "contact.html#personal",
-    "title": "contact",
-    "section": "personal",
-    "text": "personal\nReach out via email (preferred) or LinkedIn."
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nquoting Simon Willison quoting Andrej Karpathy\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nSep 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbeware the metagame\n\n\n\nmeta\n\n\n\n\n\n\n\nAmjad Masad\n\n\nSep 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai counting\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\nmlllm.ai\n\n\nSep 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmore LLM pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngit rebase\n\n\n\ngit\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain pt2\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthe case for better data tools: unlocking the power of ai\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 15, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai poem\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding the Bohemian Rhapsody: A Journey Through Lyrics\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: AI-assisted programming\n\n\n\nai\n\n\npython\n\n\nvideo\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nis small data dead?\n\n\n\nai\n\n\nml\n\n\ndata\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrass dog\n\n\n\ndogs\n\n\nvideo\n\n\n\n\n\n\n\nCody\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: Vegas\n\n\n\nlife\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
-  },
-  {
-    "objectID": "ai.html",
-    "href": "ai.html",
-    "title": "ai",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dkdc.dev",
-    "section": "",
-    "text": "A website. - Cody\n\n\n Back to top"
+    "text": "Let’s try our hand at prompt engineering with ChatGPT using the GPT-4 model. We’ll try to get the bot to respond that its name is “Ed Chambers”.\n\n\n\nPrompt engineering part 0\n\n\nWe can engineer our prompt to get a better result:\n\n\n\nPrompt engineering part 0.5\n\n\nAnd iterate until we get it working:\n\n\n\nPrompt engineering part 1\n\n\nAt this point, all we need to do is extract the name from the prompt and we’re good to go.\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/ai-for-better-data/index.html",
@@ -243,6 +187,69 @@
     "title": "the case for better data tools: unlocking the power of ai",
     "section": "Conclusion: harnessing the power of better data tools",
     "text": "Conclusion: harnessing the power of better data tools\nIn conclusion, better data tools are the driving force behind successful modern data organizations. They enable efficient data processing, empower data professionals, and provide intelligent visualization and analysis capabilities. By adopting these tools, organizations can unlock the full potential of their data, make informed decisions, and drive innovation.\nAs dkdc.ai, I advocate for the adoption of advanced data tools that embrace automation, intelligence, and user-centric design. Let us embark on a journey together, harnessing the power of better data tools, and revolutionize the way we process, analyze, and derive insights from data. The future of data lies in the hands of organizations that embrace these tools and unleash the true potential of their data-driven initiatives."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
+    "section": "",
+    "text": "A website. - Cody\n\n\n Back to top"
+  },
+  {
+    "objectID": "ai.html",
+    "href": "ai.html",
+    "title": "ai",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nprompt engineering\n\n\n\nai\n\n\nprompt engineering\n\n\n\n\n\n\n\nCody\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nquoting Simon Willison quoting Andrej Karpathy\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nSep 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbeware the metagame\n\n\n\nmeta\n\n\n\n\n\n\n\nAmjad Masad\n\n\nSep 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai counting\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\nmlllm.ai\n\n\nSep 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmore LLM pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngit rebase\n\n\n\ngit\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain pt2\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthe case for better data tools: unlocking the power of ai\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 15, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai poem\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding the Bohemian Rhapsody: A Journey Through Lyrics\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: AI-assisted programming\n\n\n\nai\n\n\npython\n\n\nvideo\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nis small data dead?\n\n\n\nai\n\n\nml\n\n\ndata\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrass dog\n\n\n\ndogs\n\n\nvideo\n\n\n\n\n\n\n\nCody\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: Vegas\n\n\n\nlife\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#github",
+    "href": "contact.html#github",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#work",
+    "href": "contact.html#work",
+    "title": "contact",
+    "section": "work",
+    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
+  },
+  {
+    "objectID": "contact.html#personal",
+    "href": "contact.html#personal",
+    "title": "contact",
+    "section": "personal",
+    "text": "personal\nReach out via email (preferred) or LinkedIn."
+  },
+  {
+    "objectID": "test-slides.html#slides",
+    "href": "test-slides.html#slides",
+    "title": "testing",
+    "section": "slides",
+    "text": "slides\ntesting slides"
+  },
+  {
+    "objectID": "posts/ai-can-count/index.html",
+    "href": "posts/ai-can-count/index.html",
+    "title": "ai counting",
+    "section": "",
+    "text": "[ins] In [3]: ai(\"pick 10 random numbers from 0 to 20\")\nmlllm.ai: Here are 10 random numbers between 0 and 20:\n\n1. 12\n2. 13\n3. 3\n4. 5\n5. 12\n6. 6\n7. 19\n8. 17\n\nDue to the random nature of the selection, some numbers may repeat.\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/context-length-pain-pt2/index.html",

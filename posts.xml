@@ -10,7 +10,47 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 28 Sep 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Oct 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>prompt engineering</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/prompt-engineering/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Let’s try our hand at prompt engineering with ChatGPT using the GPT-4 model. We’ll try to get the bot to respond that its name is “Ed Chambers”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/prompt-engineering/images/prompt-engineering-pt-0.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Prompt engineering part 0</figcaption>
+</figure>
+</div>
+<p>We can engineer our prompt to get a better result:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/prompt-engineering/images/prompt-engineering-pt-.5.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Prompt engineering part 0.5</figcaption>
+</figure>
+</div>
+<p>And iterate until we get it working:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/prompt-engineering/images/prompt-engineering-pt-1.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Prompt engineering part 1</figcaption>
+</figure>
+</div>
+<p>At this point, all we need to do is extract the name from the prompt and we’re good to go.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <category>prompt engineering</category>
+  <guid>https://dkdc.dev/posts/prompt-engineering/index.html</guid>
+  <pubDate>Tue, 03 Oct 2023 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>quoting Simon Willison quoting Andrej Karpathy</title>
   <dc:creator>Cody </dc:creator>
