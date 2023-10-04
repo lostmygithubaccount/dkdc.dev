@@ -130,7 +130,7 @@
     "href": "posts/prompt-engineering/index.html",
     "title": "prompt engineering",
     "section": "",
-    "text": "Let’s try our hand at prompt engineering with ChatGPT using the GPT-4 model. We’ll try to get the bot to respond that its name is “Ed Chambers”.\n\n\n\nPrompt engineering part 0\n\n\nWe can engineer our prompt to get a better result:\n\n\n\nPrompt engineering part 0.5\n\n\nAnd iterate until we get it working:\n\n\n\nPrompt engineering part 1\n\n\nAt this point, all we need to do is extract the name from the prompt and we’re good to go.\n\n\n\n Back to top"
+    "text": "Let’s try our hand at prompt engineering with ChatGPT using the GPT-4 model. We’ll try to get the bot to respond that its name is “Ed Chambers”:\n\n\n\nPrompt engineering part 0\n\n\nWe can engineer our prompt to get a better result:\n\n\n\nPrompt engineering part 0.5\n\n\nAnd iterate until we get it working:\n\n\n\nPrompt engineering part 1\n\n\nAt this point, all we need to do is parse the response and we’re good to go.\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/ai-for-better-data/index.html",
