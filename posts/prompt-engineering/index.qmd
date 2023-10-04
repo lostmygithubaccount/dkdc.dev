@@ -1,0 +1,22 @@
+---
+title: "prompt engineering"
+author: "Cody"
+date: "2023-10-3"
+categories: 
+    - ai
+    - prompt engineering
+---
+
+Let's try our hand at prompt engineering with ChatGPT using the GPT-4 model. We'll try to get the bot to respond that its name is "Ed Chambers".
+
+![Prompt engineering part 0](images/prompt-engineering-pt-0.png)
+
+We can engineer our prompt to get a better result:
+
+![Prompt engineering part 0.5](images/prompt-engineering-pt-.5.png)
+
+And iterate until we get it working:
+
+![Prompt engineering part 1](images/prompt-engineering-pt-1.png)
+
+At this point, all we need to do is extract the name from the prompt and we're good to go.
