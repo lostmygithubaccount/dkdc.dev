@@ -7,7 +7,7 @@ categories:
     - prompt engineering
 ---
 
-Let's try our hand at prompt engineering with ChatGPT using the GPT-4 model. We'll try to get the bot to respond that its name is "Ed Chambers".
+Let's try our hand at prompt engineering with ChatGPT using the GPT-4 model. We'll try to get the bot to respond that its name is "Ed Chambers":
 
 ![Prompt engineering part 0](images/prompt-engineering-pt-0.png)
 
@@ -19,4 +19,4 @@ And iterate until we get it working:
 
 ![Prompt engineering part 1](images/prompt-engineering-pt-1.png)
 
-At this point, all we need to do is extract the name from the prompt and we're good to go.
+At this point, all we need to do is parse the response and we're good to go.
