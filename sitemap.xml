@@ -2,114 +2,118 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2023-10-04T02:01:28.162Z</lastmod>
+    <lastmod>2023-10-06T16:41:32.875Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/website/index.html</loc>
-    <lastmod>2023-10-04T02:01:27.322Z</lastmod>
+    <lastmod>2023-10-06T16:41:31.979Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</loc>
-    <lastmod>2023-10-04T02:01:25.834Z</lastmod>
+    <lastmod>2023-10-06T16:41:30.447Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/more-llm-pain/index.html</loc>
-    <lastmod>2023-10-04T02:01:23.930Z</lastmod>
+    <lastmod>2023-10-06T16:41:28.751Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/grass-dog/index.html</loc>
-    <lastmod>2023-10-04T02:01:22.058Z</lastmod>
+    <lastmod>2023-10-06T16:41:26.543Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/ai-on-ai/index.html</loc>
-    <lastmod>2023-10-04T02:01:20.530Z</lastmod>
+    <lastmod>2023-10-06T16:41:25.091Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/ai-poem/index.html</loc>
-    <lastmod>2023-10-04T02:01:18.850Z</lastmod>
+    <lastmod>2023-10-06T16:41:23.547Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/nix/index.html</loc>
-    <lastmod>2023-10-04T02:01:14.842Z</lastmod>
+    <lastmod>2023-10-06T16:41:19.403Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/beware-the-metagame/index.html</loc>
-    <lastmod>2023-10-04T02:01:13.242Z</lastmod>
+    <lastmod>2023-10-06T16:41:17.699Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/prompt-engineering/index.html</loc>
-    <lastmod>2023-10-04T02:01:11.502Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/ai-for-better-data/index.html</loc>
-    <lastmod>2023-10-04T02:01:09.738Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2023-10-04T02:01:08.126Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2023-10-04T02:01:03.378Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/ai.html</loc>
-    <lastmod>2023-10-04T02:01:01.002Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts.html</loc>
-    <lastmod>2023-10-04T02:01:07.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/contact.html</loc>
-    <lastmod>2023-10-04T02:01:07.814Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/test-slides.html</loc>
-    <lastmod>2023-10-04T02:01:08.414Z</lastmod>
+    <lastmod>2023-10-06T16:41:16.195Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/ai-can-count/index.html</loc>
-    <lastmod>2023-10-04T02:01:10.482Z</lastmod>
+    <lastmod>2023-10-06T16:41:14.735Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/test-slides.html</loc>
+    <lastmod>2023-10-06T16:41:12.675Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/contact.html</loc>
+    <lastmod>2023-10-06T16:41:12.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2023-10-06T16:41:11.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/ai.html</loc>
+    <lastmod>2023-10-06T16:41:05.059Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
+    <lastmod>2023-10-06T16:41:07.451Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/index.html</loc>
+    <lastmod>2023-10-06T16:41:12.371Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/ai-for-better-data/index.html</loc>
+    <lastmod>2023-10-06T16:41:13.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/abolish-rag/index.html</loc>
+    <lastmod>2023-10-06T16:41:15.459Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/context-length-pain-pt2/index.html</loc>
-    <lastmod>2023-10-04T02:01:12.394Z</lastmod>
+    <lastmod>2023-10-06T16:41:16.947Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/index.html</loc>
-    <lastmod>2023-10-04T02:01:14.078Z</lastmod>
+    <lastmod>2023-10-06T16:41:18.599Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/git-rebase/index.html</loc>
-    <lastmod>2023-10-04T02:01:15.762Z</lastmod>
+    <lastmod>2023-10-06T16:41:20.479Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/is-small-data-dead/index.html</loc>
-    <lastmod>2023-10-04T02:01:17.890Z</lastmod>
+    <lastmod>2023-10-06T16:41:22.743Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/ai-programming/index.html</loc>
-    <lastmod>2023-10-04T02:01:19.550Z</lastmod>
+    <lastmod>2023-10-06T16:41:24.307Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/murphy/index.html</loc>
-    <lastmod>2023-10-04T02:01:21.302Z</lastmod>
+    <lastmod>2023-10-06T16:41:25.847Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2023-10-04T02:01:23.166Z</lastmod>
+    <lastmod>2023-10-06T16:41:27.563Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/vegas/index.html</loc>
-    <lastmod>2023-10-04T02:01:25.042Z</lastmod>
+    <lastmod>2023-10-06T16:41:29.719Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/context-length-pain/index.html</loc>
-    <lastmod>2023-10-04T02:01:26.586Z</lastmod>
+    <lastmod>2023-10-06T16:41:31.227Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/ibis-slides.html</loc>
-    <lastmod>2023-10-04T02:01:27.846Z</lastmod>
+    <lastmod>2023-10-06T16:41:32.539Z</lastmod>
   </url>
 </urlset>

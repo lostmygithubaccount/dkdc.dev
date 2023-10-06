@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/abolish-rag/index.html",
       "/posts/prompt-engineering/index.html",
       "/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html",
       "/posts/beware-the-metagame/index.html",
