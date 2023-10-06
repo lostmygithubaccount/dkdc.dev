@@ -33,7 +33,6 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <category>prompt engineering</category>
   <guid>https://dkdc.dev/posts/abolish-rag/index.html</guid>
   <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
 </item>
