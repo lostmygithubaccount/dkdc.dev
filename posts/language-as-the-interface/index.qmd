@@ -1,0 +1,37 @@
+---
+title: "language (conversation) as the interface"
+author: "Cody"
+date: "2023-10-13"
+categories: 
+    - ai
+    - language
+---
+
+> "Wait 26 minutes" - [ChatGPT](https://chat.openai.com/share/d314593c-a33b-4a18-a243-857305e51db4)
+
+I am using DALLE-3 and it's an improvement at generating images, but the key innovation is the user interface -- it's just language (conversation)! This is nothing fancy, GPT-4 (likely via some prompting or something more clever) generates DALLE-style image prompts on your behalf and makes API calls. The beauty is demonstrated in the error message (error conversation?) when a rate limit is hit:
+
+> **DALL·E 3**:
+> Error creating images
+> 
+> I apologize for the inconvenience, but I was unable to generate the images at this time. We need to wait for 26 minutes before generating more images. After this time, I'll be more than happy to assist with your request. In the meantime, if you have any questions or need assistance with other topics, please let me know.
+
+If you're confused why (it may not be obvious this is rate limiting, or why it's enforced), you can just ask:
+
+
+> **Me**:
+> Why do I have to wait 26 minutes?
+>
+> **DALL·E 3 (ChatGPT)**
+> 
+> I apologize for the inconvenience. The image generation system has rate limits in place to ensure a quality experience for everyone and to manage resource allocation. This means that after a certain number of image generation requests in a short timeframe, there's a cooldown period before new requests can be made. The specified wait time helps in distributing the computational resources efficiently among all users. I appreciate your understanding, and I'm here to assist with any other queries you might have in the meantime.
+
+And if you want to read the error message in Spanish, you can just ask:
+
+> **DALL·E 3 (ChatGPT)**:
+> Of course. Here's the translation:
+> 
+> Me disculpo por la inconveniencia, pero no pude generar las imágenes en este momento. Necesitamos esperar 26 minutos antes de generar más imágenes. Después de este tiempo, estaré más que feliz de ayudarte con tu solicitud. Mientras tanto, si tienes alguna pregunta o necesitas asistencia con otros temas, por favor avísame.
+
+While I could do all of this myself -- `curl` or use Python to make API calls to `DALLE`, or even string it together with `GPT-4` API calls -- the ability to just ask and get answers is key to the success of ChatGPT (and now DALLE-3) as a product. I don't need to parse a giant error message or traceback myself and figure out how long to wait (assuming the fine engineers at OpenAI engineered it to get this and other details correct; did I need to wait 26 minutes?).
+
