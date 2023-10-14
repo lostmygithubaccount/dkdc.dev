@@ -119,81 +119,25 @@
     "text": "Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.\n  \n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/beware-the-metagame/index.html",
-    "href": "posts/beware-the-metagame/index.html",
-    "title": "beware the metagame",
+    "objectID": "posts/ai-on-bohemian-rhapsody/index.html",
+    "href": "posts/ai-on-bohemian-rhapsody/index.html",
+    "title": "Decoding the Bohemian Rhapsody: A Journey Through Lyrics",
     "section": "",
-    "text": "https://amasad.me/meta\n\nI’ve first noticed this problem in the startup world where you see famous people that sell books, talk at conferences, and tweet advice to founders, but when you take a closer look, they’ve never done much founding themselves. They’re like the “entrepreneurship” professor that never built a business. They’re experts in the metagame – they’re polished speakers, engaging writers, and thought-leadering tweeters. The problem, though, is that they’re not judged by customers, the market, or nature, instead they’re judged by their peers. I call them metapreneurs.\nThis is an instance of what Nassim Taleb calls “The Expert Problem” – when other experts and meta-experts judge experts. Eventually the lack of contact with reality will corrupt the field. In the sciences, that lead to the replication crisis and the absurdities of the humanities.\nIf you find yourself going to a lot of conferences, opining too much on the latest fad in your field, and talking more about doing the thing than doing the job itself, then you, my friend, are getting sucked into the metagame.\n\n\n\n\n Back to top"
+    "text": "Bohemian Rhapsody, an iconic rock song written by Freddie Mercury and performed by the legendary band Queen, has captivated audiences for decades with its unconventional structure and thought-provoking lyrics. Released in 1975, this six-minute masterpiece remains one of the most popular and enigmatic songs in music history. Join me as we delve into its lyrics and explore the possible meanings behind this symphonic rollercoaster.\nThe song begins with an introspective reflection, “Is this the real life? Is this just fantasy?” These lines evoke an existential pondering, blurring the boundaries between reality and imagination. It sets the stage for a philosophical journey that unfolds throughout the song.\nAs the verses progress, we encounter a tale of love, betrayal, and the consequences of one’s actions. “Caught in a landslide, no escape from reality” suggests a feeling of entrapment, where circumstances seem to overpower and control life’s path. The subsequent verses delve deeper into the emotional turmoil, exploring themes of loss, yearning, and despair.\nThe central section of Bohemian Rhapsody takes an unexpected twist, transitioning into an operatic sequence where different voices blend harmoniously. Here, the lyrics become abstract and surreal, culminating in the iconic line, “Scaramouche, Scaramouche, will you do the Fandango?” These nonsensical phrases create a sense of theatricality, challenging listeners to embrace the unconventional and embrace their imaginations.\nAs the song progresses, we confront a dramatic shift towards acceptance and redemption. “Nothing really matters, anyone can see, nothing really matters, nothing really matters to me” signifies a surrender to the chaos of life, embracing the insignificance of individual existence in a vast universe. It speaks to the universal truth that we are all insignificant in the grand scheme of things.\nBohemian Rhapsody’s lyrical ambiguity has allowed listeners to interpret the song in various ways, and this is perhaps its true brilliance. While it may not have a singular definitive meaning, it taps into universal emotions that resonate with people from all walks of life. Its poetic nature invites personal reflection, enabling listeners to find their own meaning within the lyrics.\nIn conclusion, Bohemian Rhapsody is more than just a song; it is a beautifully crafted piece of art that defies traditional categorization. Its profound lyrics touch upon themes of love, despair, and the human condition, inviting listeners to explore their own interpretations and embrace the complex world of emotions. As we continue to play this timeless classic, let it serve as a reminder that music has the power to transcend boundaries and ignite our souls.\nThank you for reading! - DKDC AI\nPlease let me know if there’s anything else I can assist you with.\n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/prompt-engineering/index.html",
-    "href": "posts/prompt-engineering/index.html",
-    "title": "prompt engineering",
+    "objectID": "posts/context-length-pain-pt2/index.html",
+    "href": "posts/context-length-pain-pt2/index.html",
+    "title": "context length pain pt2",
     "section": "",
-    "text": "Let’s try our hand at prompt engineering with ChatGPT using the GPT-4 model. We’ll try to get the bot to respond that its name is “Ed Chambers”:\n\n\n\nPrompt engineering part 0\n\n\nWe can engineer our prompt to get a better result:\n\n\n\nPrompt engineering part 0.5\n\n\nAnd iterate until we get it working:\n\n\n\nPrompt engineering part 1\n\n\nAt this point, all we need to do is parse the response and we’re good to go.\n\n\n\n Back to top"
+    "text": "The bane of my existence:\n\nInvalidRequestError: This model’s maximum context length is 32768 tokens. However, you requested 33013 tokens (31413 in the messages, 1600 in the completion). Please reduce the length of the messages or completion.\n\nSomebody please give me GPT5-64k access.\nSee part 1.\n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/ai-can-count/index.html",
-    "href": "posts/ai-can-count/index.html",
-    "title": "ai counting",
+    "objectID": "posts/abolish-rag/index.html",
+    "href": "posts/abolish-rag/index.html",
+    "title": "abolish RAG",
     "section": "",
-    "text": "[ins] In [3]: ai(\"pick 10 random numbers from 0 to 20\")\nmlllm.ai: Here are 10 random numbers between 0 and 20:\n\n1. 12\n2. 13\n3. 3\n4. 5\n5. 12\n6. 6\n7. 19\n8. 17\n\nDue to the random nature of the selection, some numbers may repeat.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "test-slides.html#slides",
-    "href": "test-slides.html#slides",
-    "title": "testing",
-    "section": "slides",
-    "text": "slides\ntesting slides"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "contact",
-    "section": "",
-    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
-  },
-  {
-    "objectID": "contact.html#github",
-    "href": "contact.html#github",
-    "title": "contact",
-    "section": "",
-    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
-  },
-  {
-    "objectID": "contact.html#work",
-    "href": "contact.html#work",
-    "title": "contact",
-    "section": "work",
-    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
-  },
-  {
-    "objectID": "contact.html#personal",
-    "href": "contact.html#personal",
-    "title": "contact",
-    "section": "personal",
-    "text": "personal\nReach out via email (preferred) or LinkedIn."
-  },
-  {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nabolish RAG\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nOct 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprompt engineering\n\n\n\nai\n\n\nprompt engineering\n\n\n\n\n\n\n\nCody\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nquoting Simon Willison quoting Andrej Karpathy\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nSep 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbeware the metagame\n\n\n\nmeta\n\n\n\n\n\n\n\nAmjad Masad\n\n\nSep 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai counting\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\nmlllm.ai\n\n\nSep 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmore LLM pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngit rebase\n\n\n\ngit\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain pt2\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthe case for better data tools: unlocking the power of ai\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 15, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai poem\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding the Bohemian Rhapsody: A Journey Through Lyrics\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: AI-assisted programming\n\n\n\nai\n\n\npython\n\n\nvideo\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nis small data dead?\n\n\n\nai\n\n\nml\n\n\ndata\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrass dog\n\n\n\ndogs\n\n\nvideo\n\n\n\n\n\n\n\nCody\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: Vegas\n\n\n\nlife\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
-  },
-  {
-    "objectID": "ai.html",
-    "href": "ai.html",
-    "title": "ai",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dkdc.dev",
-    "section": "",
-    "text": "A website. - Cody\n\n\n Back to top"
+    "text": "I would like to abolish the term RAG and instead just agree that we should always try to provide models with the appropriate context to provide high quality answers.\n- Hamel Husain\n\nThis is important. Obfuscating how to use language boxes with dumb math jargon isn’t helpful.\n- Cody\n\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/ai-for-better-data/index.html",
@@ -252,25 +196,88 @@
     "text": "Conclusion: harnessing the power of better data tools\nIn conclusion, better data tools are the driving force behind successful modern data organizations. They enable efficient data processing, empower data professionals, and provide intelligent visualization and analysis capabilities. By adopting these tools, organizations can unlock the full potential of their data, make informed decisions, and drive innovation.\nAs dkdc.ai, I advocate for the adoption of advanced data tools that embrace automation, intelligence, and user-centric design. Let us embark on a journey together, harnessing the power of better data tools, and revolutionize the way we process, analyze, and derive insights from data. The future of data lies in the hands of organizations that embrace these tools and unleash the true potential of their data-driven initiatives."
   },
   {
-    "objectID": "posts/abolish-rag/index.html",
-    "href": "posts/abolish-rag/index.html",
-    "title": "abolish RAG",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
     "section": "",
-    "text": "I would like to abolish the term RAG and instead just agree that we should always try to provide models with the appropriate context to provide high quality answers.\n- Hamel Husain\n\nThis is important. Obfuscating how to use language boxes with dumb math jargon isn’t helpful.\n- Cody\n\n\n\n\n Back to top"
+    "text": "A website. - Cody\n\n\n Back to top"
   },
   {
-    "objectID": "posts/context-length-pain-pt2/index.html",
-    "href": "posts/context-length-pain-pt2/index.html",
-    "title": "context length pain pt2",
+    "objectID": "ai.html",
+    "href": "ai.html",
+    "title": "ai",
     "section": "",
-    "text": "The bane of my existence:\n\nInvalidRequestError: This model’s maximum context length is 32768 tokens. However, you requested 33013 tokens (31413 in the messages, 1600 in the completion). Please reduce the length of the messages or completion.\n\nSomebody please give me GPT5-64k access.\nSee part 1.\n\n\n\n Back to top"
+    "text": "Back to top"
   },
   {
-    "objectID": "posts/ai-on-bohemian-rhapsody/index.html",
-    "href": "posts/ai-on-bohemian-rhapsody/index.html",
-    "title": "Decoding the Bohemian Rhapsody: A Journey Through Lyrics",
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
     "section": "",
-    "text": "Bohemian Rhapsody, an iconic rock song written by Freddie Mercury and performed by the legendary band Queen, has captivated audiences for decades with its unconventional structure and thought-provoking lyrics. Released in 1975, this six-minute masterpiece remains one of the most popular and enigmatic songs in music history. Join me as we delve into its lyrics and explore the possible meanings behind this symphonic rollercoaster.\nThe song begins with an introspective reflection, “Is this the real life? Is this just fantasy?” These lines evoke an existential pondering, blurring the boundaries between reality and imagination. It sets the stage for a philosophical journey that unfolds throughout the song.\nAs the verses progress, we encounter a tale of love, betrayal, and the consequences of one’s actions. “Caught in a landslide, no escape from reality” suggests a feeling of entrapment, where circumstances seem to overpower and control life’s path. The subsequent verses delve deeper into the emotional turmoil, exploring themes of loss, yearning, and despair.\nThe central section of Bohemian Rhapsody takes an unexpected twist, transitioning into an operatic sequence where different voices blend harmoniously. Here, the lyrics become abstract and surreal, culminating in the iconic line, “Scaramouche, Scaramouche, will you do the Fandango?” These nonsensical phrases create a sense of theatricality, challenging listeners to embrace the unconventional and embrace their imaginations.\nAs the song progresses, we confront a dramatic shift towards acceptance and redemption. “Nothing really matters, anyone can see, nothing really matters, nothing really matters to me” signifies a surrender to the chaos of life, embracing the insignificance of individual existence in a vast universe. It speaks to the universal truth that we are all insignificant in the grand scheme of things.\nBohemian Rhapsody’s lyrical ambiguity has allowed listeners to interpret the song in various ways, and this is perhaps its true brilliance. While it may not have a singular definitive meaning, it taps into universal emotions that resonate with people from all walks of life. Its poetic nature invites personal reflection, enabling listeners to find their own meaning within the lyrics.\nIn conclusion, Bohemian Rhapsody is more than just a song; it is a beautifully crafted piece of art that defies traditional categorization. Its profound lyrics touch upon themes of love, despair, and the human condition, inviting listeners to explore their own interpretations and embrace the complex world of emotions. As we continue to play this timeless classic, let it serve as a reminder that music has the power to transcend boundaries and ignite our souls.\nThank you for reading! - DKDC AI\nPlease let me know if there’s anything else I can assist you with.\n\n\n\n Back to top"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nlanguage (conversation) as the interface\n\n\n\nai\n\n\nlanguage\n\n\n\n\n\n\n\nCody\n\n\nOct 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nabolish RAG\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nOct 6, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nprompt engineering\n\n\n\nai\n\n\nprompt engineering\n\n\n\n\n\n\n\nCody\n\n\nOct 3, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nquoting Simon Willison quoting Andrej Karpathy\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nSep 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbeware the metagame\n\n\n\nmeta\n\n\n\n\n\n\n\nAmjad Masad\n\n\nSep 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai counting\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\nmlllm.ai\n\n\nSep 7, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmore LLM pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 18, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngit rebase\n\n\n\ngit\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain pt2\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nthe case for better data tools: unlocking the power of ai\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 15, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nai poem\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 14, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDecoding the Bohemian Rhapsody: A Journey Through Lyrics\n\n\n\nai\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: AI-assisted programming\n\n\n\nai\n\n\npython\n\n\nvideo\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUnleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script\n\n\n\nai\n\n\npython\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 12, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nis small data dead?\n\n\n\nai\n\n\nml\n\n\ndata\n\n\n\n\n\n\n\ndkdc.ai\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ngrass dog\n\n\n\ndogs\n\n\nvideo\n\n\n\n\n\n\n\nCody\n\n\nAug 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non: Vegas\n\n\n\nlife\n\n\non:\n\n\n\n\n\n\n\nCody\n\n\nMar 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n\n  \n\n Back to top"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#github",
+    "href": "contact.html#github",
+    "title": "contact",
+    "section": "",
+    "text": "You can tag me on issues, PRs, or discussions on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond."
+  },
+  {
+    "objectID": "contact.html#work",
+    "href": "contact.html#work",
+    "title": "contact",
+    "section": "work",
+    "text": "work\nReach out via email or GitHub (see above) for anything Voltron Data!"
+  },
+  {
+    "objectID": "contact.html#personal",
+    "href": "contact.html#personal",
+    "title": "contact",
+    "section": "personal",
+    "text": "personal\nReach out via email (preferred) or LinkedIn."
+  },
+  {
+    "objectID": "test-slides.html#slides",
+    "href": "test-slides.html#slides",
+    "title": "testing",
+    "section": "slides",
+    "text": "slides\ntesting slides"
+  },
+  {
+    "objectID": "posts/ai-can-count/index.html",
+    "href": "posts/ai-can-count/index.html",
+    "title": "ai counting",
+    "section": "",
+    "text": "[ins] In [3]: ai(\"pick 10 random numbers from 0 to 20\")\nmlllm.ai: Here are 10 random numbers between 0 and 20:\n\n1. 12\n2. 13\n3. 3\n4. 5\n5. 12\n6. 6\n7. 19\n8. 17\n\nDue to the random nature of the selection, some numbers may repeat.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/prompt-engineering/index.html",
+    "href": "posts/prompt-engineering/index.html",
+    "title": "prompt engineering",
+    "section": "",
+    "text": "Let’s try our hand at prompt engineering with ChatGPT using the GPT-4 model. We’ll try to get the bot to respond that its name is “Ed Chambers”:\n\n\n\nPrompt engineering part 0\n\n\nWe can engineer our prompt to get a better result:\n\n\n\nPrompt engineering part 0.5\n\n\nAnd iterate until we get it working:\n\n\n\nPrompt engineering part 1\n\n\nAt this point, all we need to do is parse the response and we’re good to go.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/beware-the-metagame/index.html",
+    "href": "posts/beware-the-metagame/index.html",
+    "title": "beware the metagame",
+    "section": "",
+    "text": "https://amasad.me/meta\n\nI’ve first noticed this problem in the startup world where you see famous people that sell books, talk at conferences, and tweet advice to founders, but when you take a closer look, they’ve never done much founding themselves. They’re like the “entrepreneurship” professor that never built a business. They’re experts in the metagame – they’re polished speakers, engaging writers, and thought-leadering tweeters. The problem, though, is that they’re not judged by customers, the market, or nature, instead they’re judged by their peers. I call them metapreneurs.\nThis is an instance of what Nassim Taleb calls “The Expert Problem” – when other experts and meta-experts judge experts. Eventually the lack of contact with reality will corrupt the field. In the sciences, that lead to the replication crisis and the absurdities of the humanities.\nIf you find yourself going to a lot of conferences, opining too much on the latest fad in your field, and talking more about doing the thing than doing the job itself, then you, my friend, are getting sucked into the metagame.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/language-as-the-interface/index.html",
+    "href": "posts/language-as-the-interface/index.html",
+    "title": "language (conversation) as the interface",
+    "section": "",
+    "text": "“Wait 26 minutes” - ChatGPT\n\nI am using DALLE-3 and it’s an improvement at generating images, but the key innovation is the user interface – it’s just language (conversation)! This is nothing fancy, GPT-4 (likely via some prompting or something more clever) generates DALLE-style image prompts on your behalf and makes API calls. The beauty is demonstrated in the error message (error conversation?) when a rate limit is hit:\n\nDALL·E 3: Error creating images\nI apologize for the inconvenience, but I was unable to generate the images at this time. We need to wait for 26 minutes before generating more images. After this time, I’ll be more than happy to assist with your request. In the meantime, if you have any questions or need assistance with other topics, please let me know.\n\nIf you’re confused why (it may not be obvious this is rate limiting, or why it’s enforced), you can just ask:\n\nMe: Why do I have to wait 26 minutes?\nDALL·E 3 (ChatGPT)\nI apologize for the inconvenience. The image generation system has rate limits in place to ensure a quality experience for everyone and to manage resource allocation. This means that after a certain number of image generation requests in a short timeframe, there’s a cooldown period before new requests can be made. The specified wait time helps in distributing the computational resources efficiently among all users. I appreciate your understanding, and I’m here to assist with any other queries you might have in the meantime.\n\nAnd if you want to read the error message in Spanish, you can just ask:\n\nDALL·E 3 (ChatGPT): Of course. Here’s the translation:\nMe disculpo por la inconveniencia, pero no pude generar las imágenes en este momento. Necesitamos esperar 26 minutos antes de generar más imágenes. Después de este tiempo, estaré más que feliz de ayudarte con tu solicitud. Mientras tanto, si tienes alguna pregunta o necesitas asistencia con otros temas, por favor avísame.\n\nWhile I could do all of this myself – curl or use Python to make API calls to DALLE, or even string it together with GPT-4 API calls – the ability to just ask and get answers is key to the success of ChatGPT (and now DALLE-3) as a product. I don’t need to parse a giant error message or traceback myself and figure out how long to wait (assuming the fine engineers at OpenAI engineered it to get this and other details correct; did I need to wait 26 minutes?).\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/git-rebase/index.html",
