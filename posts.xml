@@ -10,7 +10,33 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Sun, 26 Nov 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 07 Jan 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Ron DeSantis is a clown</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/little-ron/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Ron DeSantis is a clown.</p>
+<p>It took less than 2 months from moving back to Florida – where I grew up and lived for 18 years, pre-clown – for Ron DeSantis to have personally slighted me with his clown policies. I now have to spend 1+ hours dealing with his clown behavior. While it’s far from the worst a Floridian has suffered under his clown rule, it’s still a clown law by a clown governor.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://dkdc.dev/posts/little-ron/declown.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Ron DeSantis is a clown</figcaption>
+</figure>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>politics?</category>
+  <guid>https://dkdc.dev/posts/little-ron/index.html</guid>
+  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/little-ron/declown.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>I made an AGI?</title>
   <dc:creator>Cody </dc:creator>
@@ -1754,31 +1780,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <media:content url="https://dkdc.dev/posts/ai-on-bohemian-rhapsody/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>on: AI-assisted programming</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>I had an AI CLI app write a feature for itself:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
-<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>ai</category>
-  <category>python</category>
-  <category>video</category>
-  <category>on:</category>
-  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
-  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
   <title>Unleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script</title>
   <dc:creator>dkdc.ai </dc:creator>
   <link>https://dkdc.dev/posts/ai-on-ai/index.html</link>
@@ -1827,6 +1828,31 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <guid>https://dkdc.dev/posts/ai-on-ai/index.html</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-on-ai/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>on: AI-assisted programming</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I had an AI CLI app write a feature for itself:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
+<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <category>python</category>
+  <category>video</category>
+  <category>on:</category>
+  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
+  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>grass dog</title>
@@ -1973,27 +1999,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <category>news</category>
   <guid>https://dkdc.dev/posts/website/index.html</guid>
   <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Nix the dog</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/nix/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.</p>
-<p><img src="https://dkdc.dev/posts/nix/nix2.jpeg" class="img-fluid"> <img src="https://dkdc.dev/posts/nix/nix3.jpeg" class="img-fluid"> <img src="https://dkdc.dev/posts/nix/nix4.jpeg" class="img-fluid"></p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>dogs</category>
-  <category>life</category>
-  <guid>https://dkdc.dev/posts/nix/index.html</guid>
-  <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/nix/nix1.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
