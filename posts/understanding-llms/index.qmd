@@ -1,0 +1,11 @@
+---
+title: "'we don't understand how LLMs work'"
+author: "Cody"
+date: "2024-01-14"
+categories: 
+    - ai
+---
+
+"We don't understand how LLMs work" - clowns who don't understand how LLMs work and refuse to take the time to learn or liars who want to make you think they're smart.
+
+This is usually followed by calling them "magic". You can immediately be sure whoever says this is unserious. We very much know how and why neural networks (and thus LLMs) work. Read a book.
