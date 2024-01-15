@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/understanding-llms/index.html",
       "/posts/little-ron/index.html",
       "/posts/i-made-agi/index.html",
       "/posts/language-as-the-interface/index.html",
