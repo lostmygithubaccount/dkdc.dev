@@ -31,32 +31,6 @@
   <pubDate>Sun, 14 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Ron DeSantis is a clown</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/little-ron/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Ron DeSantis is a clown.</p>
-<p>It took less than 2 months from moving back to Florida – where I grew up and lived for 18 years, pre-clown – for Ron DeSantis to have personally slighted me with his clown policies. I now have to spend 1+ hours dealing with his clown behavior. While it’s far from the worst a Floridian has suffered under his clown rule, it’s still a clown law by a clown governor.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://dkdc.dev/posts/little-ron/declown.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Ron DeSantis is a clown</figcaption>
-</figure>
-</div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>politics?</category>
-  <guid>https://dkdc.dev/posts/little-ron/index.html</guid>
-  <pubDate>Sun, 07 Jan 2024 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/little-ron/declown.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
   <title>I made an AGI?</title>
   <dc:creator>Cody </dc:creator>
   <link>https://dkdc.dev/posts/i-made-agi/index.html</link>
@@ -1999,6 +1973,25 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <guid>https://dkdc.dev/posts/is-small-data-dead/index.html</guid>
   <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/is-small-data-dead/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>I redid my website again…</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/website/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>I mean, why not at this point…</p>
+<p><a href="https://quarto.org">Quarto</a> is nice!</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>news</category>
+  <guid>https://dkdc.dev/posts/website/index.html</guid>
+  <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
