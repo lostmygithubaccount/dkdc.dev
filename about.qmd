@@ -6,9 +6,9 @@ title: "about"
 
 Hello! My name is Cody (he/him). I'm passionate about progress via technology.
 
-Currently a Technical Product Manager at [Voltron Data](https://voltrondata.com) focusing on data interfaces and awesome OSS like [Ibis](https://ibis-project.org).
+Currently a Senior Technical Product Manager at [Voltron Data](https://voltrondata.com) focusing on data interfaces and awesome OSS like [Ibis](https://ibis-project.org).
 
-Previously a Product Manager at [dbt Labs](https://getdbt.com) focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager at [Azure ML (Microsoft)](https://azure.microsoft.com/products/machine-learning) focusing on data, MLOps, and v2 developer experiences.
+Previously a Product Manager at [dbt Labs](https://getdbt.com) focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager II at [Microsoft (AI Platform | Azure ML)](https://azure.microsoft.com/products/machine-learning) focusing on data, MLOps, and v2 developer experiences.
 
 See my [GitHub](https://github.com/lostmygithubaccount) and/or [LinkedIn](https://www.linkedin.com/in/codydkdc) for more details on my experience.
 
@@ -23,3 +23,22 @@ I care about:
 **This is my personal website. My views are separate from my employer's.**
 
 The purpose of this website is to practice writing, coding, and documenting projects.
+
+## contact
+
+:::{.callout-warning}
+No soliciting! Please...
+:::
+
+### GitHub
+
+You can tag me on issues, PRs, or discussions on GitHub using [@lostmygithubaccount](https://github.com/lostmygithubaccount) to drastically improve the chance I see the notification and respond.
+
+### work
+
+Reach out [via email](mailto:cody@voltrondata.com) or GitHub (see above) for anything Voltron Data!
+
+### personal
+
+Reach out [via email](mailto:cody@dkdc.dev) (preferred) or LinkedIn.
+

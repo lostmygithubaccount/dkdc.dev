@@ -2,6 +2,7 @@
 title: "I made an AGI?"
 author: "Cody"
 date: "2023-11-26"
+draft: true
 categories: 
     - ai
 ---

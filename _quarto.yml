@@ -14,68 +14,18 @@ website:
   twitter-card: true
   back-to-top-navigation: true
   repo-url: https://github.com/lostmygithubaccount/dkdc.dev
-  # repo-actions: [edit, issue]
-
 
   # nav
   navbar:
     logo: logo.png
     fontcolor: fuchsia
-    tools:
-      - icon: github
-        menu:
-          - text: Source code
-            url: https://github.com/lostmygithubaccount/dkdc.dev
-          - text: Discussions
-            url: https://github.com/lostmygithubaccount/dkdc.dev/discussions/categories/comments
     left:
       - posts.qmd
-    right:
-      - sidebar:links
-      - sidebar:dashboards
-        # - sidebar:slides
       - about.qmd
-      - contact.qmd
-        # - ai.qmd
+    right:
+      - sidebar:dashboards
   sidebar:
     - id: ""
-    - id: links
-      title: "links"
-      style: "docked"
-      collapse-level: 2
-      contents:
-        - text: dkdc.dev
-          href: https://dkdc.dev
-        - text: reader
-          href: https://read.readwise.io/feed/unseen
-        - text: email
-          href: https://mail.google.com/mail
-        - text: calendar
-          href: https://calendar.google.com/calendar
-        - text: drive
-          href: https://drive.google.com/drive/my-drive
-        - text: ibis
-          href: https://ibis-project.org
-        - text: ibisml
-          href: https://ibis-project.github.io/ibisml
-        - text: ibis-birdbrain
-          href: https://ibis-project.github.io/ibis-birdbrain
-        - text: github
-          href: https://github.com
-        - text: azure
-          href: https://portal.azure.com
-        - text: azure openai
-          href: https://oai.azure.com/portal
-        - text: openai
-          href: https://platform.openai.com
-        - text: gcp
-          href: https://console.cloud.google.com
-        - text: streamlit
-          href: https://share.streamlit.io
-        - text: motherduck
-          href: https://app.motherduck.com
-        - text: keyboard
-          href: https://configure.zsa.io/moonlander
     - id: dashboards
       title: "dashboards"
       style: "docked"
@@ -83,11 +33,6 @@ website:
       contents:
         - text: ibis-analytics
           href: https://ibis-analytics.streamlit.app
-            #    - id: slides
-            #      title: "slides"
-            #      style: "docked"
-            #      collapse-level: 2
-            #      contents: "*-slides.qmd"
 
   # footer
   page-footer:
@@ -96,10 +41,10 @@ website:
     right:
       - icon: twitter
         href: https://dkdc.dev/posts
-      - icon: github
-        href: https://github.com/lostmygithubaccount
       - icon: linkedin
         href: https://linkedin.com/in/codydkdc
+      - icon: github
+        href: https://github.com/lostmygithubaccount
       - icon: rss
         href: https://dkdc.dev/posts.xml
 
