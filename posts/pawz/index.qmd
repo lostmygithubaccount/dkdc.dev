@@ -1,0 +1,118 @@
+---
+title: "Python + Rust: a simple tutorial"
+author: "Cody"
+date: "2024-04-30"
+draft: true
+categories: 
+    - Python
+    - Rust
+---
+
+This post is intended to provide a simple demonstration of a Python package that relies on core functionality written in Rust.
+
+## Tools
+
+In addition to Python and Rust, we'll use the following tools:
+
+- [GitHub](https://github.com): repository hosting
+- [GitHub CLI](https://cli.github.com): interact with GitHub from the command line
+- [just](https://github.com/casey/just): a command runner
+- [mise](https://github.com/jdx/mise): a tool for managing dev environments
+ (Python/Rust versions)
+
+These will be explained along the way. For generating and using Rust code in Python, we'll use [PyO3](https://pyo3.rs/).
+
+## Setting up the project
+
+## Uploading to GitHub
+
+## Publishing to PyPI
+
+```{.env}
+PYPI_TOKEN = "pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+PYPI_TEST_TOKEN = "pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+```
+
+## Doing something
+
+```{.bash}
+(venv) cody@dkdc pawz % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   pyproject.toml
+        modified:   src/pawz-core/Cargo.toml
+        modified:   src/pawz-core/src/lib.rs
+        modified:   src/pawz/__init__.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+```{.bash}
+(venv) cody@dkdc pawz % git checkout -b add-something
+Switched to a new branch 'add-something'
+```
+
+```{.bash}
+(venv) cody@dkdc pawz % just fmt
+1 file left unchanged
+```
+
+```{.bash}
+(venv) cody@dkdc pawz % git add .
+(venv) cody@dkdc pawz % git commit -m "add something"
+[add-something 3e8727d] add something
+ 4 files changed, 17 insertions(+), 5 deletions(-)
+```
+
+```{.bash}
+(venv) cody@dkdc pawz % gh pr create
+? Where should we push the 'add-something' branch? lostmygithubaccount/pawz
+
+Creating pull request for add-something into main in lostmygithubaccount/pawz
+
+? Title add something
+? Body <Received>
+? What's next? Submit
+remote:
+remote:
+To https://github.com/lostmygithubaccount/pawz.git
+ * [new branch]      HEAD -> add-something
+branch 'add-something' set up to track 'origin/add-something'.
+https://github.com/lostmygithubaccount/pawz/pull/1
+```
+
+```{.bash}
+(venv) cody@dkdc pawz % gh pr merge
+Merging pull request lostmygithubaccount/pawz#1 (add something)
+? What merge method would you like to use? Squash and merge
+? Delete the branch locally and on GitHub? Yes
+? What's next? Submit
+✓ Squashed and merged pull request lostmygithubaccount/pawz#1 (add something)
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 3), reused 9 (delta 3), pack-reused 0
+Unpacking objects: 100% (10/10), 1.72 KiB | 586.00 KiB/s, done.
+From https://github.com/lostmygithubaccount/pawz
+ * branch            main       -> FETCH_HEAD
+   a866fd3..318bd89  main       -> origin/main
+Updating a866fd3..318bd89
+Fast-forward
+ pyproject.toml           |  2 +-
+ src/pawz-core/Cargo.toml |  3 ++-
+ src/pawz-core/src/lib.rs | 10 +++++++++-
+ src/pawz/__init__.py     |  7 +++++--
+ 4 files changed, 17 insertions(+), 5 deletions(-)
+✓ Deleted local branch add-something and switched to branch main
+✓ Deleted remote branch add-something
+```
+
+## Updating on PyPI
+
+## Next steps
+
+## Conclusion
