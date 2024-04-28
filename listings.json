@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/pawz/index.html",
       "/posts/language-as-the-interface/index.html",
       "/posts/abolish-rag/index.html",
       "/posts/prompt-engineering/index.html",

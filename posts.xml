@@ -10,7 +10,1337 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.4.553</generator>
-<lastBuildDate>Fri, 13 Oct 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 28 Apr 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Python + Rust: a simple tutorial</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/pawz/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This post is intended to provide a simple demonstration of a Python package that relies on core functionality written in Rust. You can <a href="https://github.com/lostmygithubaccount/pawz">view the source code on GitHub</a>.</p>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>In addition to Python and Rust, we’ll use the following tools:</p>
+<ul>
+<li><a href="https://github.com">GitHub</a>: repository hosting</li>
+<li><a href="https://cli.github.com">GitHub CLI</a>: interact with GitHub from the command line</li>
+<li><a href="https://github.com/casey/just">just</a>: a command runner</li>
+<li><a href="https://github.com/jdx/mise">mise</a>: a tool for managing dev environments (Python/Rust versions)</li>
+</ul>
+<p>For generating and using Rust code in Python, we’ll use <a href="https://pyo3.rs/">PyO3</a>.</p>
+</section>
+<section id="setting-up-the-project" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-the-project">Setting up the project</h2>
+<p>We’ll start with an overview of the project setup.</p>
+<section id="picking-a-name" class="level3">
+<h3 class="anchored" data-anchor-id="picking-a-name">Picking a name</h3>
+<p>We need a good name for our project. Ideally, this can match how the package on PyPI. I chose <code>pawz</code> because it was not taken, is short, and leans into what the demo package will do.</p>
+</section>
+<section id="layout" class="level3">
+<h3 class="anchored" data-anchor-id="layout">Layout</h3>
+<p>Let’s start by looking at the file tree for <code>pawz</code>:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % tree</span>
+<span id="cb1-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">./</span></span>
+<span id="cb1-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> LICENSE</span>
+<span id="cb1-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> dev-requirements.txt</span>
+<span id="cb1-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> justfile</span>
+<span id="cb1-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> pyproject.toml</span>
+<span id="cb1-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> readme.md</span>
+<span id="cb1-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> src/</span>
+<span id="cb1-9">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> pawz/</span>
+<span id="cb1-10">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">│&nbsp;&nbsp;</span> └── __init__.py</span>
+<span id="cb1-11">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> pawz-core/</span>
+<span id="cb1-12">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> Cargo.toml</span>
+<span id="cb1-13">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> pyproject.toml</span>
+<span id="cb1-14">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> readme.md</span>
+<span id="cb1-15">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> src/</span>
+<span id="cb1-16">            <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">├──</span> lib.rs</span>
+<span id="cb1-17">            <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">└──</span> main.rs</span>
+<span id="cb1-18"></span>
+<span id="cb1-19"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">5</span> directories, 11 files</span></code></pre></div>
+<p>This setup is copied over from a private project, then modified to update the project name and reduce code to its minimal form.</p>
+</section>
+<section id="justfile" class="level3">
+<h3 class="anchored" data-anchor-id="justfile">Justfile</h3>
+<p>We can look at the <code>justfile</code> – <code>just</code> is a command runner – to get a sense of the things we will be doing:</p>
+<div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"># Justfile</span>
+<span id="cb2-2"></span>
+<span id="cb2-3"># load environment variables</span>
+<span id="cb2-4">set dotenv-load</span>
+<span id="cb2-5"></span>
+<span id="cb2-6"># aliases</span>
+<span id="cb2-7">alias fmt:=format</span>
+<span id="cb2-8"></span>
+<span id="cb2-9"># list justfile recipes</span>
+<span id="cb2-10">default:</span>
+<span id="cb2-11">    just --list</span>
+<span id="cb2-12"></span>
+<span id="cb2-13"># setup</span>
+<span id="cb2-14">setup:</span>
+<span id="cb2-15">    @pip install -r dev-requirements.txt</span>
+<span id="cb2-16"></span>
+<span id="cb2-17"># build</span>
+<span id="cb2-18">build:</span>
+<span id="cb2-19">    just clean</span>
+<span id="cb2-20">    @python -m build src/pawz-core</span>
+<span id="cb2-21">    @python -m build</span>
+<span id="cb2-22"></span>
+<span id="cb2-23"># format</span>
+<span id="cb2-24">format:</span>
+<span id="cb2-25">    @cargo fmt --manifest-path src/pawz-core/Cargo.toml</span>
+<span id="cb2-26">    @ruff format .</span>
+<span id="cb2-27"></span>
+<span id="cb2-28"># install</span>
+<span id="cb2-29">install:</span>
+<span id="cb2-30">    @maturin dev -m src/pawz-core/Cargo.toml</span>
+<span id="cb2-31">    @pip install --upgrade -e '.[all]'</span>
+<span id="cb2-32"></span>
+<span id="cb2-33"># uninstall</span>
+<span id="cb2-34">uninstall:</span>
+<span id="cb2-35">    @pip uninstall pawz pawz-core -y</span>
+<span id="cb2-36"></span>
+<span id="cb2-37"># release-test</span>
+<span id="cb2-38">release-test:</span>
+<span id="cb2-39">    just build</span>
+<span id="cb2-40">    @twine upload --repository testpypi src/pawz-core/dist/* -u __token__ -p ${PYPI_TEST_TOKEN}</span>
+<span id="cb2-41">    @twine upload --repository testpypi dist/* -u __token__ -p ${PYPI_TEST_TOKEN}</span>
+<span id="cb2-42"></span>
+<span id="cb2-43"># release</span>
+<span id="cb2-44">release:</span>
+<span id="cb2-45">    just build</span>
+<span id="cb2-46">    @twine upload src/pawz-core/dist/* -u __token__ -p ${PYPI_TOKEN}</span>
+<span id="cb2-47">    @twine upload dist/* -u __token__ -p ${PYPI_TOKEN}</span>
+<span id="cb2-48"></span>
+<span id="cb2-49"># clean</span>
+<span id="cb2-50">clean:</span>
+<span id="cb2-51">    @rm -r src/pawz-core/target || True</span>
+<span id="cb2-52">    @rm -rf src/pawz-core/dist || True</span>
+<span id="cb2-53">    @rm -rf dist || True</span></code></pre></div>
+</section>
+<section id="python-and-rust-sub-projects" class="level3">
+<h3 class="anchored" data-anchor-id="python-and-rust-sub-projects">Python and Rust sub-projects</h3>
+<p>You may have already noticed above we’re building and publishing two Python packages – <code>pawz</code> is a pure Python package that depends on <code>pawz-core</code>, a pure Rust package with Python bindings.</p>
+<p>You can see the package definitions in the respective <code>pyproject.toml</code>s:</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Due to the website’s exquisite theme, you may not be able to tell that below are two separate tabs.</p>
+</div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" aria-controls="tabset-1-1" aria-selected="true"><code>pawz</code>: pure Python</a></li><li class="nav-item"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" aria-controls="tabset-1-2" aria-selected="false"><code>pawz-core</code>: pure Rust with Python bindings</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[build-system]</span></span>
+<span id="cb3-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">requires</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hatchling"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb3-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">build-backend</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"hatchling.build"</span></span>
+<span id="cb3-4"></span>
+<span id="cb3-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[project]</span></span>
+<span id="cb3-6"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz"</span></span>
+<span id="cb3-7"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">version</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0.1.0"</span></span>
+<span id="cb3-8"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">authors</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[{ </span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Cody"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">, </span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">email</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cody@dkdc.dev"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> }]</span></span>
+<span id="cb3-9"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">description</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a demo of Python + Rust"</span></span>
+<span id="cb3-10"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">readme</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"readme.md"</span></span>
+<span id="cb3-11"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">requires-python</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&gt;=3.11"</span></span>
+<span id="cb3-12"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">classifiers</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span></span>
+<span id="cb3-13">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Programming Language :: Python :: 3"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-14">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"License :: OSI Approved :: MIT License"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-15">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Operating System :: OS Independent"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb3-16"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb3-17"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">dependencies</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz_core"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb3-18"></span>
+<span id="cb3-19"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[project.urls]</span></span>
+<span id="cb3-20"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"Homepage"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://github.com/lostmygithubaccount/pawz"</span></span>
+<span id="cb3-21"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"Bug Tracker"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://github.com/lostmygithubaccount/pawz/issues"</span></span></code></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[build-system]</span></span>
+<span id="cb4-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">requires</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"maturin&gt;=1.5,&lt;2.0"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb4-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">build-backend</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"maturin"</span></span>
+<span id="cb4-4"></span>
+<span id="cb4-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[project]</span></span>
+<span id="cb4-6"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz_core"</span></span>
+<span id="cb4-7"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">dynamic</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"version"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb4-8"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">authors</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[{ </span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Cody"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">, </span><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">email</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cody@dkdc.dev"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"> }]</span></span>
+<span id="cb4-9"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">description</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz core functionality (Rust!)"</span></span>
+<span id="cb4-10"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">readme</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"readme.md"</span></span>
+<span id="cb4-11"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">requires-python</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&gt;=3.11"</span></span>
+<span id="cb4-12"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">classifiers</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span></span>
+<span id="cb4-13">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Programming Language :: Python :: 3"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-14">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"License :: OSI Approved :: MIT License"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-15">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Operating System :: OS Independent"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb4-16"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb4-17"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">dependencies</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[]</span></span>
+<span id="cb4-18"></span>
+<span id="cb4-19"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[tool.maturin]</span></span>
+<span id="cb4-20"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">features</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pyo3/extension-module"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb4-21"></span>
+<span id="cb4-22"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[project.urls]</span></span>
+<span id="cb4-23"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"Homepage"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://github.com/lostmygithubaccount/pawz"</span></span>
+<span id="cb4-24"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">"Bug Tracker"</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://github.com/lostmygithubaccount/pawz/issues"</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<p>You’ll notice the primary difference is the build tooling – <code>hatchling</code> for the pure-Python project versus <code>maturin</code> for the Rust project.</p>
+<p>With <code>pawz-core</code>, the package version is specified in the <code>Cargo.toml</code> instead of the <code>pyproject.toml</code> – we’ll take a closer look at that later.</p>
+</section>
+<section id="pawz" class="level3">
+<h3 class="anchored" data-anchor-id="pawz"><code>pawz</code></h3>
+<p>Let’s setup our Python package <code>pawz</code> – to start, all you need is an <code>__init__.py</code> file in the correct subdirectory:</p>
+<div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># imports</span></span>
+<span id="cb5-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pawz_core <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pc</span>
+<span id="cb5-3"></span>
+<span id="cb5-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># exports</span></span>
+<span id="cb5-5">__all__ <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pc"</span>]</span></code></pre></div>
+<p>All we’re doing at this point is making <code>pawz_core</code> available as a module from <code>pawz</code>. So, we can do something like:</p>
+<div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> pawz <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> pz</span>
+<span id="cb6-2"></span>
+<span id="cb6-3">pz.pc.open_pawz()</span></code></pre></div>
+<p>Where the <code>open_pawz()</code> method is defined in <code>pawz_core</code>. We haven’t done that yet, but will later.</p>
+</section>
+<section id="pawz-core" class="level3">
+<h3 class="anchored" data-anchor-id="pawz-core"><code>pawz-core</code></h3>
+<p>In addition to the <code>pyproject.toml</code> above, we need a <code>Cargo.toml</code> to define the Rust project:</p>
+<div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb7-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[package]</span></span>
+<span id="cb7-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz_core"</span></span>
+<span id="cb7-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">version</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0.1.0"</span></span>
+<span id="cb7-4"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">edition</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2021"</span></span>
+<span id="cb7-5"></span>
+<span id="cb7-6"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[lib]</span></span>
+<span id="cb7-7"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz_core"</span></span>
+<span id="cb7-8"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">crate-type</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cdylib"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb7-9"></span>
+<span id="cb7-10"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[dependencies]</span></span>
+<span id="cb7-11"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">pyo3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0.21.1"</span></span></code></pre></div>
+<p>Notice the Python package’s version will match the version defined here.</p>
+<p>We also need the <code>lib.rs</code> in the <code>src/</code> directory defining the functionality and exposing it through the Python bindings:</p>
+<div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb8-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">use</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">pyo3::prelude::</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*;</span></span>
+<span id="cb8-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//use pyo3::exceptions::PyValueError;</span></span>
+<span id="cb8-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//use pyo3::types::PyTuple;</span></span>
+<span id="cb8-4"></span>
+<span id="cb8-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/// A Python module implemented in Rust.</span></span>
+<span id="cb8-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">#[</span>pymodule<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb8-7"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">#[</span>allow<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">(</span>deprecated<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">)]</span></span>
+<span id="cb8-8"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">fn</span> pawz_core(_py<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> Python<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> _m<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span>PyModule) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> PyResult<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>()<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb8-9">    <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">Ok</span>(())</span>
+<span id="cb8-10"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
+<p>Notice there’s nothing defined yet and a few things are commented out and prepended with an underscore to avoid the compiler complaining. However at this point, everything is fully functional – you can build <code>pawz-core</code> and <code>pawz</code> and import them.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What about the <code>main.rs</code>?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As of writing, the <code>main.rs</code> is a simple hello world:</p>
+<div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb9-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">fn</span> main() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb9-2">    <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">println!</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Hello, world!"</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb9-3"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
+<p>You don’t need the file, but I find it useful to easily try things out in Rust. For instance, you can import things from <code>lib.rs</code> and run them.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="setup-the-python-environment" class="level2">
+<h2 class="anchored" data-anchor-id="setup-the-python-environment">Setup the Python environment</h2>
+<p>Let’s take a look at the <code>dev-requirements.txt</code>:</p>
+<div class="sourceCode" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb10-1"># python</span>
+<span id="cb10-2">ruff</span>
+<span id="cb10-3">build</span>
+<span id="cb10-4">twine</span>
+<span id="cb10-5"></span>
+<span id="cb10-6"># rust</span>
+<span id="cb10-7">maturin</span></code></pre></div>
+<p><code>ruff</code> is to format Python code, <code>build</code> is to build the Python packages, <code>twine</code> is to upload them to PyPI, and <code>maturin</code> is to build the Rust package with Python bindings. You can see the use of these tools above in the <code>justfile</code>.</p>
+<section id="setup-a-virtual-python-environment" class="level3">
+<h3 class="anchored" data-anchor-id="setup-a-virtual-python-environment">Setup a virtual Python environment</h3>
+<p>You should generally use one virtual environment per project. I use <code>mise</code> to manage Python (and Rust) versions, but you don’t have to. You can run:</p>
+<div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % python <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> venv venv</span>
+<span id="cb11-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % source venv/bin/activate</span></code></pre></div>
+<p>to create your virtual environment. At this point if you’ve installed <code>just</code>, you can run:</p>
+<div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % just setup</span></code></pre></div>
+<p>This will install the dev dependencies defined above.</p>
+</section>
+<section id="installing-pawz-and-pawz-core" class="level3">
+<h3 class="anchored" data-anchor-id="installing-pawz-and-pawz-core">Installing <code>pawz</code> and <code>pawz-core</code></h3>
+<p>You can install <code>pawz</code> and <code>pawz-core</code> in local developer mode with:</p>
+<div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % just install</span></code></pre></div>
+<p>Now you’re able to <code>import pawz as pz</code>!</p>
+</section>
+</section>
+<section id="uploading-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="uploading-to-github">Uploading to GitHub</h2>
+<p>There are multiple ways to do this, but I prefer something like:</p>
+<div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git init</span>
+<span id="cb14-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % gh repo create pawz <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--public</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--source</span> .</span>
+<span id="cb14-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git checkout <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-b</span> main</span>
+<span id="cb14-4"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git add .</span>
+<span id="cb14-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git commit <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"initial commit"</span></span>
+<span id="cb14-6"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git push <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--set-upstream</span> origin/main</span></code></pre></div>
+<p>Now, your code should be up on GitHub!</p>
+</section>
+<section id="publishing-to-pypi" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-to-pypi">Publishing to PyPI</h2>
+<p>Let’s publish <code>pawz</code> and <code>pawz-core</code> to PyPI. First, you need to generate and place PyPI tokens in a <code>.env</code> file:</p>
+<div class="sourceCode" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb15-1">PYPI_TOKEN = "pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"</span>
+<span id="cb15-2">PYPI_TEST_TOKEN = "pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"</span></code></pre></div>
+<p>Then run:</p>
+<div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % just release-test</span>
+<span id="cb16-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % just release</span></code></pre></div>
+</section>
+<section id="doing-something" class="level2">
+<h2 class="anchored" data-anchor-id="doing-something">Doing something</h2>
+<p>Now, let’s do something! We’ll write some core functionality in Rust. For this demonstration, we’ll just open up a hardcoded URL pointing to a YouTube video.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the <code>pyproject.toml</code> and <code>Cargo.toml</code> we should bump the version up so we can ship a new version later.</p>
+</div>
+</div>
+</section>
+<section id="rust-edits" class="level2">
+<h2 class="anchored" data-anchor-id="rust-edits">Rust edits</h2>
+<p>We need to add the <code>open</code> crate dependency in the <code>Cargo.toml</code>:</p>
+<div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb17-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[package]</span></span>
+<span id="cb17-2"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz_core"</span></span>
+<span id="cb17-3"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">version</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0.2.0"</span></span>
+<span id="cb17-4"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">edition</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2021"</span></span>
+<span id="cb17-5"></span>
+<span id="cb17-6"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[lib]</span></span>
+<span id="cb17-7"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">name</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"pawz_core"</span></span>
+<span id="cb17-8"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">crate-type</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">[</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cdylib"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb17-9"></span>
+<span id="cb17-10"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">[dependencies]</span></span>
+<span id="cb17-11"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">pyo3</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"0.21.1"</span></span>
+<span id="cb17-12"><span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">open</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"5.1.2"</span></span></code></pre></div>
+<p>Then edit <code>lib.rs</code> to create our function and add it to the Python module:</p>
+<div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb18-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">use</span> open<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb18-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">use</span> <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">pyo3::prelude::</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*;</span></span>
+<span id="cb18-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//use pyo3::exceptions::PyValueError;</span></span>
+<span id="cb18-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//use pyo3::types::PyTuple;</span></span>
+<span id="cb18-5"></span>
+<span id="cb18-6"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">#[</span>pyfunction<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb18-7"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">fn</span> open_pawz() <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb18-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">let</span> url <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"https://www.youtube.com/watch?v=gJ6slhwPp6E"</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb18-9">    <span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">open::</span>that(url)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>unwrap()<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span></span>
+<span id="cb18-10"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb18-11"></span>
+<span id="cb18-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/// A Python module implemented in Rust.</span></span>
+<span id="cb18-13"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">#[</span>pymodule<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">]</span></span>
+<span id="cb18-14"><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">#[</span>allow<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">(</span>deprecated<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">)]</span></span>
+<span id="cb18-15"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">fn</span> pawz_core(_py<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> Python<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> m<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span>PyModule) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-&gt;</span> PyResult<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>()<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span></span>
+<span id="cb18-16">    m<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span>add_function(<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">wrap_pyfunction!</span>(open_pawz<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> m)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">?</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">?;</span></span>
+<span id="cb18-17">    <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">Ok</span>(())</span>
+<span id="cb18-18"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span></code></pre></div>
+<p>Now if you <code>import pawz_core</code>, you can run <code>pawz_core.open_pawz()</code> from Python!</p>
+<section id="python-edits" class="level3">
+<h3 class="anchored" data-anchor-id="python-edits">Python edits</h3>
+<p>No edits to Python are needed – since <code>pawz_core</code> is available from <code>pawz</code>, we can just call <code>pawz.pawz_core.open_pawz()</code>. You might want something different, i.e.&nbsp;to abstract away the core library code, but this is fine for demonstration purposes.</p>
+</section>
+<section id="git-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="git-workflow">Git workflow</h3>
+<p>First, we’ll check what we changed:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I changed a bit more when I actually did this, reflected in some of the output below.</p>
+</div>
+</div>
+<div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git status</span>
+<span id="cb19-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">On</span> branch main</span>
+<span id="cb19-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Your</span> branch is up to date with <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'origin/main'</span>.</span>
+<span id="cb19-4"></span>
+<span id="cb19-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Changes</span> not staged for commit:</span>
+<span id="cb19-6">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">use</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"git add &lt;file&gt;..."</span> to update what will be committed<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span id="cb19-7">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">use</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"git restore &lt;file&gt;..."</span> to discard changes in working directory<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span id="cb19-8">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">modified:</span>   pyproject.toml</span>
+<span id="cb19-9">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">modified:</span>   src/pawz-core/Cargo.toml</span>
+<span id="cb19-10">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">modified:</span>   src/pawz-core/src/lib.rs</span>
+<span id="cb19-11">        <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">modified:</span>   src/pawz/__init__.py</span>
+<span id="cb19-12"></span>
+<span id="cb19-13"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">no</span> changes added to commit <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">use</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"git add"</span> and/or <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"git commit -a"</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
+<p>Checkout a branch to commit our changes to:</p>
+<div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git checkout <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-b</span> add-something</span>
+<span id="cb20-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Switched</span> to a new branch <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'add-something'</span></span></code></pre></div>
+<p>Ensure we format our code (Rust and Python):</p>
+<div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % just fmt</span>
+<span id="cb21-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">1</span> file left unchanged</span></code></pre></div>
+<p>Add our changes and commit them:</p>
+<div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git add .</span>
+<span id="cb22-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % git commit <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"add something"</span></span>
+<span id="cb22-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">[add-something</span> 3e8727d] add something</span>
+<span id="cb22-4"> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">4</span> files changed, 17 insertions<span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">+</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">,</span> 5 deletions<span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">-</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span></span></code></pre></div>
+<p>Then create a PR on GitHub:</p>
+<div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % gh pr create</span>
+<span id="cb23-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> Where should we push the <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'add-something'</span> branch<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">?</span> lostmygithubaccount/pawz</span>
+<span id="cb23-3"></span>
+<span id="cb23-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Creating</span> pull request for add-something into main in lostmygithubaccount/pawz</span>
+<span id="cb23-5"></span>
+<span id="cb23-6"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> Title add something</span>
+<span id="cb23-7"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> Body <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>Received<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span></span>
+<span id="cb23-8"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> What<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'s next? Submit</span></span>
+<span id="cb23-9"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">remote:</span></span>
+<span id="cb23-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">remote:</span></span>
+<span id="cb23-11"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">To https://github.com/lostmygithubaccount/pawz.git</span></span>
+<span id="cb23-12"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> * [new branch]      HEAD -&gt; add-something</span></span>
+<span id="cb23-13"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">branch '</span>add-something<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">' set up to track '</span>origin/add-something<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'.</span></span>
+<span id="cb23-14"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">https://github.com/lostmygithubaccount/pawz/pull/1</span></span></code></pre></div>
+<p>And finally, merge the PR from the CLI:</p>
+<div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % gh pr merge</span>
+<span id="cb24-2"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">Merging</span> pull request lostmygithubaccount/pawz#1 <span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">add</span> something<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span></span>
+<span id="cb24-3"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> What merge method would you like to use<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">?</span> Squash and merge</span>
+<span id="cb24-4"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> Delete the branch locally and on GitHub<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">?</span> Yes</span>
+<span id="cb24-5"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">?</span> What<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'s next? Submit</span></span>
+<span id="cb24-6"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">✓ Squashed and merged pull request lostmygithubaccount/pawz#1 (add something)</span></span>
+<span id="cb24-7"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">remote: Enumerating objects: 19, done.</span></span>
+<span id="cb24-8"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">remote: Counting objects: 100% (19/19), done.</span></span>
+<span id="cb24-9"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">remote: Compressing objects: 100% (6/6), done.</span></span>
+<span id="cb24-10"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">remote: Total 10 (delta 3), reused 9 (delta 3), pack-reused 0</span></span>
+<span id="cb24-11"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Unpacking objects: 100% (10/10), 1.72 KiB | 586.00 KiB/s, done.</span></span>
+<span id="cb24-12"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">From https://github.com/lostmygithubaccount/pawz</span></span>
+<span id="cb24-13"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> * branch            main       -&gt; FETCH_HEAD</span></span>
+<span id="cb24-14"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">   a866fd3..318bd89  main       -&gt; origin/main</span></span>
+<span id="cb24-15"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Updating a866fd3..318bd89</span></span>
+<span id="cb24-16"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">Fast-forward</span></span>
+<span id="cb24-17"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> pyproject.toml           |  2 +-</span></span>
+<span id="cb24-18"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> src/pawz-core/Cargo.toml |  3 ++-</span></span>
+<span id="cb24-19"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> src/pawz-core/src/lib.rs | 10 +++++++++-</span></span>
+<span id="cb24-20"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> src/pawz/__init__.py     |  7 +++++--</span></span>
+<span id="cb24-21"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> 4 files changed, 17 insertions(+), 5 deletions(-)</span></span>
+<span id="cb24-22"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">✓ Deleted local branch add-something and switched to branch main</span></span>
+<span id="cb24-23"><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">✓ Deleted remote branch add-something</span></span></code></pre></div>
+<p>Now our source code is updated. You can <a href="https://github.com/lostmygithubaccount/pawz/pull/1">view this PR here, including the files changed</a>.</p>
+</section>
+</section>
+<section id="updating-on-pypi" class="level2">
+<h2 class="anchored" data-anchor-id="updating-on-pypi">Updating on PyPI</h2>
+<p>With our code updated, we want to update our packages on PyPI. We simply run:</p>
+<div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">(</span><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">)</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">cody@dkdc</span> pawz % just publish</span></code></pre></div>
+<p>as before, shipping the new version that does something!</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>I hope this is helpful to someone setting up a Python package with core functionality written in Rust. Of course, there are many ways to do this but I find the above fairly clean.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>Python</category>
+  <category>Rust</category>
+  <guid>https://dkdc.dev/posts/pawz/</guid>
+  <pubDate>Sun, 28 Apr 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/pawz/thumbnail.png" medium="image" type="image/png" height="130" width="144"/>
+</item>
 <item>
   <title>language (conversation) as the interface</title>
   <dc:creator>Cody </dc:creator>
@@ -813,56 +2143,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <guid>https://dkdc.dev/posts/nix/</guid>
   <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/nix/nix1.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>on: Vegas</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/vegas/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I moved to Las Vegas, NV!</p>
-<div class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div>                            <div id="0ebf270a-bb28-4186-a61d-a0885047712b" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("0ebf270a-bb28-4186-a61d-a0885047712b")) {                    Plotly.newPlot(                        "0ebf270a-bb28-4186-a61d-a0885047712b",                        [{"colorscale":[[0.0,"#636efa"],[1.0,"#636efa"]],"geo":"geo","hovertemplate":"locations=%{location}\u003cextra\u003e\u003c\u002fextra\u003e","locationmode":"USA-states","locations":["FL","TX","WA","NV"],"name":"","showlegend":true,"showscale":false,"z":[1,1,1,1],"type":"choropleth"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"marker":{"line":{"color":"#283442"}},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#f2f5fa"},"error_y":{"color":"#f2f5fa"},"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"marker":{"line":{"color":"#283442"}},"type":"scattergl"}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"baxis":{"endlinecolor":"#A2B1C6","gridcolor":"#506784","linecolor":"#506784","minorgridcolor":"#506784","startlinecolor":"#A2B1C6"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#506784"},"line":{"color":"rgb(17,17,17)"}},"header":{"fill":{"color":"#2a3f5f"},"line":{"color":"rgb(17,17,17)"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"rgb(17,17,17)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#f2f5fa"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"rgb(17,17,17)","plot_bgcolor":"rgb(17,17,17)","polar":{"bgcolor":"rgb(17,17,17)","angularaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"radialaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"ternary":{"bgcolor":"rgb(17,17,17)","aaxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"baxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""},"caxis":{"gridcolor":"#506784","linecolor":"#506784","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"#283442","linecolor":"#506784","ticks":"","title":{"standoff":15},"zerolinecolor":"#283442","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3","gridwidth":2},"yaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3","gridwidth":2},"zaxis":{"backgroundcolor":"rgb(17,17,17)","gridcolor":"#506784","linecolor":"#506784","showbackground":true,"ticks":"","zerolinecolor":"#C8D4E3","gridwidth":2}},"shapedefaults":{"line":{"color":"#f2f5fa"}},"annotationdefaults":{"arrowcolor":"#f2f5fa","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"rgb(17,17,17)","landcolor":"rgb(17,17,17)","subunitcolor":"#506784","showland":true,"showlakes":true,"lakecolor":"rgb(17,17,17)"},"title":{"x":0.05},"updatemenudefaults":{"bgcolor":"#506784","borderwidth":0},"sliderdefaults":{"bgcolor":"#C8D4E3","borderwidth":1,"bordercolor":"rgb(17,17,17)","tickwidth":0},"mapbox":{"style":"dark"}}},"geo":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"center":{},"scope":"usa"},"legend":{"tracegroupgap":0},"title":{"text":"cool states"}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('0ebf270a-bb28-4186-a61d-a0885047712b');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };                });            </script>        </div>
-</div>
-</div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>life</category>
-  <category>on:</category>
-  <guid>https://dkdc.dev/posts/vegas/</guid>
-  <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/vegas/thumbnail.png" medium="image" type="image/png" height="192" width="144"/>
 </item>
 </channel>
 </rss>
