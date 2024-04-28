@@ -495,7 +495,7 @@ Now our source code is updated. You can [view this PR here, including the files 
 With our code updated, we want to update our packages on PyPI. We simply run:
 
 ```bash
-(venv) cody@dkdc pawz % just publish
+(venv) cody@dkdc pawz % just release
 ```
 
 as before, shipping the new version that does something!
