@@ -452,7 +452,7 @@
     "href": "posts/pawz/index.html#updating-on-pypi",
     "title": "Python + Rust: a simple tutorial",
     "section": "Updating on PyPI",
-    "text": "Updating on PyPI\nWith our code updated, we want to update our packages on PyPI. We simply run:\n(venv) cody@dkdc pawz % just publish\nas before, shipping the new version that does something!"
+    "text": "Updating on PyPI\nWith our code updated, we want to update our packages on PyPI. We simply run:\n(venv) cody@dkdc pawz % just release\nas before, shipping the new version that does something!"
   },
   {
     "objectID": "posts/pawz/index.html#conclusion",
