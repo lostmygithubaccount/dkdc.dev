@@ -3,7 +3,6 @@ title: "Python + Rust: a simple tutorial"
 author: "Cody"
 date: "2024-04-28"
 image: thumbnail.png
-draft: true
 categories: 
     - Python
     - Rust
