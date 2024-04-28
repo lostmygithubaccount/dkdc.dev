@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,7 +48,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -57,6 +63,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -96,8 +103,35 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="dkdc.dev" href="posts.xml"><meta name="twitter:title" content="dkdc.dev - posts">
+<link rel="alternate" type="application/rss+xml" title="dkdc.dev" href="posts.xml" data-external="1"><meta name="twitter:title" content="dkdc.dev - posts">
 <meta name="twitter:image" content="https://dkdc.dev/posts/more-llm-pain/thumbnail.png">
 <meta name="twitter:image-height" content="256">
 <meta name="twitter:image-width" content="256">
@@ -108,9 +142,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
     <img src="./logo.png" alt="" class="navbar-logo">
     </a>
@@ -125,106 +159,107 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" rel="" target="" aria-current="page">
- <span class="menu-text">posts</span></a>
+    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+<span class="menu-text">posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-links" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-links" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">links</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-links">    
         <li>
-    <a class="dropdown-item" href="https://dkdc.dev" rel="" target="">
+    <a class="dropdown-item" href="https://dkdc.dev">
  <span class="dropdown-text">dkdc.dev</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://read.readwise.io/feed/unseen" rel="" target="">
+    <a class="dropdown-item" href="https://read.readwise.io/feed/unseen">
  <span class="dropdown-text">reader</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://mail.google.com/mail" rel="" target="">
+    <a class="dropdown-item" href="https://mail.google.com/mail">
  <span class="dropdown-text">email</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://calendar.google.com/calendar" rel="" target="">
+    <a class="dropdown-item" href="https://calendar.google.com/calendar">
  <span class="dropdown-text">calendar</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://drive.google.com/drive/my-drive" rel="" target="">
+    <a class="dropdown-item" href="https://drive.google.com/drive/my-drive">
  <span class="dropdown-text">drive</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://ibis-project.org" rel="" target="">
+    <a class="dropdown-item" href="https://ibis-project.org">
  <span class="dropdown-text">ibis</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://ibis-project.github.io/ibisml" rel="" target="">
+    <a class="dropdown-item" href="https://ibis-project.github.io/ibisml">
  <span class="dropdown-text">ibisml</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://ibis-project.github.io/ibis-birdbrain" rel="" target="">
+    <a class="dropdown-item" href="https://ibis-project.github.io/ibis-birdbrain">
  <span class="dropdown-text">ibis-birdbrain</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://github.com" rel="" target="">
+    <a class="dropdown-item" href="https://github.com">
  <span class="dropdown-text">github</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://portal.azure.com" rel="" target="">
+    <a class="dropdown-item" href="https://portal.azure.com">
  <span class="dropdown-text">azure</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://oai.azure.com/portal" rel="" target="">
+    <a class="dropdown-item" href="https://oai.azure.com/portal">
  <span class="dropdown-text">azure openai</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://platform.openai.com" rel="" target="">
+    <a class="dropdown-item" href="https://platform.openai.com">
  <span class="dropdown-text">openai</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://console.cloud.google.com" rel="" target="">
+    <a class="dropdown-item" href="https://console.cloud.google.com">
  <span class="dropdown-text">gcp</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://share.streamlit.io" rel="" target="">
+    <a class="dropdown-item" href="https://share.streamlit.io">
  <span class="dropdown-text">streamlit</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://app.motherduck.com" rel="" target="">
+    <a class="dropdown-item" href="https://app.motherduck.com">
  <span class="dropdown-text">motherduck</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://configure.zsa.io/moonlander" rel="" target="">
+    <a class="dropdown-item" href="https://configure.zsa.io/moonlander">
  <span class="dropdown-text">keyboard</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dashboards" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dashboards" role="button" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">dashboards</span>
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-dashboards">    
         <li>
-    <a class="dropdown-item" href="https://ibis-analytics.streamlit.app" rel="" target="">
+    <a class="dropdown-item" href="https://ibis-analytics.streamlit.app">
  <span class="dropdown-text">ibis-analytics</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html" rel="" target="">
- <span class="menu-text">contact</span></a>
+    <a class="nav-link" href="./contact.html"> 
+<span class="menu-text">contact</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-github"></i></a>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="quarto-navigation-tool-dropdown-0">
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lostmygithubaccount/dkdc.dev">
             Source code
@@ -238,7 +273,6 @@ ul.task-list li input[type="checkbox"] {
       </ul>
     </div>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -259,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -267,7 +301,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 
 
@@ -300,12 +336,10 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="ai" data-listing-date-sort="1705190400000" data-listing-file-modified-sort="1706033870223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="0" data-categories="ai" data-listing-date-sort="1705190400000" data-listing-file-modified-sort="1714338298355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="65">
 <a href="./posts/understanding-llms/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 ‘we don’t understand how LLMs work’
@@ -330,12 +364,10 @@ Jan 14, 2024
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="1" data-categories="ai" data-listing-date-sort="1700956800000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="g-col-1" data-index="1" data-categories="ai" data-listing-date-sort="1700956800000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="487">
 <a href="./posts/i-made-agi/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 I made an AGI?
@@ -360,12 +392,10 @@ Nov 26, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="ai,language" data-listing-date-sort="1697155200000" data-listing-file-modified-sort="1706033870183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="g-col-1" data-index="2" data-categories="ai,language" data-listing-date-sort="1697155200000" data-listing-file-modified-sort="1714338298315" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
 <a href="./posts/language-as-the-interface/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 language (conversation) as the interface
@@ -393,12 +423,10 @@ Oct 13, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="3" data-categories="ai" data-listing-date-sort="1696550400000" data-listing-file-modified-sort="1706033870143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="3" data-categories="ai" data-listing-date-sort="1696550400000" data-listing-file-modified-sort="1714338298275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="56">
 <a href="./posts/abolish-rag/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 abolish RAG
@@ -423,12 +451,10 @@ Oct 6, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="ai,prompt engineering" data-listing-date-sort="1696291200000" data-listing-file-modified-sort="1706033870223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="4" data-categories="ai,prompt engineering" data-listing-date-sort="1696291200000" data-listing-file-modified-sort="1714338298355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <a href="./posts/prompt-engineering/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="posts/prompt-engineering/images/prompt-engineering-pt-0.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 prompt engineering
@@ -456,12 +482,10 @@ Oct 3, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="ai" data-listing-date-sort="1695859200000" data-listing-file-modified-sort="1706033870223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="5" data-categories="ai" data-listing-date-sort="1695859200000" data-listing-file-modified-sort="1714338298355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="41">
 <a href="./posts/quoting-simon-willison-quoting-andrej-karpathy/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 quoting Simon Willison quoting Andrej Karpathy
@@ -486,12 +510,10 @@ Sep 28, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="meta" data-listing-date-sort="1694390400000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="6" data-categories="meta" data-listing-date-sort="1694390400000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="177">
 <a href="./posts/beware-the-metagame/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 beware the metagame
@@ -516,12 +538,10 @@ Sep 11, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="7" data-categories="ai,python" data-listing-date-sort="1694044800000" data-listing-file-modified-sort="1706033870143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="7" data-categories="ai,python" data-listing-date-sort="1694044800000" data-listing-file-modified-sort="1714338298275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
 <a href="./posts/ai-can-count/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
+<p class="card-img-top"><img src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 ai counting
@@ -535,7 +555,19 @@ python
 </div>
 </div>
 <div class="card-text listing-description">
-
+<pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1">[ins] In [<span class="dv">3</span>]: ai(<span class="st">"pick 10 random numbers from 0 to 20"</span>)</span>
+<span id="cb1-2">mlllm.ai: Here are <span class="dv">10</span> random numbers between <span class="dv">0</span> <span class="kw">and</span> <span class="dv">20</span>:</span>
+<span id="cb1-3"></span>
+<span id="cb1-4"><span class="fl">1.</span> <span class="dv">12</span></span>
+<span id="cb1-5"><span class="fl">2.</span> <span class="dv">13</span></span>
+<span id="cb1-6"><span class="fl">3.</span> <span class="dv">3</span></span>
+<span id="cb1-7"><span class="fl">4.</span> <span class="dv">5</span></span>
+<span id="cb1-8"><span class="fl">5.</span> <span class="dv">12</span></span>
+<span id="cb1-9"><span class="fl">6.</span> <span class="dv">6</span></span>
+<span id="cb1-10"><span class="fl">7.</span> <span class="dv">19</span></span>
+<span id="cb1-11"><span class="fl">8.</span> <span class="dv">17</span></span>
+<span id="cb1-12"></span>
+<span id="cb1-13">Due to the…</span></code></pre>
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -549,7 +581,7 @@ Sep 7, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="ai" data-listing-date-sort="1692316800000" data-listing-file-modified-sort="1706033870187" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="8" data-categories="ai" data-listing-date-sort="1692316800000" data-listing-file-modified-sort="1714338298319" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="77">
 <a href="./posts/more-llm-pain/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -579,7 +611,7 @@ Aug 18, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="9" data-categories="git" data-listing-date-sort="1692230400000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="g-col-1" data-index="9" data-categories="git" data-listing-date-sort="1692230400000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="717">
 <a href="./posts/git-rebase/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -595,7 +627,7 @@ git
 </div>
 </div>
 <div class="card-text listing-description">
-Git provides a multitude of ways to manage changes and development paths, one of which is the <code>git rebase</code> command. This command is a powerful tool that can make your commit history cleaner, resolve conflicts in a more controlled manner, and…
+Git provides a multitude of ways to manage changes and development paths, one of which is the <code>git rebase</code> command. This command is a powerful tool that can make your commit…
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
@@ -609,7 +641,7 @@ Aug 17, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="10" data-categories="ai" data-listing-date-sort="1692144000000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="10" data-categories="ai" data-listing-date-sort="1692144000000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
 <a href="./posts/context-length-pain-pt2/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -639,7 +671,7 @@ Aug 16, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="11" data-categories="ai" data-listing-date-sort="1692057600000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="g-col-1" data-index="11" data-categories="ai" data-listing-date-sort="1692057600000" data-listing-file-modified-sort="1714338298275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="538">
 <a href="./posts/ai-for-better-data/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -669,7 +701,7 @@ Aug 15, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="12" data-categories="ai" data-listing-date-sort="1691971200000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="12" data-categories="ai" data-listing-date-sort="1691971200000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="179">
 <a href="./posts/ai-poem/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -699,7 +731,7 @@ Aug 14, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="13" data-categories="ai" data-listing-date-sort="1691884800000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="13" data-categories="ai" data-listing-date-sort="1691884800000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
 <a href="./posts/context-length-pain/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -729,7 +761,7 @@ Aug 13, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="14" data-categories="ai" data-listing-date-sort="1691884800000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="g-col-1" data-index="14" data-categories="ai" data-listing-date-sort="1691884800000" data-listing-file-modified-sort="1714338298275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="427">
 <a href="./posts/ai-on-bohemian-rhapsody/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -759,40 +791,7 @@ Aug 13, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="15" data-categories="ai,python" data-listing-date-sort="1691798400000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<a href="./posts/ai-on-ai/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/ai-on-ai/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Unleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('ai'); return false;">
-ai
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
-python
-</div>
-</div>
-<div class="card-text listing-description">
-Imagine a world where cutting-edge technology harnesses the power of artificial intelligence (AI) to create seamless and engaging conversations. Enter the world of DKDC AI’s…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-dkdc.ai
-</div>
-<div class="listing-date">
-Aug 12, 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="16" data-categories="ai,python,video,on:" data-listing-date-sort="1691798400000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="15" data-categories="ai,python,video,on:" data-listing-date-sort="1691798400000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="45">
 <a href="./posts/ai-programming/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -831,44 +830,44 @@ Aug 12, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="17" data-categories="dogs,video" data-listing-date-sort="1691712000000" data-listing-file-modified-sort="1706033870147" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./posts/grass-dog/index.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="16" data-categories="ai,python" data-listing-date-sort="1691798400000" data-listing-file-modified-sort="1714338298275" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="462">
+<a href="./posts/ai-on-ai/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img src="./posts/nix/nix2.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+<img src="./posts/ai-on-ai/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-grass dog
+Unleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script
 </h5>
 <div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('dogs'); return false;">
-dogs
+<div class="listing-category" onclick="window.quartoListingCategory('ai'); return false;">
+ai
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('video'); return false;">
-video
+<div class="listing-category" onclick="window.quartoListingCategory('python'); return false;">
+python
 </div>
 </div>
 <div class="card-text listing-description">
-Nix being a dog (feat. Murphy):
+Imagine a world where cutting-edge technology harnesses the power of artificial intelligence (AI) to create seamless and engaging conversations. Enter the world of DKDC AI’s…
 </div>
 <div class="card-attribution card-text-small justify">
 <div class="listing-author">
-Cody
+dkdc.ai
 </div>
 <div class="listing-date">
-Aug 11, 2023
+Aug 12, 2023
 </div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="18" data-categories="ai,ml,data" data-listing-date-sort="1691712000000" data-listing-file-modified-sort="1706033870183" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="g-col-1" data-index="17" data-categories="ai,ml,data" data-listing-date-sort="1691712000000" data-listing-file-modified-sort="1714338298315" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="691">
 <a href="./posts/is-small-data-dead/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="./posts/is-small-data-dead/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
+<img src="./posts/is-small-data-dead/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -900,12 +899,43 @@ Aug 11, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="19" data-categories="news" data-listing-date-sort="1691193600000" data-listing-file-modified-sort="1706033870223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="./posts/website/index.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="18" data-categories="dogs,video" data-listing-date-sort="1691712000000" data-listing-file-modified-sort="1714338298279" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./posts/grass-dog/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img data-src="logo.png" class="thumbnail-image card-img" style="height: 150px;">
+<img data-src="./posts/nix/nix2.jpeg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+grass dog
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('dogs'); return false;">
+dogs
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('video'); return false;">
+video
+</div>
+</div>
+<div class="card-text listing-description">
+Nix being a dog (feat. Murphy):
+</div>
+<div class="card-attribution card-text-small justify">
+<div class="listing-author">
+Cody
+</div>
+<div class="listing-date">
+Aug 11, 2023
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="19" data-categories="news" data-listing-date-sort="1691193600000" data-listing-file-modified-sort="1714338298355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<a href="./posts/website/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img data-src="logo.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 I redid my website again…
@@ -930,7 +960,7 @@ Aug 5, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="20" data-categories="dogs,life" data-listing-date-sort="1680307200000" data-listing-file-modified-sort="1706033870191" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="20" data-categories="dogs,life" data-listing-date-sort="1680307200000" data-listing-file-modified-sort="1714338298323" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="12">
 <a href="./posts/nix/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -963,7 +993,7 @@ Apr 1, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="21" data-categories="life,on:" data-listing-date-sort="1677628800000" data-listing-file-modified-sort="1706033870223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="21" data-categories="life,on:" data-listing-date-sort="1677628800000" data-listing-file-modified-sort="1714338298355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="23">
 <a href="./posts/vegas/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -996,7 +1026,7 @@ Mar 1, 2023
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="22" data-categories="dogs,life" data-listing-date-sort="1508284800000" data-listing-file-modified-sort="1706033870187" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="g-col-1" data-index="22" data-categories="dogs,life" data-listing-date-sort="1508284800000" data-listing-file-modified-sort="1714338298319" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <a href="./posts/murphy/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1029,7 +1059,7 @@ Oct 18, 2017
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="23" data-categories="archive" data-listing-date-sort="-62127820800000" data-listing-file-modified-sort="1706033870223" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="g-col-1" data-index="23" data-categories="archive" data-listing-date-sort="-62127820800000" data-listing-file-modified-sort="1714338298355" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="235">
 <a href="./posts/testing/index.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -1146,10 +1176,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/dkdc\.dev");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1159,8 +1206,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1172,7 +1228,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1216,6 +1395,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1241,6 +1421,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1306,7 +1512,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">Cody’s website</div>
+    <div class="nav-footer-center">
+<p>Cody’s website</p>
+</div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -1337,6 +1545,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
 
 
 

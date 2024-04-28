@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cody">
-<meta name="dcterms.date" content="2023-09-28">
+<meta name="dcterms.date" content="2024-04-30">
 
-<title>dkdc.dev - quoting Simon Willison quoting Andrej Karpathy</title>
+<title>dkdc.dev - Python + Rust: a simple tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,7 +106,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta name="twitter:title" content="dkdc.dev - quoting Simon Willison quoting Andrej Karpathy">
+<meta name="twitter:title" content="dkdc.dev - Python + Rust: a simple tutorial">
+<meta name="twitter:description" content="Cody’s website">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -218,9 +253,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">quoting Simon Willison quoting Andrej Karpathy</h1>
+      <h1 class="title">Python + Rust: a simple tutorial</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">ai</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Rust</div>
               </div>
                   </div>
   </div>
@@ -238,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 28, 2023</p>
+        <p class="date">April 30, 2024</p>
       </div>
     </div>
     
@@ -250,7 +286,20 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#tools" id="toc-tools" class="nav-link active" data-scroll-target="#tools">Tools</a></li>
+  <li><a href="#setting-up-the-project" id="toc-setting-up-the-project" class="nav-link" data-scroll-target="#setting-up-the-project">Setting up the project</a></li>
+  <li><a href="#uploading-to-github" id="toc-uploading-to-github" class="nav-link" data-scroll-target="#uploading-to-github">Uploading to GitHub</a></li>
+  <li><a href="#publishing-to-pypi" id="toc-publishing-to-pypi" class="nav-link" data-scroll-target="#publishing-to-pypi">Publishing to PyPI</a></li>
+  <li><a href="#doing-something" id="toc-doing-something" class="nav-link" data-scroll-target="#doing-something">Doing something</a></li>
+  <li><a href="#updating-on-pypi" id="toc-updating-on-pypi" class="nav-link" data-scroll-target="#updating-on-pypi">Updating on PyPI</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next steps</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -259,15 +308,101 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<blockquote class="blockquote">
-<blockquote class="blockquote">
-<p>Looking at LLMs as chatbots is the same as looking at early computers as calculators. We’re seeing an emergence of a whole new computing paradigm, and it is very early.</p>
-<p>— <a href="https://twitter.com/karpathy/status/1707437820045062561">Andrej Karpathy</a></p>
-</blockquote>
-<p>- <a href="https://simonwillison.net/2023/Sep/28/andrej-karpathy/">Simon Willison</a></p>
-</blockquote>
+<p>This post is intended to provide a simple demonstration of a Python package that relies on core functionality written in Rust.</p>
+<section id="tools" class="level2">
+<h2 class="anchored" data-anchor-id="tools">Tools</h2>
+<p>In addition to Python and Rust, we’ll use the following tools:</p>
+<ul>
+<li><a href="https://github.com">GitHub</a>: repository hosting</li>
+<li><a href="https://cli.github.com">GitHub CLI</a>: interact with GitHub from the command line</li>
+<li><a href="https://github.com/casey/just">just</a>: a command runner</li>
+<li><a href="https://github.com/jdx/mise">mise</a>: a tool for managing dev environments (Python/Rust versions)</li>
+</ul>
+<p>These will be explained along the way. For generating and using Rust code in Python, we’ll use <a href="https://pyo3.rs/">PyO3</a>.</p>
+</section>
+<section id="setting-up-the-project" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-the-project">Setting up the project</h2>
+</section>
+<section id="uploading-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="uploading-to-github">Uploading to GitHub</h2>
+</section>
+<section id="publishing-to-pypi" class="level2">
+<h2 class="anchored" data-anchor-id="publishing-to-pypi">Publishing to PyPI</h2>
+<pre class="env"><code>PYPI_TOKEN = "pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+PYPI_TEST_TOKEN = "pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"</code></pre>
+</section>
+<section id="doing-something" class="level2">
+<h2 class="anchored" data-anchor-id="doing-something">Doing something</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % git status</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">On</span> branch main</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> branch is up to date with <span class="st">'origin/main'</span>.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Changes</span> not staged for commit:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git add &lt;file&gt;..."</span> to update what will be committed<span class="kw">)</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">(</span><span class="ex">use</span> <span class="st">"git restore &lt;file&gt;..."</span> to discard changes in working directory<span class="kw">)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   pyproject.toml</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   src/pawz-core/Cargo.toml</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   src/pawz-core/src/lib.rs</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="ex">modified:</span>   src/pawz/__init__.py</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">no</span> changes added to commit <span class="er">(</span><span class="ex">use</span> <span class="st">"git add"</span> and/or <span class="st">"git commit -a"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % git checkout <span class="at">-b</span> add-something</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Switched</span> to a new branch <span class="st">'add-something'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % just fmt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">1</span> file left unchanged</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % git add .</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % git commit <span class="at">-m</span> <span class="st">"add something"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[add-something</span> 3e8727d] add something</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a> <span class="ex">4</span> files changed, 17 insertions<span class="er">(</span><span class="ex">+</span><span class="kw">)</span><span class="ex">,</span> 5 deletions<span class="er">(</span><span class="ex">-</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % gh pr create</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Where should we push the <span class="st">'add-something'</span> branch<span class="pp">?</span> lostmygithubaccount/pawz</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Creating</span> pull request for add-something into main in lostmygithubaccount/pawz</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Title add something</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Body <span class="op">&lt;</span>Received<span class="op">&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> What<span class="st">'s next? Submit</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="st">remote:</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="st">remote:</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="st">To https://github.com/lostmygithubaccount/pawz.git</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="st"> * [new branch]      HEAD -&gt; add-something</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="st">branch '</span>add-something<span class="st">' set up to track '</span>origin/add-something<span class="st">'.</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="st">https://github.com/lostmygithubaccount/pawz/pull/1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">cody@dkdc</span> pawz % gh pr merge</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Merging</span> pull request lostmygithubaccount/pawz#1 <span class="er">(</span><span class="ex">add</span> something<span class="kw">)</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> What merge method would you like to use<span class="pp">?</span> Squash and merge</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> Delete the branch locally and on GitHub<span class="pp">?</span> Yes</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">?</span> What<span class="st">'s next? Submit</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="st">✓ Squashed and merged pull request lostmygithubaccount/pawz#1 (add something)</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="st">remote: Enumerating objects: 19, done.</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="st">remote: Counting objects: 100% (19/19), done.</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="st">remote: Compressing objects: 100% (6/6), done.</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="st">remote: Total 10 (delta 3), reused 9 (delta 3), pack-reused 0</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="st">Unpacking objects: 100% (10/10), 1.72 KiB | 586.00 KiB/s, done.</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="st">From https://github.com/lostmygithubaccount/pawz</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st"> * branch            main       -&gt; FETCH_HEAD</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">   a866fd3..318bd89  main       -&gt; origin/main</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="st">Updating a866fd3..318bd89</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="st">Fast-forward</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="st"> pyproject.toml           |  2 +-</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="st"> src/pawz-core/Cargo.toml |  3 ++-</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="st"> src/pawz-core/src/lib.rs | 10 +++++++++-</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="st"> src/pawz/__init__.py     |  7 +++++--</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="st"> 4 files changed, 17 insertions(+), 5 deletions(-)</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="st">✓ Deleted local branch add-something and switched to branch main</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="st">✓ Deleted remote branch add-something</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="updating-on-pypi" class="level2">
+<h2 class="anchored" data-anchor-id="updating-on-pypi">Updating on PyPI</h2>
+</section>
+<section id="next-steps" class="level2">
+<h2 class="anchored" data-anchor-id="next-steps">Next steps</h2>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

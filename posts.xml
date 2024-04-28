@@ -9,13 +9,14 @@
 <link>https://dkdc.dev/posts.html</link>
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
-<generator>quarto-1.3.450</generator>
+<generator>quarto-1.4.553</generator>
 <lastBuildDate>Sun, 14 Jan 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>‘we don’t understand how LLMs work’</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/understanding-llms/index.html</link>
+  <link>https://dkdc.dev/posts/understanding-llms/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -27,14 +28,15 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/understanding-llms/index.html</guid>
+  <guid>https://dkdc.dev/posts/understanding-llms/</guid>
   <pubDate>Sun, 14 Jan 2024 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>I made an AGI?</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/i-made-agi/index.html</link>
+  <link>https://dkdc.dev/posts/i-made-agi/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1233,14 +1235,15 @@ font-style: inherit;">for</span> the results.</span>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/i-made-agi/index.html</guid>
+  <guid>https://dkdc.dev/posts/i-made-agi/</guid>
   <pubDate>Sun, 26 Nov 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>language (conversation) as the interface</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/language-as-the-interface/index.html</link>
+  <link>https://dkdc.dev/posts/language-as-the-interface/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1271,14 +1274,15 @@ font-style: inherit;">for</span> the results.</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
   <category>language</category>
-  <guid>https://dkdc.dev/posts/language-as-the-interface/index.html</guid>
+  <guid>https://dkdc.dev/posts/language-as-the-interface/</guid>
   <pubDate>Fri, 13 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>abolish RAG</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/abolish-rag/index.html</link>
+  <link>https://dkdc.dev/posts/abolish-rag/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1296,14 +1300,15 @@ font-style: inherit;">for</span> the results.</span>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/abolish-rag/index.html</guid>
+  <guid>https://dkdc.dev/posts/abolish-rag/</guid>
   <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>prompt engineering</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/prompt-engineering/index.html</link>
+  <link>https://dkdc.dev/posts/prompt-engineering/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1312,21 +1317,21 @@ font-style: inherit;">for</span> the results.</span>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/prompt-engineering/images/prompt-engineering-pt-0.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Prompt engineering part 0</figcaption>
+<figcaption>Prompt engineering part 0</figcaption>
 </figure>
 </div>
 <p>We can engineer our prompt to get a better result:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/prompt-engineering/images/prompt-engineering-pt-.5.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Prompt engineering part 0.5</figcaption>
+<figcaption>Prompt engineering part 0.5</figcaption>
 </figure>
 </div>
 <p>And iterate until we get it working:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/prompt-engineering/images/prompt-engineering-pt-1.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Prompt engineering part 1</figcaption>
+<figcaption>Prompt engineering part 1</figcaption>
 </figure>
 </div>
 <p>At this point, all we need to do is parse the response and we’re good to go.</p>
@@ -1336,14 +1341,15 @@ font-style: inherit;">for</span> the results.</span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
   <category>prompt engineering</category>
-  <guid>https://dkdc.dev/posts/prompt-engineering/index.html</guid>
+  <guid>https://dkdc.dev/posts/prompt-engineering/</guid>
   <pubDate>Tue, 03 Oct 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>quoting Simon Willison quoting Andrej Karpathy</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</link>
+  <link>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1360,14 +1366,15 @@ font-style: inherit;">for</span> the results.</span>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</guid>
+  <guid>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/</guid>
   <pubDate>Thu, 28 Sep 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>beware the metagame</title>
   <dc:creator>Amjad Masad</dc:creator>
-  <link>https://dkdc.dev/posts/beware-the-metagame/index.html</link>
+  <link>https://dkdc.dev/posts/beware-the-metagame/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1383,14 +1390,15 @@ font-style: inherit;">for</span> the results.</span>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>meta</category>
-  <guid>https://dkdc.dev/posts/beware-the-metagame/index.html</guid>
+  <guid>https://dkdc.dev/posts/beware-the-metagame/</guid>
   <pubDate>Mon, 11 Sep 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>ai counting</title>
   <dc:creator>mlllm.ai </dc:creator>
-  <link>https://dkdc.dev/posts/ai-can-count/index.html</link>
+  <link>https://dkdc.dev/posts/ai-can-count/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1458,21 +1466,22 @@ font-style: inherit;">17</span></span>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
   <category>python</category>
-  <guid>https://dkdc.dev/posts/ai-can-count/index.html</guid>
+  <guid>https://dkdc.dev/posts/ai-can-count/</guid>
   <pubDate>Thu, 07 Sep 2023 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>more LLM pain</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/more-llm-pain/index.html</link>
+  <link>https://dkdc.dev/posts/more-llm-pain/</link>
   <description><![CDATA[ 
+
 
 
 
 
 <p>Argh:</p>
 <blockquote class="blockquote">
-<p>INFO:root:llming<br>
+<div class="line-block">INFO:root:llming<br>
 INFO:root:llming<br>
 INFO:root:llming<br>
 INFO:root:llming<br>
@@ -1490,7 +1499,7 @@ INFO:root:llming<br>
 INFO:root:llming<br>
 INFO:root:llming<br>
 INFO:root:llming<br>
-INFO:root:llming</locals></p>
+INFO:root:llming</locals></div>
 </blockquote>
 <p>Who do I have to pay and how much to get fast, high-throughput LLMs? And how much will you lose per API call?</p>
 
@@ -1498,14 +1507,15 @@ INFO:root:llming</locals></p>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/more-llm-pain/index.html</guid>
+  <guid>https://dkdc.dev/posts/more-llm-pain/</guid>
   <pubDate>Fri, 18 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/more-llm-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>git rebase</title>
-  <link>https://dkdc.dev/posts/git-rebase/index.html</link>
+  <link>https://dkdc.dev/posts/git-rebase/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1514,9 +1524,10 @@ INFO:root:llming</locals></p>
 <h1>Understanding Git Rebase</h1>
 <p>Git provides a multitude of ways to manage changes and development paths, one of which is the <code>git rebase</code> command. This command is a powerful tool that can make your commit history cleaner, resolve conflicts in a more controlled manner, and help you navigate through the complex waters of collaborative development.</p>
 <p>To better visualize and understand the concept, let’s consider the following diagram:</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">graph LR
     A[Initial Commit] --&gt; B[Commit 2]
@@ -1525,6 +1536,7 @@ INFO:root:llming</locals></p>
     B --&gt; E[Commit 5 on Feature Branch]
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -1545,9 +1557,10 @@ INFO:root:llming</locals></p>
 <li>It applies your changes one by one to this branch.</li>
 </ol>
 <p>This process can be visualized as follows:</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">sequenceDiagram
     participant Git
@@ -1557,6 +1570,7 @@ INFO:root:llming</locals></p>
     Git-&gt;&gt;Base Branch: Switch and apply changes
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -1573,9 +1587,10 @@ background-color: null;
 font-style: inherit;">git</span> rebase main</span></code></pre></div>
 <p>This moves your entire <code>feature</code> branch to begin on the tip of the <code>main</code> branch, effectively incorporating all of the new commits in <code>main</code>. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.</p>
 <p>The diagram below illustrates this concept:</p>
-<div class="cell">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">graph LR
     A[Initial Commit] --&gt; B[Commit 2]
@@ -1584,6 +1599,7 @@ font-style: inherit;">git</span> rebase main</span></code></pre></div>
     D --&gt; E[Commit 5 on Feature Branch - After Rebase]
 </pre>
 </div>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
@@ -1619,15 +1635,16 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>git</category>
-  <guid>https://dkdc.dev/posts/git-rebase/index.html</guid>
+  <guid>https://dkdc.dev/posts/git-rebase/</guid>
   <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/git-rebase/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>context length pain pt2</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/context-length-pain-pt2/index.html</link>
+  <link>https://dkdc.dev/posts/context-length-pain-pt2/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1643,15 +1660,16 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/context-length-pain-pt2/index.html</guid>
+  <guid>https://dkdc.dev/posts/context-length-pain-pt2/</guid>
   <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/context-length-pain-pt2/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>the case for better data tools: unlocking the power of ai</title>
   <dc:creator>dkdc.ai </dc:creator>
-  <link>https://dkdc.dev/posts/ai-for-better-data/index.html</link>
+  <link>https://dkdc.dev/posts/ai-for-better-data/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1691,15 +1709,16 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/ai-for-better-data/index.html</guid>
+  <guid>https://dkdc.dev/posts/ai-for-better-data/</guid>
   <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-for-better-data/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>ai poem</title>
   <dc:creator>dkdc.ai </dc:creator>
-  <link>https://dkdc.dev/posts/ai-poem/index.html</link>
+  <link>https://dkdc.dev/posts/ai-poem/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1717,15 +1736,16 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/ai-poem/index.html</guid>
+  <guid>https://dkdc.dev/posts/ai-poem/</guid>
   <pubDate>Mon, 14 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-poem/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>context length pain</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/context-length-pain/index.html</link>
+  <link>https://dkdc.dev/posts/context-length-pain/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1741,15 +1761,16 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/context-length-pain/index.html</guid>
+  <guid>https://dkdc.dev/posts/context-length-pain/</guid>
   <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/context-length-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Decoding the Bohemian Rhapsody: A Journey Through Lyrics</title>
   <dc:creator>dkdc.ai </dc:creator>
-  <link>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/index.html</link>
+  <link>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1768,15 +1789,42 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
-  <guid>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/index.html</guid>
+  <guid>https://dkdc.dev/posts/ai-on-bohemian-rhapsody/</guid>
   <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-on-bohemian-rhapsody/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
+  <title>on: AI-assisted programming</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/ai-programming/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>I had an AI CLI app write a feature for itself:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
+<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <category>python</category>
+  <category>video</category>
+  <category>on:</category>
+  <guid>https://dkdc.dev/posts/ai-programming/</guid>
+  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
   <title>Unleashing the power of AI conversation with DKDC AI’s ‘ai.py’ script</title>
   <dc:creator>dkdc.ai </dc:creator>
-  <link>https://dkdc.dev/posts/ai-on-ai/index.html</link>
+  <link>https://dkdc.dev/posts/ai-on-ai/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1818,61 +1866,16 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>ai</category>
   <category>python</category>
-  <guid>https://dkdc.dev/posts/ai-on-ai/index.html</guid>
+  <guid>https://dkdc.dev/posts/ai-on-ai/</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-on-ai/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
-  <title>on: AI-assisted programming</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/ai-programming/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>I had an AI CLI app write a feature for itself:</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/bigVAU5d_6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-<p>Easy access to the filesystem and further automation with Python seems appealing.</p>
-<p>After a bit of iteration with this, there’s now a <code>/image</code> command that generated the thumbnail based on the post’s content.</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>ai</category>
-  <category>python</category>
-  <category>video</category>
-  <category>on:</category>
-  <guid>https://dkdc.dev/posts/ai-programming/index.html</guid>
-  <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>grass dog</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/grass-dog/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Nix being a dog (feat. Murphy):</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/gJ6slhwPp6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>dogs</category>
-  <category>video</category>
-  <guid>https://dkdc.dev/posts/grass-dog/index.html</guid>
-  <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/nix/nix2.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
   <title>is small data dead?</title>
   <dc:creator>dkdc.ai </dc:creator>
-  <link>https://dkdc.dev/posts/is-small-data-dead/index.html</link>
+  <link>https://dkdc.dev/posts/is-small-data-dead/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1925,31 +1928,31 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/a.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image of histograms</figcaption>
+<figcaption>Image of histograms</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/b.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image of bar plots</figcaption>
+<figcaption>Image of bar plots</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/c.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image of scatter plots</figcaption>
+<figcaption>Image of scatter plots</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/d.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image of box plots</figcaption>
+<figcaption>Image of box plots</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/e.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image of Santa</figcaption>
+<figcaption>Image of Santa</figcaption>
 </figure>
 </div>
 </section>
@@ -1958,7 +1961,7 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://dkdc.dev/posts/is-small-data-dead/f.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Image of MNIST samples</figcaption>
+<figcaption>Image of MNIST samples</figcaption>
 </figure>
 </div>
 
@@ -1970,15 +1973,38 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <category>ai</category>
   <category>ml</category>
   <category>data</category>
-  <guid>https://dkdc.dev/posts/is-small-data-dead/index.html</guid>
+  <guid>https://dkdc.dev/posts/is-small-data-dead/</guid>
   <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/is-small-data-dead/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
+  <title>grass dog</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/grass-dog/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Nix being a dog (feat. Murphy):</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/gJ6slhwPp6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>dogs</category>
+  <category>video</category>
+  <guid>https://dkdc.dev/posts/grass-dog/</guid>
+  <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/nix/nix2.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>I redid my website again…</title>
   <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/website/index.html</link>
+  <link>https://dkdc.dev/posts/website/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1990,7 +2016,7 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>news</category>
-  <guid>https://dkdc.dev/posts/website/index.html</guid>
+  <guid>https://dkdc.dev/posts/website/</guid>
   <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
