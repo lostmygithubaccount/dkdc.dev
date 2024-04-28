@@ -2,8 +2,6 @@
   {
     "listing": "/posts.html",
     "items": [
-      "/posts/understanding-llms/index.html",
-      "/posts/i-made-agi/index.html",
       "/posts/language-as-the-interface/index.html",
       "/posts/abolish-rag/index.html",
       "/posts/prompt-engineering/index.html",
