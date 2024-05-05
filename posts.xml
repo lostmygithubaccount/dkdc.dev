@@ -9,8 +9,35 @@
 <link>https://dkdc.dev/posts.html</link>
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
-<generator>quarto-1.4.553</generator>
-<lastBuildDate>Sun, 28 Apr 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.554</generator>
+<lastBuildDate>Sun, 05 May 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>How I lost my GitHub account</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/how-i-lost-my-github-account/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Occasionally, I am asked (or suspect people wonder) how I lost <a href="https://github.com/lostmygithubaccount">my GitHub account</a>. There’s a quick explanation on my account’s README:</p>
+<blockquote class="blockquote">
+<p>forked from <a href="https://github.com/cody-dkdc">cody-dkdc</a> (2FA was the downfall of that account)</p>
+</blockquote>
+<p>Short story longer, I thought my phone was waterproof and had it in my pocket in a pool outside of the United States. The phone broke – it was water resistant and I was dumb.</p>
+<p>Upon returning to Florida, I went to get a new phone. I had to travel back to Washington state a day or two later and didn’t want to do so without a phone. For whatever reason, the phone people told me I either had to get a new number and I could get the new phone that day, or it would take longer.</p>
+<p>I thought about it and decided a new phone number wasn’t a huge deal – text people, update accounts – so I went with that option. My GitHub account was last on my list of things I cared about at this point. Once I realized I needed to use it for work, I just created another one with a memorable name.</p>
+<p>After creating my new account, the name grew on my and I decided to keep it. This is the story of how I lost my GitHub account.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>GitHub</category>
+  <guid>https://dkdc.dev/posts/how-i-lost-my-github-account/</guid>
+  <pubDate>Sun, 05 May 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/how-i-lost-my-github-account/thumbnail.png" medium="image" type="image/png" height="86" width="144"/>
+</item>
 <item>
   <title>Python + Rust: a simple tutorial</title>
   <dc:creator>Cody </dc:creator>
@@ -2121,28 +2148,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <category>news</category>
   <guid>https://dkdc.dev/posts/website/</guid>
   <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Nix the dog</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/nix/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.</p>
-<p><img src="https://dkdc.dev/posts/nix/nix2.jpeg" class="img-fluid"> <img src="https://dkdc.dev/posts/nix/nix3.jpeg" class="img-fluid"> <img src="https://dkdc.dev/posts/nix/nix4.jpeg" class="img-fluid"></p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>dogs</category>
-  <category>life</category>
-  <guid>https://dkdc.dev/posts/nix/</guid>
-  <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/nix/nix1.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
