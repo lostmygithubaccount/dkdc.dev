@@ -33,6 +33,8 @@ website:
       contents:
         - text: ibis-analytics
           href: https://ibis-analytics.streamlit.app
+        - text: pypi-analytics
+          href: https://pypi-analytics.streamlit.app
 
   # footer
   page-footer:
