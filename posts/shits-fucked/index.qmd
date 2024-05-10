@@ -1,0 +1,11 @@
+---
+title: "shit's fucked"
+author: "Cody"
+date: "2024-05-10"
+image: thumbnail.png
+categories: 
+    - life
+---
+
+Bad systems are bad for everybody. How do we make them better?
+
