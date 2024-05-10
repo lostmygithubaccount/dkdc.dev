@@ -10,7 +10,27 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Sun, 05 May 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 10 May 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>shit’s fucked</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/shits-fucked/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Bad systems are bad for everybody. How do we make them better?</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>life</category>
+  <guid>https://dkdc.dev/posts/shits-fucked/</guid>
+  <pubDate>Fri, 10 May 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/shits-fucked/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>How I lost my GitHub account</title>
   <dc:creator>Cody </dc:creator>
@@ -2128,26 +2148,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <guid>https://dkdc.dev/posts/grass-dog/</guid>
   <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/nix/nix2.jpeg" medium="image" type="image/jpeg"/>
-</item>
-<item>
-  <title>I redid my website again…</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/website/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>I mean, why not at this point…</p>
-<p><a href="https://quarto.org">Quarto</a> is nice!</p>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>news</category>
-  <guid>https://dkdc.dev/posts/website/</guid>
-  <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
