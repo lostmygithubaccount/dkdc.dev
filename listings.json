@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/dkdc-cli-for-me/index.html",
       "/posts/shits-fucked/index.html",
       "/posts/how-i-lost-my-github-account/index.html",
       "/posts/pawz/index.html",
@@ -18,10 +19,10 @@
       "/posts/ai-poem/index.html",
       "/posts/context-length-pain/index.html",
       "/posts/ai-on-bohemian-rhapsody/index.html",
-      "/posts/ai-programming/index.html",
       "/posts/ai-on-ai/index.html",
-      "/posts/is-small-data-dead/index.html",
+      "/posts/ai-programming/index.html",
       "/posts/grass-dog/index.html",
+      "/posts/is-small-data-dead/index.html",
       "/posts/website/index.html",
       "/posts/nix/index.html",
       "/posts/vegas/index.html",
