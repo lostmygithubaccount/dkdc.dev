@@ -1,0 +1,13 @@
+---
+title: "dkdc: the CLI for me"
+author: "Cody"
+date: "2024-05-20"
+categories: 
+    - dkdc
+---
+
+Looking back, I first released `dkdc` on PyPI in August 2023. I don't remember exactly what the CLI did and I'm not going to check for the purpose of this quick blog, but more recently I rewrote it in Rust. This was a great learning experience and, in theory, much better for what I started using the tool for: anything I commonly do in the terminal. Rust allowed shipping a single binary that could be globally installed on a computer and very low latency.
+
+However, while I'm happy I've "learned" Rust, I am orders of magnitude better in Python. So, I've rewritten `dkdc` in Python. I'm going to be more dedicated to this project (and other things!) going forward and use this as a basis for adding any common Python code I want to run programmatically.
+
+There may still be a `dkdc-core` or `dkdc-rs` written in Rust at some point...
