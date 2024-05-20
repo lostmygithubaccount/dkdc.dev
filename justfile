@@ -9,6 +9,10 @@ set dotenv-load
 default:
     just --list
 
+# open
+open:
+    @open https://dkdc.dev
+
 # setup
 setup:
     @pip install -r requirements.txt
