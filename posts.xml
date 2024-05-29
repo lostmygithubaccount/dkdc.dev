@@ -10,7 +10,28 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.4.554</generator>
-<lastBuildDate>Mon, 20 May 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 29 May 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>all’s well</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/alls-well/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>You can only have so many bad weeks in life.</p>
+<p>“It’s time to wake up.”</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>life</category>
+  <guid>https://dkdc.dev/posts/alls-well/</guid>
+  <pubDate>Wed, 29 May 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/alls-well/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>dkdc: the CLI for me</title>
   <dc:creator>Cody </dc:creator>
@@ -2040,28 +2061,6 @@ font-style: inherit;">-i</span> HEAD~3</span></code></pre></div>
   <guid>https://dkdc.dev/posts/ai-programming/</guid>
   <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/ai-programming/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>grass dog</title>
-  <dc:creator>Cody </dc:creator>
-  <link>https://dkdc.dev/posts/grass-dog/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>Nix being a dog (feat. Murphy):</p>
-<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/gJ6slhwPp6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
-
-
-
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
-  <category>dogs</category>
-  <category>video</category>
-  <guid>https://dkdc.dev/posts/grass-dog/</guid>
-  <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://dkdc.dev/posts/nix/nix2.jpeg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
