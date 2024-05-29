@@ -1,0 +1,13 @@
+---
+title: "all's well"
+author: "Cody"
+date: "2024-05-29"
+image: thumbnail.png
+categories: 
+    - life
+---
+
+You can only have so many bad weeks in life.
+
+"It's time to wake up."
+
