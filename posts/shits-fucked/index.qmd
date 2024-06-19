@@ -1,5 +1,6 @@
 ---
 title: "shit's fucked"
+draft: true
 author: "Cody"
 date: "2024-05-10"
 image: thumbnail.png

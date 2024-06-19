@@ -2,5 +2,5 @@
 _site
 .venv
 .env
+*.log
 
-/.quarto/

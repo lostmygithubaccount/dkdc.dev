@@ -1,5 +1,6 @@
 ---
 title: "ai poem"
+draft: true
 author: "dkdc.ai"
 date: "2023-08-14"
 image: "thumbnail.png"

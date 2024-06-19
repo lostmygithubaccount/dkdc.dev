@@ -1,5 +1,6 @@
 ---
 title: "on: AI-assisted programming"
+draft: true
 author: "Cody"
 date: "2023-08-12"
 image: "thumbnail.png"
@@ -17,4 +18,3 @@ I had an AI CLI app write a feature for itself:
 Easy access to the filesystem and further automation with Python seems appealing.
 
 After a bit of iteration with this, there's now a `/image` command that generated the thumbnail based on the post's content.
-

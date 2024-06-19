@@ -1,5 +1,6 @@
 ---
 title: "all's well"
+draft: true
 author: "Cody"
 date: "2024-05-29"
 image: thumbnail.png
@@ -10,4 +11,3 @@ categories:
 You can only have so many bad weeks in life.
 
 "It's time to wake up."
-

@@ -1,5 +1,6 @@
 ---
 title: "How I lost my GitHub account"
+draft: true
 author: "Cody"
 date: "2024-05-05"
 image: thumbnail.png

@@ -1,5 +1,6 @@
 ---
 title: "git rebase"
+draft: true
 author: ""
 date: "2023-08-17"
 image: "thumbnail.png"

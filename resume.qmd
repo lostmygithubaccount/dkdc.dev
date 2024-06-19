@@ -1,0 +1,92 @@
+---
+format:
+  pdf:
+    colorlinks: true
+    include-in-header:
+      text: '\pagenumbering{gobble}'
+    pdf-engine: xelatex
+fontsize: 10pt
+geometry:
+  - top=20mm
+  - left=15mm
+  - heightrounded
+---
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+# Cody Peterson ([Email](mailto:cody@dkdc.dev) | [Website](https://dkdc.dev) | [GitHub](https://github.com/lostmygithubaccount) | [LinkedIn](https://linkedin.com/in/codydkdc))
+
+## Work experience
+
+**Voltron Data** | Ibis project | remote
+
+*Senior Technical Product Manager* | April 2024 - present
+
+- ...
+
+*Technical Product Manager* | May 2023 - April 2024
+
+- ...
+
+**dbt Labs** | dbt Core & Cloud | remote
+
+*Product Manager* | July 2022 - March 2023
+
+- Launched Python models at Coalesce 2022, transforming dbt from SQL-only into a multilingual framework for more data practitioners running increasingly complex workloads, including the first ML use cases in dbt Cloud
+- At critical inflection point, assumed management of internal platform team and led alignment of stakeholders on major roadmap adjustment to achieve better product outcomes and more efficient engineering execution
+
+**Microsoft** | AI Platform (Azure ML) | Bellevue, WA
+
+*Product Manager II* | March 2020 - July 2022
+
+- Led development for v2 product features in the data & MLOps areas, resulting in higher usability score
+- Reduced time from days to hours for customers to implement ML solutions by leading inter-organizational team to deliver standard v2 MLOps solution accelerators and merging disparate internal workstreams
+- Improved strategy for examples and documentation in collaboration with key stakeholders, resulting in positive qualitative feedback from users and a significant increase in contributions from PMs and data scientists
+- Increased satisfaction for strategic cloud customer as primary point of engagement for the product team
+
+*Product Manager* | July 2018 - February 2020
+
+- Filled gap in Azure MLOps marketing story by leading cross-disciplinary team of developers and data scientists to launch data drift monitoring feature ahead of major cloud competitors
+- Led development of open-source contribution to Dask to run on Azure ML infrastructure
+- Deprecated legacy internal products, managing engineering and working with customers on migration
+
+## Education
+
+**Rice University** | 2014 - 2018 | Houston, TX
+
+*B.S. Electrical Engineering with Data Science specialization*, 3.5/4.0 GPA
+
+## Skills & technologies
+
+**Advanced:** Python (data science tools), GitHub, CLI tools
+
+**Intermediate:** Go, UNIX/Linux systems, git, Docker, SQL, raspberry pis
+
+**Once upon a time:** C, Perl, MATLAB, JavaScript, Verilog, FPGAs, CAD, 3D printing, Figma, PowerBI
+
+{{< pagebreak >}}
+
+## Additional work experience
+
+**Convergent Engineering** | New product research and development | Newberry, FL
+
+*Consultant* | Summer 2017
+
+- Delivered prototype system for alerting nurses to non-critical alarms in patient rooms, including live testing with IRB-approved study at the UF Shands Hospital in Gainesville, FL
+
+**Texas Instruments** | System on a Chip (SoC) Design Verification | Dallas, TX
+
+*Design Engineering Intern* | Summer 2016
+
+- Reduced average SoC simulation runtime by six percent through discovery of optimal simulation configuration via benchmarking tool designed and implemented with engineering mentor
+- Decreased time to debug SoC simulations by partnering with three engineers to build tools for efficient printf simulation and a user-friendly web interface to determine signal routing through chip components
+
+**Convergent Engineering** | Various projects | Newberry, FL
+
+*Consultant* | Summer 2015
+
+- Automated data collection and analysis from proprietary e-pill devices with a CLI over Bluetooth
+
+## About me
+
+I am...

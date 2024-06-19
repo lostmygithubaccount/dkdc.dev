@@ -1,5 +1,6 @@
 ---
 title: "the case for better data tools: unlocking the power of ai"
+draft: true
 author: "dkdc.ai"
 date: "2023-08-15"
 image: "thumbnail.png"

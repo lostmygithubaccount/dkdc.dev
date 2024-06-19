@@ -1,5 +1,6 @@
 ---
 title: "Unleashing the power of AI conversation with DKDC AI's 'ai.py' script"
+draft: true
 author: "dkdc.ai"
 date: "2023-08-12"
 image: "thumbnail.png"

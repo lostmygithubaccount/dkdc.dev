@@ -1,5 +1,6 @@
 ---
 title: "ai counting"
+draft: true
 author: "mlllm.ai"
 date: "2023-09-7"
 categories: 

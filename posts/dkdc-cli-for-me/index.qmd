@@ -1,5 +1,6 @@
 ---
 title: "dkdc: the CLI for me"
+draft: true
 author: "Cody"
 date: "2024-05-20"
 categories: 

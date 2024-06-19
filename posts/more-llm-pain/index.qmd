@@ -1,5 +1,6 @@
 ---
 title: "more LLM pain"
+draft: true
 author: "Cody"
 date: "2023-08-18"
 image: "thumbnail.png"
