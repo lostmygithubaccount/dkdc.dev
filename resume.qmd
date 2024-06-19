@@ -3,7 +3,7 @@ format:
   pdf:
     colorlinks: true
     include-in-header:
-      text: '\pagenumbering{gobble}'
+      text: '\pagenumbering{gobble}\hyphenpenalty=10000\exhyphenpenalty=10000'
     pdf-engine: xelatex
 fontsize: 10pt
 geometry:
@@ -11,8 +11,6 @@ geometry:
   - left=15mm
   - heightrounded
 ---
-\hyphenpenalty=10000
-\exhyphenpenalty=10000
 
 # Cody Peterson ([Email](mailto:cody@dkdc.dev) | [Website](https://dkdc.dev) | [GitHub](https://github.com/lostmygithubaccount) | [LinkedIn](https://linkedin.com/in/codydkdc))
 

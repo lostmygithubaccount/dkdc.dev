@@ -16,6 +16,7 @@ open:
 # setup
 setup:
     @pip install -r requirements.txt
+    @quarto install tinytex --no-prompt
 
 # preview
 preview:
