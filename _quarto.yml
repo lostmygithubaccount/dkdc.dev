@@ -32,11 +32,11 @@ website:
       collapse-level: 2
       contents:
         - text: ibis-analytics
-          href: https://ibis-analytics.streamlit.app
+          href: https://ibis-project.github.io/ibis-analytics
         - text: ibis-bench
-          href: https://ibis-bench.streamlit.app
-        - text: pypi-analytics
-          href: https://pypi-analytics.streamlit.app
+          href: https://lostmygithubaccount.github.io/ibis-bench
+        - text: Better PyPI stats
+          href: https://connect.posit.cloud/lostmygithubaccount/content/019180af-9e47-14bd-0955-38e6d98a5f98
 
   # footer
   page-footer:
