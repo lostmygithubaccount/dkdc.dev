@@ -9,7 +9,7 @@
 <link>https://dkdc.dev/posts.html</link>
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
-<generator>quarto-1.4.555</generator>
+<generator>quarto-1.5.56</generator>
 <lastBuildDate>Sun, 28 Apr 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Python + Rust: a simple tutorial</title>
@@ -45,10 +45,12 @@
 <p>Let’s start by looking at the file tree for <code>pawz</code>:</p>
 <div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % tree</span>
@@ -186,6 +188,7 @@ Important
 <div id="tabset-1-1" class="tab-pane active" aria-labelledby="tabset-1-1-tab">
 <div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb3-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[build-system]</span></span>
 <span id="cb3-2"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -208,6 +211,7 @@ font-style: inherit;">"hatchling.build"</span></span>
 <span id="cb3-4"></span>
 <span id="cb3-5"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[project]</span></span>
 <span id="cb3-6"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -306,6 +310,7 @@ font-style: inherit;">]</span></span>
 <span id="cb3-18"></span>
 <span id="cb3-19"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[project.urls]</span></span>
 <span id="cb3-20"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -325,6 +330,7 @@ font-style: inherit;">"https://github.com/lostmygithubaccount/pawz/issues"</span
 <div id="tabset-1-2" class="tab-pane" aria-labelledby="tabset-1-2-tab">
 <div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb4-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[build-system]</span></span>
 <span id="cb4-2"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -347,6 +353,7 @@ font-style: inherit;">"maturin"</span></span>
 <span id="cb4-4"></span>
 <span id="cb4-5"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[project]</span></span>
 <span id="cb4-6"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -445,6 +452,7 @@ font-style: inherit;">[]</span></span>
 <span id="cb4-18"></span>
 <span id="cb4-19"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[tool.maturin]</span></span>
 <span id="cb4-20"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -460,6 +468,7 @@ font-style: inherit;">]</span></span>
 <span id="cb4-21"></span>
 <span id="cb4-22"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[project.urls]</span></span>
 <span id="cb4-23"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -516,6 +525,7 @@ font-style: inherit;">as</span> pz</span>
 <p>In addition to the <code>pyproject.toml</code> above, we need a <code>Cargo.toml</code> to define the Rust project:</p>
 <div class="sourceCode" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb7-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[package]</span></span>
 <span id="cb7-2"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -541,6 +551,7 @@ font-style: inherit;">"2021"</span></span>
 <span id="cb7-5"></span>
 <span id="cb7-6"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[lib]</span></span>
 <span id="cb7-7"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -563,6 +574,7 @@ font-style: inherit;">]</span></span>
 <span id="cb7-9"></span>
 <span id="cb7-10"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[dependencies]</span></span>
 <span id="cb7-11"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -575,6 +587,7 @@ font-style: inherit;">"0.21.1"</span></span></code></pre></div>
 <p>We also need the <code>lib.rs</code> in the <code>src/</code> directory defining the functionality and exposing it through the Python bindings:</p>
 <div class="sourceCode" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb8-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">use</span> <span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">pyo3::prelude::</span><span class="op" style="color: #5E5E5E;
@@ -604,6 +617,7 @@ background-color: null;
 font-style: inherit;">)]</span></span>
 <span id="cb8-8"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">fn</span> pawz_core(_py<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> Python<span class="op" style="color: #5E5E5E;
@@ -643,6 +657,7 @@ What about the <code>main.rs</code>?
 <p>As of writing, the <code>main.rs</code> is a simple hello world:</p>
 <div class="sourceCode" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb9-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">fn</span> main() <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">{</span></span>
@@ -678,10 +693,12 @@ font-style: inherit;">}</span></span></code></pre></div>
 <p>You should generally use one virtual environment per project. I use <code>mise</code> to manage Python (and Rust) versions, but you don’t have to. You can run:</p>
 <div class="sourceCode" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % python <span class="at" style="color: #657422;
@@ -689,20 +706,24 @@ background-color: null;
 font-style: inherit;">-m</span> venv venv</span>
 <span id="cb11-2"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % source venv/bin/activate</span></code></pre></div>
 <p>to create your virtual environment. At this point if you’ve installed <code>just</code>, you can run:</p>
 <div class="sourceCode" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % just setup</span></code></pre></div>
@@ -713,10 +734,12 @@ font-style: inherit;">cody@dkdc</span> pawz % just setup</span></code></pre></di
 <p>You can install <code>pawz</code> and <code>pawz-core</code> in local developer mode with:</p>
 <div class="sourceCode" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % just install</span></code></pre></div>
@@ -728,19 +751,23 @@ font-style: inherit;">cody@dkdc</span> pawz % just install</span></code></pre></
 <p>There are multiple ways to do this, but I prefer something like:</p>
 <div class="sourceCode" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git init</span>
 <span id="cb14-2"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % gh repo create pawz <span class="at" style="color: #657422;
@@ -750,10 +777,12 @@ background-color: null;
 font-style: inherit;">--source</span> .</span>
 <span id="cb14-3"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git checkout <span class="at" style="color: #657422;
@@ -761,19 +790,23 @@ background-color: null;
 font-style: inherit;">-b</span> main</span>
 <span id="cb14-4"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git add .</span>
 <span id="cb14-5"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git commit <span class="at" style="color: #657422;
@@ -783,10 +816,12 @@ background-color: null;
 font-style: inherit;">"initial commit"</span></span>
 <span id="cb14-6"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git push <span class="at" style="color: #657422;
@@ -802,19 +837,23 @@ font-style: inherit;">--set-upstream</span> origin/main</span></code></pre></div
 <p>Then run:</p>
 <div class="sourceCode" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % just release-test</span>
 <span id="cb16-2"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % just release</span></code></pre></div>
@@ -841,6 +880,7 @@ Important
 <p>We need to add the <code>open</code> crate dependency in the <code>Cargo.toml</code>:</p>
 <div class="sourceCode" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode toml code-with-copy"><code class="sourceCode toml"><span id="cb17-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[package]</span></span>
 <span id="cb17-2"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -866,6 +906,7 @@ font-style: inherit;">"2021"</span></span>
 <span id="cb17-5"></span>
 <span id="cb17-6"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[lib]</span></span>
 <span id="cb17-7"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -888,6 +929,7 @@ font-style: inherit;">]</span></span>
 <span id="cb17-9"></span>
 <span id="cb17-10"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">[dependencies]</span></span>
 <span id="cb17-11"><span class="dt" style="color: #AD0000;
 background-color: null;
@@ -906,11 +948,13 @@ font-style: inherit;">"5.1.2"</span></span></code></pre></div>
 <p>Then edit <code>lib.rs</code> to create our function and add it to the Python module:</p>
 <div class="sourceCode" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode rust code-with-copy"><code class="sourceCode rust"><span id="cb18-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">use</span> open<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">;</span></span>
 <span id="cb18-2"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">use</span> <span class="pp" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">pyo3::prelude::</span><span class="op" style="color: #5E5E5E;
@@ -930,11 +974,13 @@ background-color: null;
 font-style: inherit;">]</span></span>
 <span id="cb18-7"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">fn</span> open_pawz() <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">{</span></span>
 <span id="cb18-8">    <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">let</span> url <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">=</span> <span class="st" style="color: #20794D;
@@ -970,6 +1016,7 @@ background-color: null;
 font-style: inherit;">)]</span></span>
 <span id="cb18-15"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">fn</span> pawz_core(_py<span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">:</span> Python<span class="op" style="color: #5E5E5E;
@@ -1027,10 +1074,12 @@ Note
 </div>
 <div class="sourceCode" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git status</span>
@@ -1048,21 +1097,25 @@ background-color: null;
 font-style: inherit;">Changes</span> not staged for commit:</span>
 <span id="cb19-6">  <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">use</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"git add &lt;file&gt;..."</span> to update what will be committed<span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span></span>
 <span id="cb19-7">  <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">use</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"git restore &lt;file&gt;..."</span> to discard changes in working directory<span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span></span>
 <span id="cb19-8">        <span class="ex" style="color: null;
 background-color: null;
@@ -1089,14 +1142,17 @@ font-style: inherit;">"git add"</span> and/or <span class="st" style="color: #20
 background-color: null;
 font-style: inherit;">"git commit -a"</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span></span></code></pre></div>
 <p>Checkout a branch to commit our changes to:</p>
 <div class="sourceCode" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git checkout <span class="at" style="color: #657422;
@@ -1110,10 +1166,12 @@ font-style: inherit;">'add-something'</span></span></code></pre></div>
 <p>Ensure we format our code (Rust and Python):</p>
 <div class="sourceCode" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % just fmt</span>
@@ -1123,19 +1181,23 @@ font-style: inherit;">1</span> file left unchanged</span></code></pre></div>
 <p>Add our changes and commit them:</p>
 <div class="sourceCode" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git add .</span>
 <span id="cb22-2"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % git commit <span class="at" style="color: #657422;
@@ -1154,6 +1216,7 @@ font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">+</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">,</span> 5 deletions<span class="er" style="color: #AD0000;
@@ -1162,14 +1225,17 @@ font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">-</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span></span></code></pre></div>
 <p>Then create a PR on GitHub:</p>
 <div class="sourceCode" id="cb23" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % gh pr create</span>
@@ -1225,10 +1291,12 @@ font-style: inherit;">https://github.com/lostmygithubaccount/pawz/pull/1</span><
 <p>And finally, merge the PR from the CLI:</p>
 <div class="sourceCode" id="cb24" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % gh pr merge</span>
@@ -1240,6 +1308,7 @@ font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">add</span> something<span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span></span>
 <span id="cb24-3"><span class="ex" style="color: null;
 background-color: null;
@@ -1318,10 +1387,12 @@ font-style: inherit;">✓ Deleted remote branch add-something</span></span></cod
 <p>With our code updated, we want to update our packages on PyPI. We simply run:</p>
 <div class="sourceCode" id="cb25" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">(</span><span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">venv</span><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">)</span> <span class="ex" style="color: null;
 background-color: null;
 font-style: inherit;">cody@dkdc</span> pawz % just release</span></code></pre></div>
@@ -1676,6 +1747,7 @@ if (outputEl) {{
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">def</span> transform(t):</span>
 <span id="cb5-2">    <span class="co" style="color: #5E5E5E;
 background-color: null;
@@ -1687,6 +1759,7 @@ font-style: inherit;">=</span> t.mutate(</span>
 background-color: null;
 font-style: inherit;">"zscore"</span>: <span class="kw" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">lambda</span> x: (x <span class="op" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">-</span> x.mean()) <span class="op" style="color: #5E5E5E;
@@ -1697,6 +1770,7 @@ background-color: null;
 font-style: inherit;"># drop rows with missing values</span></span>
 <span id="cb5-6">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">return</span> t</span>
 <span id="cb5-7"></span>
 <span id="cb5-8"></span>

@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dkdc.dev/posts.html</loc>
-    <lastmod>2024-06-19T16:52:09.700Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/context-length-pain-pt2/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.708Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/context-length-pain/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.708Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/beware-the-metagame/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.708Z</lastmod>
+    <loc>https://dkdc.dev/posts/murphy/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.685Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/website/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/pawz/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.764Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2024-06-19T16:52:09.696Z</lastmod>
+    <lastmod>2024-08-24T22:42:08.725Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.768Z</lastmod>
+    <lastmod>2024-08-24T22:42:08.721Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/murphy/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.732Z</lastmod>
+    <loc>https://dkdc.dev/posts/pawz/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.721Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.772Z</lastmod>
+    <loc>https://dkdc.dev/posts/context-length-pain-pt2/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.661Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/nix/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.736Z</lastmod>
+    <lastmod>2024-08-24T22:42:08.689Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2024-06-19T16:52:09.696Z</lastmod>
+    <loc>https://dkdc.dev/chalkboard-slides.html</loc>
+    <lastmod>2024-08-24T22:42:08.649Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2024-06-19T16:52:09.696Z</lastmod>
+    <lastmod>2024-08-24T22:42:08.649Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2024-08-24T22:42:08.653Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.649Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/testing/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/context-length-pain/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/beware-the-metagame/index.html</loc>
+    <lastmod>2024-08-24T22:42:08.661Z</lastmod>
   </url>
 </urlset>
