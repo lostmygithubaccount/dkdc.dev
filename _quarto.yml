@@ -27,7 +27,7 @@ website:
   sidebar:
     - id: ""
     - id: dashboards
-      title: "dashboards"
+      title: "links"
       style: "docked"
       collapse-level: 2
       contents:
