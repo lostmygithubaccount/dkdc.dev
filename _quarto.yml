@@ -35,7 +35,7 @@ website:
           href: https://ibis-project.github.io/ibis-analytics
         - text: ibis-bench
           href: https://lostmygithubaccount.github.io/ibis-bench
-        - text: Better PyPI stats
+        - text: better-pypi-stats
           href: https://connect.posit.cloud/lostmygithubaccount/content/019180af-9e47-14bd-0955-38e6d98a5f98
 
   # footer
