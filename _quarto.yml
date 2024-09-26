@@ -20,14 +20,16 @@ website:
     logo: logo.png
     fontcolor: fuchsia
     left:
-      - posts.qmd
       - about.qmd
+      - href: resume.qmd
+        text: resume
     right:
+      - posts.qmd
       - sidebar:dashboards
   sidebar:
     - id: ""
     - id: dashboards
-      title: "links"
+      title: "some projects"
       style: "docked"
       collapse-level: 2
       contents:
