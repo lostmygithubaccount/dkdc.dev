@@ -12,39 +12,42 @@ geometry:
   - heightrounded
 ---
 
-# Cody Peterson ([Email](mailto:cody@dkdc.dev) | [Website](https://dkdc.dev) | [GitHub](https://github.com/lostmygithubaccount) | [LinkedIn](https://linkedin.com/in/codydkdc))
+# Cody Peterson (he/him) | [Email](mailto:cody@dkdc.dev) | [GitHub](https://github.com/lostmygithubaccount) | [LinkedIn](https://linkedin.com/in/codydkdc) | [Personal website](https://dkdc.dev)
 
 ## Work experience
 
-**Voltron Data** | Ibis project | remote
+**Voltron Data** (Ibis project)
 
-*Senior Technical Product Manager* | April 2024 - September 2024
+*Senior Technical Product Manager* | April 2024 - September 2024 | remote
 
-- ...
+- Led marketing and developer advocacy for Ibis resulting in GitHub stars doubling, PyPI downloads tripling, and documentation visits quintupling year-over-year
+- Built composable data stacks for analytics, benchmarking, and more to achieve desired product outcomes
+- Worked with executives and product leadership to re-align product direction for new stream processing and ML features across OSS and commercial offerings, enabling more efficient use of engineering resources
 
-*Technical Product Manager* | May 2023 - April 2024
+*Technical Product Manager* | May 2023 - April 2024 | remote
 
-- ...
+- Migrated the Ibis website to Quarto for better UX, easier contributions, and a proper blog
+- Planned and executed a GenAI/LLM strategy for OSS and commercial offerings with Ibis Birdbrain
+- Contributed features, bug fixes, and blog posts to the Ibis project, becoming a trusted committer to `ibis` and maintainer of several side projects in the GitHub organization
 
-**dbt Labs** | dbt Core & Cloud | remote
+**dbt Labs** (dbt Core & dbt Cloud)
 
-*Product Manager* | July 2022 - March 2023
+*Product Manager* | July 2022 - March 2023 | remote
 
-- Launched Python models at Coalesce 2022, transforming dbt from SQL-only into a multilingual framework for more data practitioners running increasingly complex workloads, including the first ML use cases in dbt Cloud
-- At critical inflection point, assumed management of internal platform team and led alignment of stakeholders on major roadmap adjustment to achieve better product outcomes and more efficient engineering execution
+- Launched Python models at company conference, enabling the first data science & ML use cases
+- Assumed management of cloud platform team and led alignment of stakeholders on major roadmap adjustment to achieve better product outcomes and more efficient engineering execution
 
-**Microsoft** | AI Platform (Azure ML) | Bellevue, WA
+**Microsoft** (AI Platform, Azure ML)
 
-*Product Manager II* | March 2020 - July 2022
+*Product Manager II* | March 2020 - July 2022 | Bellevue, WA & remote
 
 - Led development for v2 product features in the data & MLOps areas, resulting in higher usability score
-- Reduced time from days to hours for customers to implement ML solutions by leading inter-organizational team to deliver standard v2 MLOps solution accelerators and merging disparate internal workstreams
-- Improved strategy for examples and documentation in collaboration with key stakeholders, resulting in positive qualitative feedback from users and a significant increase in contributions from PMs and data scientists
+- Improved strategy for examples and documentation in collaboration with key stakeholders, resulting in positive qualitative feedback from users and a significant increase in contributions
 - Increased satisfaction for strategic cloud customer as primary point of engagement for the product team
 
-*Product Manager* | July 2018 - February 2020
+*Product Manager* | July 2018 - February 2020 | Bellevue, WA
 
-- Filled gap in Azure MLOps marketing story by leading cross-disciplinary team of developers and data scientists to launch data drift monitoring feature ahead of major cloud competitors
+- Filled gap in Azure MLOps marketing story by leading cross-disciplinary team of developers and data scientists to launch a data drift monitoring feature ahead of major cloud competitors
 - Led development of open-source contribution to Dask to run on Azure ML infrastructure
 - Deprecated legacy internal products, managing engineering and working with customers on migration
 
@@ -56,9 +59,9 @@ geometry:
 
 ## Skills & technologies
 
-**Advanced:** Python (data science tools), GitHub, CLI tools
+**Advanced:** Python (data, ML, & "AI" tools), GitHub, data platforms, cloud services (Azure/GCP)
 
-**Intermediate:** Go, UNIX/Linux systems, git, Docker, SQL, raspberry pis
+**Intermediate:** Go, Rust, git, Docker, SQL, UNIX/Linux systems, Raspberry Pis
 
 **Once upon a time:** C, Perl, MATLAB, JavaScript, Verilog, FPGAs, CAD, 3D printing, Figma, PowerBI
 
@@ -66,25 +69,21 @@ geometry:
 
 ## Additional work experience
 
-**Convergent Engineering** | New product research and development | Newberry, FL
+**Convergent Engineering** | (New product R&D)
 
-*Consultant* | Summer 2017
+*Consultant* | Summer 2017 | Newberry, FL
 
 - Delivered prototype system for alerting nurses to non-critical alarms in patient rooms, including live testing with IRB-approved study at the UF Shands Hospital in Gainesville, FL
 
-**Texas Instruments** | System on a Chip (SoC) Design Verification | Dallas, TX
+**Texas Instruments** (System on a Chip [SoC] Design Verification)
 
-*Design Engineering Intern* | Summer 2016
+*Design Engineering Intern* | Summer 2016 | Dallas, TX
 
 - Reduced average SoC simulation runtime by six percent through discovery of optimal simulation configuration via benchmarking tool designed and implemented with engineering mentor
 - Decreased time to debug SoC simulations by partnering with three engineers to build tools for efficient printf simulation and a user-friendly web interface to determine signal routing through chip components
 
-**Convergent Engineering** | Various projects | Newberry, FL
+**Convergent Engineering** (Various projects)
 
-*Consultant* | Summer 2015
+*Engineering intern* | Summer 2015 | Newberry, FL
 
 - Automated data collection and analysis from proprietary e-pill devices with a CLI over Bluetooth
-
-## About me
-
-I am...
