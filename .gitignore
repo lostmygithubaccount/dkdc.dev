@@ -4,5 +4,6 @@ _site
 .env
 *.log
 
-
+references.qmd
+cover.qmd
 /.quarto/

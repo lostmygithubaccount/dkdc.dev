@@ -8,9 +8,9 @@ freeze: true
 title-block-banner: true
 
 # comments
-comments:
-  giscus:
-    repo: lostmygithubaccount/dkdc.dev
-    theme: purple_dark
-    category: comments
-    reactions-enabled: false
+# comments:
+#   giscus:
+#     repo: lostmygithubaccount/dkdc.dev
+#     theme: purple_dark
+#     category: comments
+#     reactions-enabled: false
