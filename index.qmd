@@ -4,15 +4,18 @@ about:
   template: jolla
   image: logo.png
   links:
-    - icon: twitter
-      text: posts
-      href: posts.qmd
+    - icon: file-person-fill
+      text: resume
+      href: resume.qmd
     - icon: linkedin
       text: linkedin
       href: https://linkedin.com/in/codydkdc
     - icon: github
       text: github
       href: https://github.com/lostmygithubaccount
+    - icon: twitter
+      text: posts
+      href: posts.qmd
     - icon: rss
       text: rss
       href: https://dkdc.dev/posts.xml

@@ -3,7 +3,7 @@ title: 'on hurricanes'
 author: "Cody"
 date: "2024-09-30"
 image: "fuck.png"
-draft: false
+draft: true
 categories: 
     - life
 ---
