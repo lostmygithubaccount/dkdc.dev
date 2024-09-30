@@ -12,7 +12,7 @@ geometry:
   - heightrounded
 ---
 
-# Cody Peterson (he/him) | [Email](mailto:cody@dkdc.dev) | [GitHub](https://github.com/lostmygithubaccount) | [LinkedIn](https://linkedin.com/in/codydkdc) | [Personal website](https://dkdc.dev)
+# Cody Peterson (he/him) | [Email](mailto:cody@dkdc.dev) | [GitHub](https://github.com/lostmygithubaccount) | [LinkedIn](https://linkedin.com/in/codydkdc) | [Website](https://dkdc.dev)
 
 ## Work experience
 
