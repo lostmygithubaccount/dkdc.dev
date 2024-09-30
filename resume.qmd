@@ -84,6 +84,7 @@ geometry:
 
 **Convergent Engineering** (Various projects)
 
-*Engineering intern* | Summer 2015 | Newberry, FL
+*Engineering Intern* | Summer 2015 | Newberry, FL
 
 - Automated data collection and analysis from proprietary e-pill devices with a CLI over Bluetooth
+- ECG data collection and signal analysis from multiple hardware platforms
