@@ -5,7 +5,7 @@ _site
 *.log
 
 covers/
-cover.qmd
+covers.qmd
 references.qmd
 
 /.quarto/
