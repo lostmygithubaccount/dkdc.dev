@@ -7,12 +7,12 @@ about:
     - icon: file-person-fill
       text: resume
       href: resume.qmd
-    - icon: linkedin
-      text: linkedin
-      href: https://linkedin.com/in/codydkdc
     - icon: github
       text: github
       href: https://github.com/lostmygithubaccount
+    - icon: linkedin
+      text: linkedin
+      href: https://linkedin.com/in/codydkdc
     - icon: twitter
       text: posts
       href: posts.qmd
