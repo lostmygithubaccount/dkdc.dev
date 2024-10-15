@@ -4,9 +4,6 @@ about:
   template: jolla
   image: logo.png
   links:
-    - icon: file-person-fill
-      text: resume
-      href: resume.qmd
     - icon: github
       text: github
       href: https://github.com/lostmygithubaccount

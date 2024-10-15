@@ -21,8 +21,6 @@ website:
     fontcolor: fuchsia
     left:
       - about.qmd
-      - href: resume.qmd
-        text: resume
     right:
       - posts.qmd
       - sidebar:dashboards
