@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://dkdc.dev/posts.html</loc>
-    <lastmod>2024-10-02T16:05:02.033Z</lastmod>
+    <loc>https://dkdc.dev/about.html</loc>
+    <lastmod>2024-10-15T16:15:36.495Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/pawz/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.145Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.148Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.607Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/beware-the-metagame/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.038Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.504Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.028Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.495Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/context-length-pain/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.038Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/website/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.151Z</lastmod>
+    <loc>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</loc>
+    <lastmod>2024-10-15T16:15:36.610Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.150Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/on-hurricanes/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.119Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.612Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/murphy/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.059Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.525Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/nix/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.063Z</lastmod>
+    <loc>https://dkdc.dev/posts/context-length-pain/index.html</loc>
+    <lastmod>2024-10-15T16:15:36.505Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/on-hurricanes/index.html</loc>
+    <lastmod>2024-10-15T16:15:36.581Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/context-length-pain-pt2/index.html</loc>
-    <lastmod>2024-10-02T16:05:02.038Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.504Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/nix/index.html</loc>
+    <lastmod>2024-10-15T16:15:36.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/website/index.html</loc>
+    <lastmod>2024-10-15T16:15:36.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2024-10-15T16:15:36.499Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2024-10-02T16:05:02.028Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2024-10-02T16:05:02.028Z</lastmod>
+    <lastmod>2024-10-15T16:15:36.495Z</lastmod>
   </url>
 </urlset>
