@@ -50,7 +50,7 @@ My rough Python stack includes:
 
 Of course, many other tools and Python packages are used along the way (and you can use whatever you like!), but this stack contained in a single Dockerfile allows deploying a single-node full-stack Python application with minimal build times locally, on a Raspberry Pi, and on a cloud VM with ease.
 
-### Miscellaneous notes
+Some miscellaneous notes:
 
 - **order**: the Dockefile is ordered so that frequently changing parts are toward the bottom
 - **system installs**: if you don't need these, you can remove them. I also need to re-add Postgres here if using it (I'm not currently in the project I copied this from)
