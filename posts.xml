@@ -141,7 +141,7 @@ font-style: inherit;">--upgrade</span></span></code></pre></div>
 <p>This allow for a <a href="https://12factor.net">twelve-factor-style</a> Python application deployed with Docker. I use a Docker compose YAML file with a backend server and GUI container, both running the same image with different CLI commands (e.g.&nbsp;<code>my-package server</code> and <code>my-package gui</code>) and mounting a <code>~/.my-package</code> directory for secrets and persistent data.</p>
 <p>My rough Python stack includes:</p>
 <ul>
-<li><a href="https://fastapi.tiangolo.com">FastAPI</a>: backend server</li>
+<li><a href="https://fastapi.tiangolo.com">FastAPI</a>: web server + continuous data ingestion and ETL</li>
 <li><a href="https://typer.tiangolo.com">Typer</a>: CLI</li>
 <li><a href="https://github.com/sqlite/sqlite">SQLite</a> and/or <a href="https://github.com/postgres/postgres">Postgres</a>: OLTP database</li>
 <li><a href="https://github.com/duckdb/duckdb">DuckDB</a>: OLAP database (views on top of the OLTP tables)</li>
