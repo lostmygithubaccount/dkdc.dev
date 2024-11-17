@@ -1,0 +1,58 @@
+---
+title: 'the novelty cycle'
+author: "Cody"
+date: "2025-01-01"
+draft: true
+categories: 
+    - life
+    - ai
+---
+
+***AI, circles, and parallels.***
+
+---
+
+I've been watching too much YouTube and want to make a prediction about social media.
+
+https://www.youtube.com/watch?v=Wyntvjyx6fo
+
+## What is the novelty cycle?
+
+The idea itself certainly is not novel. In starting this post, GitHub Copilot had some idea of what I was talking about from the title alone:
+
+![copilot](copilot.png)
+
+As did ChatGPT:
+
+![chatgpt](chatgpt.png)
+
+Google's AI will similarly make up some bullshit, but quickly devolves into what you actually get back in a search engine (bicycles):
+
+![google](google.png)
+
+Now, ...
+
+## Democracy and technology
+
+- point about awareness of talking points and whatnot
+
+### Time (compounding knowledge)
+
+- fables
+
+## Looking back
+
+- tech-focused
+
+## Looking ahead
+
+- tech-focused
+
+### Movies
+
+- random prediction about perspectives
+
+### Social media
+
+- more in-depth analysis and prediction
+- individual ownership?

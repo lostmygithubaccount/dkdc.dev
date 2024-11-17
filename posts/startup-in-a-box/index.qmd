@@ -1,0 +1,20 @@
+---
+title: 'startup in a box'
+author: "Cody"
+date: "2024-12-25"
+draft: true
+categories: 
+    - startup-in-a-box
+---
+
+***Starting startups faster.***
+
+---
+
+Tearing apart Silicon Valley tech culture is for another blog, but the idea that California statups are moving fast and "breaking things" is comical.
+
+## High-level overview of startup culture and financials
+
+## Finding the right levels of abstraction
+
+## Starting a startup
