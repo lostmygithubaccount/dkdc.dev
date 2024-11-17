@@ -48,7 +48,7 @@ My rough Python stack includes:
 - [Ibis](https://github.com/ibis-project/ibis): table management and queries
 - [Shiny for Python](https://github.com/posit-dev/py-shiny): GUI
 
-Of course, many other tools and Python packages are used along the way (and you can use whatever you like!), but this stack contained in a single Dockerfile easily allows deploying a single-node full-stack Python application with minimal build times locally, on a Raspberry Pi, and on a cloud VM with ease.
+Of course, many other tools and Python packages are used along the way (and you can use whatever you like!), but this stack contained in a single Dockerfile allows deploying a single-node full-stack Python application with minimal build times locally, on a Raspberry Pi, and on a cloud VM with ease.
 
 ### Miscellaneous notes
 
