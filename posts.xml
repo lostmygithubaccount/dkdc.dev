@@ -10,7 +10,166 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 30 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 17 Nov 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>fast Python Dockerfile with uv</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/fast-uv-dockerfile/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><strong><em>Fast, full-stack Python application with quick build times.</em></strong></p>
+<hr>
+<p>In this post, we’ll look at my Dockerfile:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Dockerfile</span></span>
+<span id="cb1-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">FROM</span> ghcr.io/astral-sh/uv:latest <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">AS</span> uv</span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">FROM</span> python:3.12-slim</span>
+<span id="cb1-4"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Install the required system packages</span></span>
+<span id="cb1-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">RUN</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">apt-get</span> update <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">&amp;&amp;</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">apt-get</span> install <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-y</span> <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-6">    git <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-7">    ffmpeg <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-8">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">&amp;&amp;</span> <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">apt-get</span> clean <span class="dt" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-9">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">&amp;&amp;</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rm</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-rf</span> /var/lib/apt/lists/<span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">*</span></span>
+<span id="cb1-10"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set the environment variables</span></span>
+<span id="cb1-11"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">ENV</span> PATH=/root/.local/bin:$PATH</span>
+<span id="cb1-12"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set the working directory</span></span>
+<span id="cb1-13"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">WORKDIR</span> /app</span>
+<span id="cb1-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Copy the files</span></span>
+<span id="cb1-15"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">COPY</span> readme.md /app/readme.md</span>
+<span id="cb1-16"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">COPY</span> pyproject.toml /app/pyproject.toml</span>
+<span id="cb1-17"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">COPY</span> .git /app/.git</span>
+<span id="cb1-18"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">COPY</span> src /app/src</span>
+<span id="cb1-19"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Install the Python packages</span></span>
+<span id="cb1-20"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">RUN</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">--mount=type=cache,target=/root/.cache/uv</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-21">    <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">--mount=from=uv,source=/uv,target=./uv</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">\</span></span>
+<span id="cb1-22">    <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">./uv</span> pip install <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'my-package @ .'</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--system</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--upgrade</span></span></code></pre></div>
+<p>This allow for a <a href="https://12factor.net">twelve-factor-style</a> Python application deployed with Docker. I use a Docker compose YAML file with a backend server and GUI container, both running the same image with different CLI commands (e.g.&nbsp;<code>my-package server</code> and <code>my-package gui</code>) and mounting a <code>~/.my-package</code> directory for secrets and persistent data.</p>
+<p>My rough Python stack includes:</p>
+<ul>
+<li><a href="https://fastapi.tiangolo.com">FastAPI</a>: backend server</li>
+<li><a href="https://typer.tiangolo.com">Typer</a>: CLI</li>
+<li><a href="https://github.com/sqlite/sqlite">SQLite</a> and/or <a href="https://github.com/postgres/postgres">Postgres</a>: OLTP database</li>
+<li><a href="https://github.com/duckdb/duckdb">DuckDB</a>: OLAP database (views on top of the OLTP tables)</li>
+<li><a href="https://github.com/ibis-project/ibis">Ibis</a>: table management and queries</li>
+<li><a href="https://github.com/posit-dev/py-shiny">Shiny for Python</a>: GUI</li>
+</ul>
+<p>Of course, many other tools and Python packages are used along the way, but this stack contained in a single Dockerfile easily allows deploying a single-node full-stack Python application with minimal build times locally, on a Raspberry Pi, and on a cloud VM with ease.</p>
+<section id="miscellaneous-notes" class="level3">
+<h3 class="anchored" data-anchor-id="miscellaneous-notes">Miscellaneous notes</h3>
+<ul>
+<li><strong>order</strong>: the Dockefile is ordered so that frequently changing parts are toward the bottom</li>
+<li><strong>system installs</strong>: if you don’t need these, you can remove them. I also need to re-add Postgres here if using it (I’m not currently in the project I copied this from)</li>
+<li><strong>cache</strong>: the big point is the caching line, which I stole from somewhere (<a href="https://github.com/astral-sh/uv/issues/4385">here?</a>)</li>
+<li><strong>git</strong>: I wouldn’t recommend copying the <code>.git</code> directory (or intalling <code>git</code>), but I’m kinda-sorta using it (I might remove it)</li>
+<li><strong>readme.md</strong>: the <code>pyproject.toml</code> is needed as it defines the installation of the package (and CLI), and the <code>readme.md</code> is needed because it’s referenced in the <code>pyproject.toml</code></li>
+<li><strong>src</strong>: this is the source code, in something like <code>src/my_package</code>, and obviously needs to be copied</li>
+<li><strong>pinning verions</strong>: in general I’m not pinning (or using a <code>uv</code> lockfile), but I would obviously recommend doing so for production workloads and having a process for updating dependencies</li>
+</ul>
+<p>Combining this with a few <code>justfile</code> commands makes development and deployment very easy.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>python</category>
+  <guid>https://dkdc.dev/posts/fast-uv-dockerfile/</guid>
+  <pubDate>Sun, 17 Nov 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>on hurricanes</title>
   <dc:creator>Cody </dc:creator>
