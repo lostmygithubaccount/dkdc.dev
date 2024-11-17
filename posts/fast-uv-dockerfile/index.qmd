@@ -41,7 +41,7 @@ This allow for a [twelve-factor-style](https://12factor.net) Python application 
 
 My rough Python stack includes:
 
-- [FastAPI](https://fastapi.tiangolo.com): backend server
+- [FastAPI](https://fastapi.tiangolo.com): web server + continuous data ingestion and ETL
 - [Typer](https://typer.tiangolo.com): CLI
 - [SQLite](https://github.com/sqlite/sqlite) and/or [Postgres](https://github.com/postgres/postgres): OLTP database
 - [DuckDB](https://github.com/duckdb/duckdb): OLAP database (views on top of the OLTP tables)
