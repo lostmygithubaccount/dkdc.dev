@@ -149,8 +149,7 @@ font-style: inherit;">--upgrade</span></span></code></pre></div>
 <li><a href="https://github.com/posit-dev/py-shiny">Shiny for Python</a>: GUI</li>
 </ul>
 <p>Of course, many other tools and Python packages are used along the way (and you can use whatever you like!), but this stack contained in a single Dockerfile allows deploying a single-node full-stack Python application with minimal build times locally, on a Raspberry Pi, and on a cloud VM with ease.</p>
-<section id="miscellaneous-notes" class="level3">
-<h3 class="anchored" data-anchor-id="miscellaneous-notes">Miscellaneous notes</h3>
+<p>Some miscellaneous notes:</p>
 <ul>
 <li><strong>order</strong>: the Dockefile is ordered so that frequently changing parts are toward the bottom</li>
 <li><strong>system installs</strong>: if you don’t need these, you can remove them. I also need to re-add Postgres here if using it (I’m not currently in the project I copied this from)</li>
@@ -163,7 +162,6 @@ font-style: inherit;">--upgrade</span></span></code></pre></div>
 <p>Combining this with a few <code>justfile</code> commands makes development and deployment very easy.</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>python</category>
