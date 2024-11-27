@@ -20,6 +20,6 @@ about:
 
 A [website](about.qmd#website). - [Cody](about.qmd#me)
 
-::: {.callout-important title="Looking for technical content?"}
+::: {.callout-important title="Looking for professional content?"}
 You're in the wrong place! After a mid-career crisis, I've decided to keep my purple neon website for my own delusions and separate out useful (?) technical content into [dkdc.io](https://dkdc.io). This website is now a personal blog for nonsense.
 :::
