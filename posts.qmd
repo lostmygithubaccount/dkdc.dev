@@ -14,5 +14,5 @@ page-layout: full
 ---
 
 ::: {.callout-important title="This is not the blog you are looking for!"}
-Check out [dkdc.io](https://dkdc.io/posts) for technical content. This website is now a personal blog for nonsense.
+Check out [dkdc.io](https://dkdc.io/posts) for technical content. This website is now a personal blog for nonsense. My views are independent.
 :::
