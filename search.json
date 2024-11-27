@@ -1,143 +1,66 @@
 [
   {
-    "objectID": "posts/beware-the-metagame/index.html",
-    "href": "posts/beware-the-metagame/index.html",
-    "title": "beware the metagame",
+    "objectID": "posts/gnx-track-tier-list/index.html",
+    "href": "posts/gnx-track-tier-list/index.html",
+    "title": "GNX track tier list (official)",
     "section": "",
-    "text": "https://amasad.me/meta\n\nI’ve first noticed this problem in the startup world where you see famous people that sell books, talk at conferences, and tweet advice to founders, but when you take a closer look, they’ve never done much founding themselves. They’re like the “entrepreneurship” professor that never built a business. They’re experts in the metagame – they’re polished speakers, engaging writers, and thought-leadering tweeters. The problem, though, is that they’re not judged by customers, the market, or nature, instead they’re judged by their peers. I call them metapreneurs.\nThis is an instance of what Nassim Taleb calls “The Expert Problem” – when other experts and meta-experts judge experts. Eventually the lack of contact with reality will corrupt the field. In the sciences, that lead to the replication crisis and the absurdities of the humanities.\nIf you find yourself going to a lot of conferences, opining too much on the latest fad in your field, and talking more about doing the thing than doing the job itself, then you, my friend, are getting sucked into the metagame.\n\n\n\n\n Back to top"
+    "text": "Tier list of tracks on Kendrick Lamar’s GNX album.\nLoosely ordered."
   },
   {
-    "objectID": "posts/fast-uv-dockerfile/index.html",
-    "href": "posts/fast-uv-dockerfile/index.html",
-    "title": "fast Python Dockerfile with uv",
+    "objectID": "posts/gnx-track-tier-list/index.html#s-tier",
+    "href": "posts/gnx-track-tier-list/index.html#s-tier",
+    "title": "GNX track tier list (official)",
+    "section": "S+ tier",
+    "text": "S+ tier\n\nreincarnated\nheart pt. 6\nwacced our murals\nsquabble up\nluther\ngloria"
+  },
+  {
+    "objectID": "posts/gnx-track-tier-list/index.html#s-tier-1",
+    "href": "posts/gnx-track-tier-list/index.html#s-tier-1",
+    "title": "GNX track tier list (official)",
+    "section": "S tier",
+    "text": "S tier\n\ntv off\ngnx\ndodger blue\nhey now\nman at the garden\npeekaboo"
+  },
+  {
+    "objectID": "posts/gnx-track-tier-list/index.html#questions-comments-concerns",
+    "href": "posts/gnx-track-tier-list/index.html#questions-comments-concerns",
+    "title": "GNX track tier list (official)",
+    "section": "questions? comments? concerns?",
+    "text": "questions? comments? concerns?\nLeave your thoughts below!"
+  },
+  {
+    "objectID": "posts/nix/index.html",
+    "href": "posts/nix/index.html",
+    "title": "Nix the dog",
     "section": "",
-    "text": "Fast, full-stack Python application with quick build times.\n\nIn this post, we’ll look at my Dockerfile:\n# Dockerfile\nFROM ghcr.io/astral-sh/uv:latest AS uv\nFROM python:3.12-slim\n# Install the required system packages\nRUN apt-get update && apt-get install -y \\\n    git \\\n    ffmpeg \\\n    && apt-get clean \\\n    && rm -rf /var/lib/apt/lists/*\n# Set the environment variables\nENV PATH=/root/.local/bin:$PATH\n# Set the working directory\nWORKDIR /app\n# Copy the files\nCOPY readme.md /app/readme.md\nCOPY pyproject.toml /app/pyproject.toml\nCOPY .git /app/.git\nCOPY src /app/src\n# Install the Python packages\nRUN --mount=type=cache,target=/root/.cache/uv \\\n    --mount=from=uv,source=/uv,target=./uv \\\n    ./uv pip install 'my-package @ .' --system --upgrade\nThis allow for a twelve-factor-style Python application deployed with Docker. I use a Docker compose YAML file with a backend server and GUI container, both running the same image with different CLI commands (e.g. my-package server and my-package gui) and mounting a ~/.my-package directory for secrets and persistent data.\nMy rough Python stack includes:\n\nFastAPI: web server + continuous data ingestion and ETL\nTyper: CLI\nSQLite and/or Postgres: OLTP database\nDuckDB: OLAP database (views on top of the OLTP tables)\nIbis: table management and queries\nShiny for Python: GUI\n\nOf course, many other tools and Python packages are used along the way (and you can use whatever you like!), but this stack contained in a single Dockerfile allows deploying a single-node full-stack Python application with minimal build times locally, on a Raspberry Pi, and on a cloud VM with ease.\nSome miscellaneous notes:\n\norder: the Dockefile is ordered so that frequently changing parts are toward the bottom\nsystem installs: if you don’t need these, you can remove them. I also need to re-add Postgres here if using it (I’m not currently in the project I copied this from)\ncache: the big point is the caching line, which I stole from somewhere (here?)\ngit: I wouldn’t recommend copying the .git directory (or intalling git), but I’m kinda-sorta using it (I might remove it)\nreadme.md: the pyproject.toml is needed as it defines the installation of the package (and CLI), and the readme.md is needed because it’s referenced in the pyproject.toml\nsrc: this is the source code, in something like src/my_package, and obviously needs to be copied\npinning verions: in general I’m not pinning (or using a uv lockfile), but I would obviously recommend doing so for production workloads and having a process for updating dependencies\n\nCombining this with a few justfile commands makes development and deployment very easy.\n\n\n\n Back to top"
+    "text": "Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.\n  \n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/murphy/index.html",
-    "href": "posts/murphy/index.html",
-    "title": "Murphy the dog",
+    "objectID": "posts/website/index.html",
+    "href": "posts/website/index.html",
+    "title": "I redid my website again…",
     "section": "",
-    "text": "Murphy the dog.\n  \n\n\n\n Back to top"
+    "text": "I mean, why not at this point…\nQuarto is nice!\n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/context-length-pain/index.html",
-    "href": "posts/context-length-pain/index.html",
-    "title": "context length pain",
+    "objectID": "posts/context-length-pain-pt2/index.html",
+    "href": "posts/context-length-pain-pt2/index.html",
+    "title": "context length pain pt2",
     "section": "",
-    "text": "The bane of my existence:\n\nInvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.\n\nSomebody please give me GPT4-32k access.\nUpdates: See part 2.\n\n\n\n Back to top"
+    "text": "The bane of my existence:\n\nInvalidRequestError: This model’s maximum context length is 32768 tokens. However, you requested 33013 tokens (31413 in the messages, 1600 in the completion). Please reduce the length of the messages or completion.\n\nSomebody please give me GPT5-64k access.\nSee part 1.\n\n\n\n Back to top"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "posts",
+    "objectID": "posts/ban-advertisement/index.html",
+    "href": "posts/ban-advertisement/index.html",
+    "title": "ban advertisement",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nfast Python Dockerfile with uv\n\n\n\npython\n\n\n\n\n\n\n\nCody\n\n\nNov 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non hurricanes\n\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nSep 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPython + Rust: a simple tutorial\n\n\n\nPython\n\n\nRust\n\n\n\n\n\n\n\nCody\n\n\nApr 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nquoting Simon Willison quoting Andrej Karpathy\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nSep 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nbeware the metagame\n\n\n\nmeta\n\n\n\n\n\n\n\nAmjad Masad\n\n\nSep 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain pt2\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Ban advertisement.\n\nI suspect banning advertisement – at least digital advertisement – would make the world a better place.\n\n\n\n Back to top"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "about",
+    "objectID": "posts/quoting-simon-willison-quoting-andrej-karpathy/index.html",
+    "href": "posts/quoting-simon-willison-quoting-andrej-karpathy/index.html",
+    "title": "quoting Simon Willison quoting Andrej Karpathy",
     "section": "",
-    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently for hire! Probably. Feel free to reach out.\nPreviously a Senior Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis. Previously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager II at Microsoft (AI Platform | Azure ML) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about:\n\nOSS & scale\nbeautiful design\nelegant engineering"
-  },
-  {
-    "objectID": "about.html#me",
-    "href": "about.html#me",
-    "title": "about",
-    "section": "",
-    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently for hire! Probably. Feel free to reach out.\nPreviously a Senior Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis. Previously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager II at Microsoft (AI Platform | Azure ML) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about:\n\nOSS & scale\nbeautiful design\nelegant engineering"
-  },
-  {
-    "objectID": "about.html#website",
-    "href": "about.html#website",
-    "title": "about",
-    "section": "website",
-    "text": "website\nThis is my personal website. My views are separate from my (potential) employer’s.\nThe purpose of this website is to practice writing, coding, and documenting projects."
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "about",
-    "section": "contact",
-    "text": "contact\n\n\n\n\n\n\nWarning\n\n\n\nNo soliciting! Please…\n\n\n\nGitHub\nYou can tag on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond.\n\n\npersonal\nReach out via email (preferred) or LinkedIn."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "dkdc.dev",
-    "section": "",
-    "text": "A website. - Cody\n\n\n Back to top"
-  },
-  {
-    "objectID": "posts/pawz/index.html",
-    "href": "posts/pawz/index.html",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "",
-    "text": "This post is intended to provide a simple demonstration of a Python package that relies on core functionality written in Rust. You can view the source code on GitHub."
-  },
-  {
-    "objectID": "posts/pawz/index.html#tools",
-    "href": "posts/pawz/index.html#tools",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Tools",
-    "text": "Tools\nIn addition to Python and Rust, we’ll use the following tools:\n\nGitHub: repository hosting\nGitHub CLI: interact with GitHub from the command line\njust: a command runner\nmise: a tool for managing dev environments (Python/Rust versions)\n\nFor generating and using Rust code in Python, we’ll use PyO3."
-  },
-  {
-    "objectID": "posts/pawz/index.html#setting-up-the-project",
-    "href": "posts/pawz/index.html#setting-up-the-project",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Setting up the project",
-    "text": "Setting up the project\nWe’ll start with an overview of the project setup.\n\nPicking a name\nWe need a good name for our project. Ideally, this can match how the package on PyPI. I chose pawz because it was not taken, is short, and leans into what the demo package will do.\n\n\nLayout\nLet’s start by looking at the file tree for pawz:\n(venv) cody@dkdc pawz % tree\n./\n├── LICENSE\n├── dev-requirements.txt\n├── justfile\n├── pyproject.toml\n├── readme.md\n└── src/\n    ├── pawz/\n    │   └── __init__.py\n    └── pawz-core/\n        ├── Cargo.toml\n        ├── pyproject.toml\n        ├── readme.md\n        └── src/\n            ├── lib.rs\n            └── main.rs\n\n5 directories, 11 files\nThis setup is copied over from a private project, then modified to update the project name and reduce code to its minimal form.\n\n\nJustfile\nWe can look at the justfile – just is a command runner – to get a sense of the things we will be doing:\n# Justfile\n\n# load environment variables\nset dotenv-load\n\n# aliases\nalias fmt:=format\n\n# list justfile recipes\ndefault:\n    just --list\n\n# setup\nsetup:\n    @pip install -r dev-requirements.txt\n\n# build\nbuild:\n    just clean\n    @python -m build src/pawz-core\n    @python -m build\n\n# format\nformat:\n    @cargo fmt --manifest-path src/pawz-core/Cargo.toml\n    @ruff format .\n\n# install\ninstall:\n    @maturin dev -m src/pawz-core/Cargo.toml\n    @pip install --upgrade -e '.[all]'\n\n# uninstall\nuninstall:\n    @pip uninstall pawz pawz-core -y\n\n# release-test\nrelease-test:\n    just build\n    @twine upload --repository testpypi src/pawz-core/dist/* -u __token__ -p ${PYPI_TEST_TOKEN}\n    @twine upload --repository testpypi dist/* -u __token__ -p ${PYPI_TEST_TOKEN}\n\n# release\nrelease:\n    just build\n    @twine upload src/pawz-core/dist/* -u __token__ -p ${PYPI_TOKEN}\n    @twine upload dist/* -u __token__ -p ${PYPI_TOKEN}\n\n# clean\nclean:\n    @rm -r src/pawz-core/target || True\n    @rm -rf src/pawz-core/dist || True\n    @rm -rf dist || True\n\n\nPython and Rust sub-projects\nYou may have already noticed above we’re building and publishing two Python packages – pawz is a pure Python package that depends on pawz-core, a pure Rust package with Python bindings.\nYou can see the package definitions in the respective pyproject.tomls:\n\n\n\n\n\n\nImportant\n\n\n\nDue to the website’s exquisite theme, you may not be able to tell that below are two separate tabs.\n\n\n\npawz: pure Pythonpawz-core: pure Rust with Python bindings\n\n\n[build-system]\nrequires = [\"hatchling\"]\nbuild-backend = \"hatchling.build\"\n\n[project]\nname = \"pawz\"\nversion = \"0.1.0\"\nauthors = [{ name = \"Cody\", email = \"cody@dkdc.dev\" }]\ndescription = \"a demo of Python + Rust\"\nreadme = \"readme.md\"\nrequires-python = \"&gt;=3.11\"\nclassifiers = [\n  \"Programming Language :: Python :: 3\",\n  \"License :: OSI Approved :: MIT License\",\n  \"Operating System :: OS Independent\",\n]\ndependencies = [\"pawz_core\"]\n\n[project.urls]\n\"Homepage\" = \"https://github.com/lostmygithubaccount/pawz\"\n\"Bug Tracker\" = \"https://github.com/lostmygithubaccount/pawz/issues\"\n\n\n[build-system]\nrequires = [\"maturin&gt;=1.5,&lt;2.0\"]\nbuild-backend = \"maturin\"\n\n[project]\nname = \"pawz_core\"\ndynamic = [\"version\"]\nauthors = [{ name = \"Cody\", email = \"cody@dkdc.dev\" }]\ndescription = \"pawz core functionality (Rust!)\"\nreadme = \"readme.md\"\nrequires-python = \"&gt;=3.11\"\nclassifiers = [\n  \"Programming Language :: Python :: 3\",\n  \"License :: OSI Approved :: MIT License\",\n  \"Operating System :: OS Independent\",\n]\ndependencies = []\n\n[tool.maturin]\nfeatures = [\"pyo3/extension-module\"]\n\n[project.urls]\n\"Homepage\" = \"https://github.com/lostmygithubaccount/pawz\"\n\"Bug Tracker\" = \"https://github.com/lostmygithubaccount/pawz/issues\"\n\n\n\nYou’ll notice the primary difference is the build tooling – hatchling for the pure-Python project versus maturin for the Rust project.\nWith pawz-core, the package version is specified in the Cargo.toml instead of the pyproject.toml – we’ll take a closer look at that later.\n\n\npawz\nLet’s setup our Python package pawz – to start, all you need is an __init__.py file in the correct subdirectory:\n# imports\nimport pawz_core as pc\n\n# exports\n__all__ = [\"pc\"]\nAll we’re doing at this point is making pawz_core available as a module from pawz. So, we can do something like:\nimport pawz as pz\n\npz.pc.open_pawz()\nWhere the open_pawz() method is defined in pawz_core. We haven’t done that yet, but will later.\n\n\npawz-core\nIn addition to the pyproject.toml above, we need a Cargo.toml to define the Rust project:\n[package]\nname = \"pawz_core\"\nversion = \"0.1.0\"\nedition = \"2021\"\n\n[lib]\nname = \"pawz_core\"\ncrate-type = [\"cdylib\"]\n\n[dependencies]\npyo3 = \"0.21.1\"\nNotice the Python package’s version will match the version defined here.\nWe also need the lib.rs in the src/ directory defining the functionality and exposing it through the Python bindings:\nuse pyo3::prelude::*;\n//use pyo3::exceptions::PyValueError;\n//use pyo3::types::PyTuple;\n\n/// A Python module implemented in Rust.\n#[pymodule]\n#[allow(deprecated)]\nfn pawz_core(_py: Python, _m: &PyModule) -&gt; PyResult&lt;()&gt; {\n    Ok(())\n}\nNotice there’s nothing defined yet and a few things are commented out and prepended with an underscore to avoid the compiler complaining. However at this point, everything is fully functional – you can build pawz-core and pawz and import them.\n\n\n\n\n\n\nWhat about the main.rs?\n\n\n\n\n\nAs of writing, the main.rs is a simple hello world:\nfn main() {\n    println!(\"Hello, world!\");\n}\nYou don’t need the file, but I find it useful to easily try things out in Rust. For instance, you can import things from lib.rs and run them."
-  },
-  {
-    "objectID": "posts/pawz/index.html#setup-the-python-environment",
-    "href": "posts/pawz/index.html#setup-the-python-environment",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Setup the Python environment",
-    "text": "Setup the Python environment\nLet’s take a look at the dev-requirements.txt:\n# python\nruff\nbuild\ntwine\n\n# rust\nmaturin\nruff is to format Python code, build is to build the Python packages, twine is to upload them to PyPI, and maturin is to build the Rust package with Python bindings. You can see the use of these tools above in the justfile.\n\nSetup a virtual Python environment\nYou should generally use one virtual environment per project. I use mise to manage Python (and Rust) versions, but you don’t have to. You can run:\n(venv) cody@dkdc pawz % python -m venv venv\n(venv) cody@dkdc pawz % source venv/bin/activate\nto create your virtual environment. At this point if you’ve installed just, you can run:\n(venv) cody@dkdc pawz % just setup\nThis will install the dev dependencies defined above.\n\n\nInstalling pawz and pawz-core\nYou can install pawz and pawz-core in local developer mode with:\n(venv) cody@dkdc pawz % just install\nNow you’re able to import pawz as pz!"
-  },
-  {
-    "objectID": "posts/pawz/index.html#uploading-to-github",
-    "href": "posts/pawz/index.html#uploading-to-github",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Uploading to GitHub",
-    "text": "Uploading to GitHub\nThere are multiple ways to do this, but I prefer something like:\n(venv) cody@dkdc pawz % git init\n(venv) cody@dkdc pawz % gh repo create pawz --public --source .\n(venv) cody@dkdc pawz % git checkout -b main\n(venv) cody@dkdc pawz % git add .\n(venv) cody@dkdc pawz % git commit -m \"initial commit\"\n(venv) cody@dkdc pawz % git push --set-upstream origin/main\nNow, your code should be up on GitHub!"
-  },
-  {
-    "objectID": "posts/pawz/index.html#publishing-to-pypi",
-    "href": "posts/pawz/index.html#publishing-to-pypi",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Publishing to PyPI",
-    "text": "Publishing to PyPI\nLet’s publish pawz and pawz-core to PyPI. First, you need to generate and place PyPI tokens in a .env file:\nPYPI_TOKEN = \"pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"\nPYPI_TEST_TOKEN = \"pypi-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\"\nThen run:\n(venv) cody@dkdc pawz % just release-test\n(venv) cody@dkdc pawz % just release"
-  },
-  {
-    "objectID": "posts/pawz/index.html#doing-something",
-    "href": "posts/pawz/index.html#doing-something",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Doing something",
-    "text": "Doing something\nNow, let’s do something! We’ll write some core functionality in Rust. For this demonstration, we’ll just open up a hardcoded URL pointing to a YouTube video.\n\n\n\n\n\n\nImportant\n\n\n\nIn the pyproject.toml and Cargo.toml we should bump the version up so we can ship a new version later."
-  },
-  {
-    "objectID": "posts/pawz/index.html#rust-edits",
-    "href": "posts/pawz/index.html#rust-edits",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Rust edits",
-    "text": "Rust edits\nWe need to add the open crate dependency in the Cargo.toml:\n[package]\nname = \"pawz_core\"\nversion = \"0.2.0\"\nedition = \"2021\"\n\n[lib]\nname = \"pawz_core\"\ncrate-type = [\"cdylib\"]\n\n[dependencies]\npyo3 = \"0.21.1\"\nopen = \"5.1.2\"\nThen edit lib.rs to create our function and add it to the Python module:\nuse open;\nuse pyo3::prelude::*;\n//use pyo3::exceptions::PyValueError;\n//use pyo3::types::PyTuple;\n\n#[pyfunction]\nfn open_pawz() {\n    let url = \"https://www.youtube.com/watch?v=gJ6slhwPp6E\";\n    open::that(url).unwrap();\n}\n\n/// A Python module implemented in Rust.\n#[pymodule]\n#[allow(deprecated)]\nfn pawz_core(_py: Python, m: &PyModule) -&gt; PyResult&lt;()&gt; {\n    m.add_function(wrap_pyfunction!(open_pawz, m)?)?;\n    Ok(())\n}\nNow if you import pawz_core, you can run pawz_core.open_pawz() from Python!\n\nPython edits\nNo edits to Python are needed – since pawz_core is available from pawz, we can just call pawz.pawz_core.open_pawz(). You might want something different, i.e. to abstract away the core library code, but this is fine for demonstration purposes.\n\n\nGit workflow\nFirst, we’ll check what we changed:\n\n\n\n\n\n\nNote\n\n\n\nI changed a bit more when I actually did this, reflected in some of the output below.\n\n\n(venv) cody@dkdc pawz % git status\nOn branch main\nYour branch is up to date with 'origin/main'.\n\nChanges not staged for commit:\n  (use \"git add &lt;file&gt;...\" to update what will be committed)\n  (use \"git restore &lt;file&gt;...\" to discard changes in working directory)\n        modified:   pyproject.toml\n        modified:   src/pawz-core/Cargo.toml\n        modified:   src/pawz-core/src/lib.rs\n        modified:   src/pawz/__init__.py\n\nno changes added to commit (use \"git add\" and/or \"git commit -a\")\nCheckout a branch to commit our changes to:\n(venv) cody@dkdc pawz % git checkout -b add-something\nSwitched to a new branch 'add-something'\nEnsure we format our code (Rust and Python):\n(venv) cody@dkdc pawz % just fmt\n1 file left unchanged\nAdd our changes and commit them:\n(venv) cody@dkdc pawz % git add .\n(venv) cody@dkdc pawz % git commit -m \"add something\"\n[add-something 3e8727d] add something\n 4 files changed, 17 insertions(+), 5 deletions(-)\nThen create a PR on GitHub:\n(venv) cody@dkdc pawz % gh pr create\n? Where should we push the 'add-something' branch? lostmygithubaccount/pawz\n\nCreating pull request for add-something into main in lostmygithubaccount/pawz\n\n? Title add something\n? Body &lt;Received&gt;\n? What's next? Submit\nremote:\nremote:\nTo https://github.com/lostmygithubaccount/pawz.git\n * [new branch]      HEAD -&gt; add-something\nbranch 'add-something' set up to track 'origin/add-something'.\nhttps://github.com/lostmygithubaccount/pawz/pull/1\nAnd finally, merge the PR from the CLI:\n(venv) cody@dkdc pawz % gh pr merge\nMerging pull request lostmygithubaccount/pawz#1 (add something)\n? What merge method would you like to use? Squash and merge\n? Delete the branch locally and on GitHub? Yes\n? What's next? Submit\n✓ Squashed and merged pull request lostmygithubaccount/pawz#1 (add something)\nremote: Enumerating objects: 19, done.\nremote: Counting objects: 100% (19/19), done.\nremote: Compressing objects: 100% (6/6), done.\nremote: Total 10 (delta 3), reused 9 (delta 3), pack-reused 0\nUnpacking objects: 100% (10/10), 1.72 KiB | 586.00 KiB/s, done.\nFrom https://github.com/lostmygithubaccount/pawz\n * branch            main       -&gt; FETCH_HEAD\n   a866fd3..318bd89  main       -&gt; origin/main\nUpdating a866fd3..318bd89\nFast-forward\n pyproject.toml           |  2 +-\n src/pawz-core/Cargo.toml |  3 ++-\n src/pawz-core/src/lib.rs | 10 +++++++++-\n src/pawz/__init__.py     |  7 +++++--\n 4 files changed, 17 insertions(+), 5 deletions(-)\n✓ Deleted local branch add-something and switched to branch main\n✓ Deleted remote branch add-something\nNow our source code is updated. You can view this PR here, including the files changed."
-  },
-  {
-    "objectID": "posts/pawz/index.html#updating-on-pypi",
-    "href": "posts/pawz/index.html#updating-on-pypi",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Updating on PyPI",
-    "text": "Updating on PyPI\nWith our code updated, we want to update our packages on PyPI. We simply run:\n(venv) cody@dkdc pawz % just release\nas before, shipping the new version that does something!"
-  },
-  {
-    "objectID": "posts/pawz/index.html#conclusion",
-    "href": "posts/pawz/index.html#conclusion",
-    "title": "Python + Rust: a simple tutorial",
-    "section": "Conclusion",
-    "text": "Conclusion\nI hope this is helpful to someone setting up a Python package with core functionality written in Rust. Of course, there are many ways to do this but I find the above fairly clean."
+    "text": "Looking at LLMs as chatbots is the same as looking at early computers as calculators. We’re seeing an emergence of a whole new computing paradigm, and it is very early.\n— Andrej Karpathy\n\n- Simon Willison\n\n\n\n\n Back to top"
   },
   {
     "objectID": "posts/on-hurricanes/index.html",
@@ -168,11 +91,60 @@
     "text": "Horrors and hope ahead\nThings tend to work out over time.\n\nSomething to be done?\nStill it’s frustrating how little we do about hurricanes given how much we know about them. If you live in Florida you’re likely to experience one every year. We can predict when in the year they will happen. We can watch them from above. We can predict the path they will take. We can predict expected damages and loss of life. We can predict we’ll continue having more “historic” hurricanes at an alarming rate.\nWe have programs for dealing with the aftermath but little prevention. Our response is often reactionary and primitive given the technology available to us. We can’t stop hurricanes (?) but it seems like we could do a lot more to prevent the negative outcomes they cause if someone motivated (or rather incentivized) took the problem seriously. Capital, strategy, and execution. But what do we spend our resources and time on instead?\nTo be clear I haven’t helped anyone affected by Hurricane Helene. I haven’t donated my money. I haven’t volunteered my time. I haven’t offered anyone a place to stay. Some would argue this is immoral and, to a large extent, I’d agree. Yet it’s exhausting to care about every bad thing going on in the world. While technology has made it trivial to help people after disasters in most cases the disaster-recovery cycle tires.\n\nÉcoute bien, cette musique a déjà fait plusieurs tours\nLe mouvement se répète, il s’incruste dans ta tête\nTu voudrais le faire sortir, mais ça n’peut jamais finir\nTu commences à intégrer le rythme répétitif\nTu commences à intégrer le rythme répétitif\nLe mouvement perpétuel quand tu revois le motif\nTu vas bientôt regretter, est-ce que ça valait le coup ?\nTu te poses des questions, n’écoutes que la musique\n\n\n\nSilver linings\nAfter rain we can look for the silver linings. After Harvey I had Microsoft and Murphy.\n\n\n\nMurphy at Microsoft\n\n\nI’ve been fortunate to have excellent communities around me at times of need. I could not be where I am today without my housemates, the nice couple, my friends, my family, and many others after Harvey.\nThroughout life I’ve been lucky to have excellent advisors, mentors, managers, colleagues, and friends.\n\n\nWhat’s next?\nLife goes on. As I get a little older I realize life is about perspective. For me Hurricane Helene was just a rainy day. For others it will have effects for months and even years to come. I hope they find the support they need in their communities. I hope they find their silver linings. I hope one day I am in a better position to help others myself. I hope we can all do better to prevent such outcomes from predictable disasters in the future.\nI did get to see this cool bird at the dog park on Friday:\n\n\n\nbird"
   },
   {
-    "objectID": "posts/quoting-simon-willison-quoting-andrej-karpathy/index.html",
-    "href": "posts/quoting-simon-willison-quoting-andrej-karpathy/index.html",
-    "title": "quoting Simon Willison quoting Andrej Karpathy",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dkdc.dev",
     "section": "",
-    "text": "Looking at LLMs as chatbots is the same as looking at early computers as calculators. We’re seeing an emergence of a whole new computing paradigm, and it is very early.\n— Andrej Karpathy\n\n- Simon Willison\n\n\n\n\n Back to top"
+    "text": "A website. - Cody\n\n\n\n\n\n\nLooking for technical content?\n\n\n\nYou’re in the wrong place! After a mid-career crisis, I’ve decided to keep my purple neon website for my own delusions and separate out useful (?) technical content into dkdc.io. This website is now a personal blog for nonsense.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "about",
+    "section": "",
+    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently for hire! Probably. Feel free to reach out.\nPreviously a Senior Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis. Previously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager II at Microsoft (AI Platform | Azure ML) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about:\n\nOSS & scale\nbeautiful design\nelegant engineering"
+  },
+  {
+    "objectID": "about.html#me",
+    "href": "about.html#me",
+    "title": "about",
+    "section": "",
+    "text": "Hello! My name is Cody (he/him). I’m passionate about progress via technology.\nCurrently for hire! Probably. Feel free to reach out.\nPreviously a Senior Technical Product Manager at Voltron Data focusing on data interfaces and awesome OSS like Ibis. Previously a Product Manager at dbt Labs focusing on OSS (Python models) and Cloud (internal platform). Previously a Product Manager II at Microsoft (AI Platform | Azure ML) focusing on data, MLOps, and v2 developer experiences.\nSee my GitHub and/or LinkedIn for more details on my experience.\nI care about:\n\nOSS & scale\nbeautiful design\nelegant engineering"
+  },
+  {
+    "objectID": "about.html#website",
+    "href": "about.html#website",
+    "title": "about",
+    "section": "website",
+    "text": "website\nThis is my personal website. My views are independent.\nThe purpose of this website is to practice writing, coding, and documenting projects."
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "about",
+    "section": "contact",
+    "text": "contact\n\n\n\n\n\n\nWarning\n\n\n\nNo soliciting! Please…\n\n\n\nGitHub\nYou can tag on GitHub using @lostmygithubaccount to drastically improve the chance I see the notification and respond.\n\n\npersonal\nReach out via email (preferred) or LinkedIn."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "posts",
+    "section": "",
+    "text": "This is not the blog you are looking for!\n\n\n\nCheck out dkdc.io for technical content. This website is now a personal blog for nonsense.\n\n\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nGNX track tier list (official)\n\n\n\nmusic\n\n\n\n\n\n\n\nCody\n\n\nNov 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nban advertisement\n\n\n\npolitics\n\n\n\n\n\n\n\nCody\n\n\nNov 27, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\non hurricanes\n\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nSep 30, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nquoting Simon Willison quoting Andrej Karpathy\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nSep 28, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nbeware the metagame\n\n\n\nmeta\n\n\n\n\n\n\n\nAmjad Masad\n\n\nSep 11, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain pt2\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 16, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncontext length pain\n\n\n\nai\n\n\n\n\n\n\n\nCody\n\n\nAug 13, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nI redid my website again…\n\n\n\nnews\n\n\n\n\n\n\n\nCody\n\n\nAug 5, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNix the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMurphy the dog\n\n\n\ndogs\n\n\nlife\n\n\n\n\n\n\n\nCody\n\n\nOct 18, 2017\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ntesting\n\n\n\narchive\n\n\n\n\n\n\n\nCody\n\n\nApr 1, 1\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "posts/context-length-pain/index.html",
+    "href": "posts/context-length-pain/index.html",
+    "title": "context length pain",
+    "section": "",
+    "text": "The bane of my existence:\n\nInvalidRequestError: This model’s maximum context length is 16385 tokens. However, your messages resulted in 28737 tokens. Please reduce the length of the messages.\n\nSomebody please give me GPT4-32k access.\nUpdates: See part 2.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "posts/murphy/index.html",
+    "href": "posts/murphy/index.html",
+    "title": "Murphy the dog",
+    "section": "",
+    "text": "Murphy the dog.\n  \n\n\n\n Back to top"
   },
   {
     "objectID": "posts/testing/index.html",
@@ -182,24 +154,10 @@
     "text": "Testing in soon-to-be-past.\n\n\n\n\n\n\nNote\n\n\n\nIf not rendered properly, view on dkdc.dev.\n\n\nSome Python code:\n\nimport ibis\nimport ibis.selectors as s\nimport plotly.io as pio\nimport plotly.express as px\n\n\n# configuration\npio.templates.default = \"plotly_dark\"\nibis.options.interactive = True\n\nt = ibis.examples.penguins.fetch()\nt\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │\n│ Adelie  │ Torgersen │            nan │           nan │              NULL │        NULL │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │\n│ Adelie  │ Torgersen │           34.1 │          18.1 │               193 │        3475 │ NULL   │  2007 │\n│ Adelie  │ Torgersen │           42.0 │          20.2 │               190 │        4250 │ NULL   │  2007 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┘\n\n\n\n\nt.group_by(\"species\").agg(ibis._.count().name(\"count\"))\n\n┏━━━━━━━━━━━┳━━━━━━━┓\n┃ species   ┃ count ┃\n┡━━━━━━━━━━━╇━━━━━━━┩\n│ string    │ int64 │\n├───────────┼───────┤\n│ Adelie    │   152 │\n│ Gentoo    │   124 │\n│ Chinstrap │    68 │\n└───────────┴───────┘\n\n\n\n\nt[\"species\"].topk(5)\n\n┏━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓\n┃ species   ┃ Count(species) ┃\n┡━━━━━━━━━━━╇━━━━━━━━━━━━━━━━┩\n│ string    │ int64          │\n├───────────┼────────────────┤\n│ Adelie    │            152 │\n│ Gentoo    │            124 │\n│ Chinstrap │             68 │\n└───────────┴────────────────┘\n\n\n\n\npx.scatter(t, title=\"penguins\", x=\"bill_length_mm\", y=\"bill_depth_mm\", color=\"species\")\n\n                                                \n\n\n\ndef transform(t):\n    # compute the z score\n    t = t.mutate(\n        s.across(s.numeric(), {\"zscore\": lambda x: (x - x.mean()) / x.std()})\n    ).dropna()  # drop rows with missing values\n    return t\n\n\nf = transform(t)\nf\n\n┏━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓\n┃ species ┃ island    ┃ bill_length_mm ┃ bill_depth_mm ┃ flipper_length_mm ┃ body_mass_g ┃ sex    ┃ year  ┃ bill_length_mm_zscore ┃ bill_depth_mm_zscore ┃ flipper_length_mm_zscore ┃ body_mass_g_zscore ┃ year_zscore ┃\n┡━━━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━┩\n│ string  │ string    │ float64        │ float64       │ int64             │ int64       │ string │ int64 │ float64               │ float64              │ float64                  │ float64            │ float64     │\n├─────────┼───────────┼────────────────┼───────────────┼───────────────────┼─────────────┼────────┼───────┼───────────────────────┼──────────────────────┼──────────────────────────┼────────────────────┼─────────────┤\n│ Adelie  │ Torgersen │           39.1 │          18.7 │               181 │        3750 │ male   │  2007 │             -0.883137 │             0.784218 │                -1.416243 │          -0.563316 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.5 │          17.4 │               186 │        3800 │ female │  2007 │             -0.809877 │             0.125990 │                -1.060674 │          -0.500969 │   -1.258032 │\n│ Adelie  │ Torgersen │           40.3 │          18.0 │               195 │        3250 │ female │  2007 │             -0.663357 │             0.429788 │                -0.420652 │          -1.186793 │   -1.258032 │\n│ Adelie  │ Torgersen │           36.7 │          19.3 │               193 │        3450 │ female │  2007 │             -1.322698 │             1.088015 │                -0.562879 │          -0.937402 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.3 │          20.6 │               190 │        3650 │ male   │  2007 │             -0.846507 │             1.746243 │                -0.776220 │          -0.688012 │   -1.258032 │\n│ Adelie  │ Torgersen │           38.9 │          17.8 │               181 │        3625 │ female │  2007 │             -0.919767 │             0.328522 │                -1.416243 │          -0.719185 │   -1.258032 │\n│ Adelie  │ Torgersen │           39.2 │          19.6 │               195 │        4675 │ male   │  2007 │             -0.864822 │             1.239914 │                -0.420652 │           0.590115 │   -1.258032 │\n│ Adelie  │ Torgersen │           41.1 │          17.6 │               182 │        3200 │ female │  2007 │             -0.516837 │             0.227256 │                -1.345129 │          -1.249140 │   -1.258032 │\n│ Adelie  │ Torgersen │           38.6 │          21.2 │               191 │        3800 │ male   │  2007 │             -0.974712 │             2.050041 │                -0.705106 │          -0.500969 │   -1.258032 │\n│ Adelie  │ Torgersen │           34.6 │          21.1 │               198 │        4400 │ male   │  2007 │             -1.707313 │             1.999408 │                -0.207311 │           0.247203 │   -1.258032 │\n│ …       │ …         │              … │             … │                 … │           … │ …      │     … │                     … │                    … │                        … │                  … │           … │\n└─────────┴───────────┴────────────────┴───────────────┴───────────────────┴─────────────┴────────┴───────┴───────────────────────┴──────────────────────┴──────────────────────────┴────────────────────┴─────────────┘\n\n\n\n\nfrom sklearn.decomposition import PCA\n\n# select \"features\" as X\nX = f.select(s.contains(\"zscore\"))\n\n# get the the first 2 principal components to visualize\nn_components = 3\npca = PCA(n_components=n_components).fit(X)\n\n# transform the table to get the principal components\nt_pca = ibis.memtable(pca.transform(X)).relabel({\"col0\": \"pc1\", \"col1\": \"pc2\", \"col2\": \"pc3\"})\n\n# join the original table with the PCA table, assuming the order is the same\nf = f.mutate(row_number=ibis.row_number().over()).join(\n    t_pca.mutate(row_number=ibis.row_number().over()), \"row_number\"\n)\n\n# plot the first 3 principal components\npx.scatter_3d(f, title=\"penguins PCA\", x=\"pc1\", y=\"pc2\", z=\"pc3\", color=\"species\")\n\n                                                \n\n\n\n\n\n\n\ngraph TD\n\n  %% Extraction\n  JSON --&gt;|Extract| CLOUDSTORAGE\n  PARQUET --&gt;|Extract| CLOUDSTORAGE\n  DELTASRC --&gt;|Extract| CLOUDSTORAGE\n  \n  %% Transformation\n  CLOUDSTORAGE --&gt;|Transform| DUCKDB\n  CLOUDSTORAGE --&gt;|Transform| POLARS\n  \n  %% Load\n  DUCKDB --&gt;|Load| DELTADST\n  DUCKDB --&gt;|Load| DBOUTPUT\n  POLARS --&gt;|Load| DELTADST\n  POLARS --&gt;|Load| DBOUTPUT\n  \n  classDef dataFormat fill:#f9d,stroke:#333,stroke-width:2px;\n  classDef storage fill:#9df,stroke:#333,stroke-width:2px;\n  classDef processing fill:#fd9,stroke:#333,stroke-width:2px;\n  classDef output fill:#d9f,stroke:#333,stroke-width:2px;\n\n  class JSON,PARQUET,DELTASRC dataFormat;\n  class CLOUDSTORAGE storage;\n  class DUCKDB,POLARS processing;\n  class DELTADST,DBOUTPUT output;\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "posts/context-length-pain-pt2/index.html",
-    "href": "posts/context-length-pain-pt2/index.html",
-    "title": "context length pain pt2",
+    "objectID": "posts/beware-the-metagame/index.html",
+    "href": "posts/beware-the-metagame/index.html",
+    "title": "beware the metagame",
     "section": "",
-    "text": "The bane of my existence:\n\nInvalidRequestError: This model’s maximum context length is 32768 tokens. However, you requested 33013 tokens (31413 in the messages, 1600 in the completion). Please reduce the length of the messages or completion.\n\nSomebody please give me GPT5-64k access.\nSee part 1.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "posts/website/index.html",
-    "href": "posts/website/index.html",
-    "title": "I redid my website again…",
-    "section": "",
-    "text": "I mean, why not at this point…\nQuarto is nice!\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "posts/nix/index.html",
-    "href": "posts/nix/index.html",
-    "title": "Nix the dog",
-    "section": "",
-    "text": "Nix the dog. Short for “Phoenix”, no relation to the OS/package manager.\n  \n\n\n\n Back to top"
+    "text": "https://amasad.me/meta\n\nI’ve first noticed this problem in the startup world where you see famous people that sell books, talk at conferences, and tweet advice to founders, but when you take a closer look, they’ve never done much founding themselves. They’re like the “entrepreneurship” professor that never built a business. They’re experts in the metagame – they’re polished speakers, engaging writers, and thought-leadering tweeters. The problem, though, is that they’re not judged by customers, the market, or nature, instead they’re judged by their peers. I call them metapreneurs.\nThis is an instance of what Nassim Taleb calls “The Expert Problem” – when other experts and meta-experts judge experts. Eventually the lack of contact with reality will corrupt the field. In the sciences, that lead to the replication crisis and the absurdities of the humanities.\nIf you find yourself going to a lot of conferences, opining too much on the latest fad in your field, and talking more about doing the thing than doing the job itself, then you, my friend, are getting sucked into the metagame.\n\n\n\n\n Back to top"
   }
 ]

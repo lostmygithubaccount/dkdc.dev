@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-b4e30233709540bd42910b3dcb370383.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -93,36 +93,15 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">about</span></a>
   </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./posts.html"> 
 <span class="menu-text">posts</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-some-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">some projects</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-some-projects">    
-        <li>
-    <a class="dropdown-item" href="https://ibis-project.github.io/ibis-analytics">
- <span class="dropdown-text">ibis-analytics</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://lostmygithubaccount.github.io/ibis-bench">
- <span class="dropdown-text">ibis-bench</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="https://connect.posit.cloud/lostmygithubaccount/content/019180af-9e47-14bd-0955-38e6d98a5f98">
- <span class="dropdown-text">better-pypi-stats</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -147,11 +126,28 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </header><main class="content" id="quarto-document-content">
 <p>A <a href="./about.html#website">website</a>. - <a href="./about.html#me">Cody</a></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Looking for technical content?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Looking for technical content?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You’re in the wrong place! After a mid-career crisis, I’ve decided to keep my purple neon website for my own delusions and separate out useful (?) technical content into <a href="https://dkdc.io">dkdc.io</a>. This website is now a personal blog for nonsense.</p>
+</div>
+</div>
 
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> 
   <hr class="about-sep">
    <div class="about-links">
+  <a href="/about.html" class="about-link" rel="" target="">
+    <i class="bi bi-brilliance"></i>
+     <span class="about-link-text">about</span>
+  </a>
   <a href="https://github.com/lostmygithubaccount" class="about-link" rel="" target="">
     <i class="bi bi-github"></i>
      <span class="about-link-text">github</span>
@@ -161,12 +157,8 @@ ul.task-list li input[type="checkbox"] {
      <span class="about-link-text">linkedin</span>
   </a>
   <a href="/posts.html" class="about-link" rel="" target="">
-    <i class="bi bi-twitter"></i>
+    <i class="bi bi-body-text"></i>
      <span class="about-link-text">posts</span>
-  </a>
-  <a href="https://dkdc.dev/posts.xml" class="about-link" rel="" target="">
-    <i class="bi bi-rss"></i>
-     <span class="about-link-text">rss</span>
   </a>
 </div>
 </div>
@@ -246,8 +238,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -358,7 +348,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -596,6 +585,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
+    <a class="nav-link" href="https://dkdc.dev/about">
+      <i class="bi bi-brilliance" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lostmygithubaccount">
       <i class="bi bi-github" role="img">
 </i> 
@@ -609,13 +604,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </li>  
     <li class="nav-item compact">
     <a class="nav-link" href="https://dkdc.dev/posts">
-      <i class="bi bi-twitter" role="img">
-</i> 
-    </a>
-  </li>  
-    <li class="nav-item compact">
-    <a class="nav-link" href="https://dkdc.dev/posts.xml">
-      <i class="bi bi-rss" role="img">
+      <i class="bi bi-body-text" role="img">
 </i> 
     </a>
   </li>  
