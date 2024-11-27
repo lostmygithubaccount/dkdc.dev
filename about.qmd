@@ -20,7 +20,7 @@ I care about:
 
 ## website
 
-**This is my personal website. My views are separate from my (potential) employer's.**
+**This is my personal website. My views are independent.**
 
 The purpose of this website is to practice writing, coding, and documenting projects.
 

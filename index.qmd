@@ -4,18 +4,22 @@ about:
   template: jolla
   image: logo.png
   links:
+    - icon: brilliance
+      text: about
+      href: about.qmd
     - icon: github
       text: github
       href: https://github.com/lostmygithubaccount
     - icon: linkedin
       text: linkedin
       href: https://linkedin.com/in/codydkdc
-    - icon: twitter
+    - icon: body-text
       text: posts
       href: posts.qmd
-    - icon: rss
-      text: rss
-      href: https://dkdc.dev/posts.xml
 ---
 
 A [website](about.qmd#website). - [Cody](about.qmd#me)
+
+::: {.callout-important title="Looking for technical content?"}
+You're in the wrong place! After a mid-career crisis, I've decided to keep my purple neon website for my own delusions and separate out useful (?) technical content into [dkdc.io](https://dkdc.io). This website is now a personal blog for nonsense.
+:::

@@ -18,39 +18,23 @@ website:
   # nav
   navbar:
     logo: logo.png
-    fontcolor: fuchsia
-    left:
-      - about.qmd
     right:
+      - about.qmd
       - posts.qmd
-      - sidebar:dashboards
-  sidebar:
-    - id: ""
-    - id: dashboards
-      title: "some projects"
-      style: "docked"
-      collapse-level: 2
-      contents:
-        - text: ibis-analytics
-          href: https://ibis-project.github.io/ibis-analytics
-        - text: ibis-bench
-          href: https://lostmygithubaccount.github.io/ibis-bench
-        - text: better-pypi-stats
-          href: https://connect.posit.cloud/lostmygithubaccount/content/019180af-9e47-14bd-0955-38e6d98a5f98
 
   # footer
   page-footer:
     border: false
     center: "Cody's website"
     right:
+      - icon: brilliance
+        href: https://dkdc.dev/about
       - icon: github
         href: https://github.com/lostmygithubaccount
       - icon: linkedin
         href: https://linkedin.com/in/codydkdc
-      - icon: twitter
+      - icon: body-text
         href: https://dkdc.dev/posts
-      - icon: rss
-        href: https://dkdc.dev/posts.xml
 
 # theme
 format:
