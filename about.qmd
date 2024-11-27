@@ -12,7 +12,7 @@ Previously a Senior Technical Product Manager at [Voltron Data](https://voltrond
 
 See my [GitHub](https://github.com/lostmygithubaccount) and/or [LinkedIn](https://www.linkedin.com/in/codydkdc) for more details on my experience.
 
-I care about:
+I care about (w.r.t. work):
 
 - OSS & scale
 - beautiful design
