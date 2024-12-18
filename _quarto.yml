@@ -18,9 +18,10 @@ website:
   # nav
   navbar:
     logo: logo.png
-    right:
-      - about.qmd
-      - posts.qmd
+    #left:
+    #   - about.qmd
+    #right:
+      # - posts.qmd
 
   # footer
   page-footer:
@@ -33,8 +34,8 @@ website:
         href: https://github.com/lostmygithubaccount
       - icon: linkedin
         href: https://linkedin.com/in/codydkdc
-      - icon: body-text
-        href: https://dkdc.dev/posts
+      # - icon: body-text
+      #   href: https://dkdc.dev/posts
 
 # theme
 format:
