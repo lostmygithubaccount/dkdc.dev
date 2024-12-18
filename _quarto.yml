@@ -14,6 +14,7 @@ website:
   twitter-card: true
   back-to-top-navigation: true
   repo-url: https://github.com/lostmygithubaccount/dkdc.dev
+  search: false
 
   # nav
   navbar:
