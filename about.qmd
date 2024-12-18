@@ -1,6 +1,4 @@
----
-title: "about"
----
+# about
 
 ## me
 
@@ -18,9 +16,7 @@ I care about (w.r.t. work):
 
 ## website
 
-**This is my personal website. My views are independent.**
-
-The purpose of this website is to practice writing, coding, and documenting projects.
+**This is my personal website.**
 
 ## contact
 
@@ -35,4 +31,3 @@ You can tag on GitHub using [@lostmygithubaccount](https://github.com/lostmygith
 ### personal
 
 Reach out [via email](mailto:cody@dkdc.dev) (preferred) or LinkedIn.
-
