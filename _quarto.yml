@@ -27,7 +27,7 @@ website:
   # footer
   page-footer:
     border: false
-    center: "Cody's website"
+    center: "Cody's website."
     right:
       - icon: brilliance
         href: https://dkdc.dev/about
