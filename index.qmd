@@ -20,6 +20,6 @@ about:
 
 A [website](about.qmd#website). - [Cody](about.qmd#me)
 
-::: {.callout-important title="Looking for professional content?"}
-You're in the wrong place! I've moved useful (?) technical content to [dkdc.io](https://dkdc.io).
+::: {.callout-important title="This is not the website you are looking for!"}
+I've moved useful (?) technical content to [dkdc.io](https://dkdc.io).
 :::
