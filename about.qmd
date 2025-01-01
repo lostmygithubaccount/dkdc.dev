@@ -16,13 +16,9 @@ I care about (w.r.t. work):
 
 ## website
 
-**This is my personal website.**
+This is my personal website.
 
 ## contact
-
-:::{.callout-warning}
-No soliciting! Please...
-:::
 
 ### GitHub
 
