@@ -1,6 +1,5 @@
 ---
 title: "grass dog"
-draft: true
 author: "Cody"
 date: "2023-08-11"
 image: "../nix/nix2.jpeg"

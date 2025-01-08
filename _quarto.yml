@@ -19,10 +19,9 @@ website:
   # nav
   navbar:
     logo: logo.png
-    #left:
-    #   - about.qmd
-    #right:
-      # - posts.qmd
+    right:
+      - about.qmd
+      - posts.qmd
 
   # footer
   page-footer:
