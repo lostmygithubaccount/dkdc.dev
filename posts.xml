@@ -9,7 +9,7 @@
 <link>https://dkdc.dev/posts.html</link>
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
-<generator>quarto-1.6.39</generator>
+<generator>quarto-1.6.40</generator>
 <lastBuildDate>Thu, 28 Nov 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>GNX track tier list (official)</title>
@@ -277,6 +277,32 @@
   <media:content url="https://dkdc.dev/posts/on-hurricanes/fuck.png" medium="image" type="image/png" height="108" width="144"/>
 </item>
 <item>
+  <title>abolish RAG</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/abolish-rag/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<blockquote class="blockquote">
+<blockquote class="blockquote">
+<p>I would like to abolish the term RAG and instead just agree that we should always try to provide models with the appropriate context to provide high quality answers.</p>
+<p>- <a href="https://twitter.com/HamelHusain/status/1709740984643596768">Hamel Husain</a></p>
+</blockquote>
+<p>This is important. Obfuscating how to use language boxes with dumb math jargon isn’t helpful.</p>
+<p>- Cody</p>
+</blockquote>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>ai</category>
+  <guid>https://dkdc.dev/posts/abolish-rag/</guid>
+  <pubDate>Fri, 06 Oct 2023 00:00:00 GMT</pubDate>
+</item>
+<item>
   <title>quoting Simon Willison quoting Andrej Karpathy</title>
   <dc:creator>Cody </dc:creator>
   <link>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/</link>
@@ -374,6 +400,28 @@
   <guid>https://dkdc.dev/posts/context-length-pain/</guid>
   <pubDate>Sun, 13 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://dkdc.dev/posts/context-length-pain/thumbnail.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>grass dog</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/grass-dog/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Nix being a dog (feat. Murphy):</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/gJ6slhwPp6E" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>dogs</category>
+  <category>video</category>
+  <guid>https://dkdc.dev/posts/grass-dog/</guid>
+  <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/nix/nix2.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>I redid my website again…</title>
