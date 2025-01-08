@@ -17,9 +17,9 @@ jobs:
 
       - uses: extractions/setup-just@v1
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.11
+      # - uses: actions/setup-python@v4
+      #   with:
+      #     python-version: 3.11
 
       - uses: quarto-dev/quarto-actions/setup@v2
 
