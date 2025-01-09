@@ -3,6 +3,8 @@ project:
 
 # website
 website:
+  draft-mode: gone
+
   # basics
   title: "dkdc.dev"
   site-url: https://dkdc.dev
