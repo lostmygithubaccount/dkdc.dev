@@ -10,7 +10,28 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Thu, 28 Nov 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 08 Jan 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>ball dogs</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/ball-dogs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Morning routine:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/JPo9i613bqc" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>dogs</category>
+  <category>video</category>
+  <guid>https://dkdc.dev/posts/ball-dogs/</guid>
+  <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>GNX track tier list (official)</title>
   <dc:creator>Cody </dc:creator>
