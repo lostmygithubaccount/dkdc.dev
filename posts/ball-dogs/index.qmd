@@ -1,0 +1,12 @@
+---
+title: "ball dogs"
+author: "Cody"
+date: "2025-01-08"
+categories: 
+    - dogs
+    - video
+---
+
+Morning routine:
+
+{{< video https://youtu.be/JPo9i613bqc >}}
