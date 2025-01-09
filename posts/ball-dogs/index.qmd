@@ -2,6 +2,7 @@
 title: "ball dogs"
 author: "Cody"
 date: "2025-01-08"
+image: "thumbnail.png"
 categories: 
     - dogs
     - video
