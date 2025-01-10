@@ -36,8 +36,8 @@ website:
         href: https://github.com/lostmygithubaccount
       - icon: linkedin
         href: https://linkedin.com/in/codydkdc
-      # - icon: body-text
-      #   href: https://dkdc.dev/posts
+      - icon: body-text
+        href: https://dkdc.dev/posts.html
 
 # theme
 format:

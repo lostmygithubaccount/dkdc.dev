@@ -13,9 +13,9 @@ about:
     - icon: linkedin
       text: linkedin
       href: https://linkedin.com/in/codydkdc
-    # - icon: body-text
-    #   text: posts
-    #   href: posts.qmd
+    - icon: body-text
+      text: posts
+      href: posts.qmd
 ---
 
 A [website](about.qmd#website). - [Cody](about.qmd#me)
