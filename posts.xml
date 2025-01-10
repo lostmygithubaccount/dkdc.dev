@@ -10,7 +10,29 @@
 <atom:link href="https://dkdc.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description>Cody&#39;s website</description>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Wed, 08 Jan 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 10 Jan 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>stick dogs</title>
+  <dc:creator>Cody </dc:creator>
+  <link>https://dkdc.dev/posts/stick-dogs/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Morning routine pt 2:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/MkuDX-cafzo" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>dogs</category>
+  <category>video</category>
+  <guid>https://dkdc.dev/posts/stick-dogs/</guid>
+  <pubDate>Fri, 10 Jan 2025 00:00:00 GMT</pubDate>
+  <media:content url="https://dkdc.dev/posts/stick-dogs/thumbnail.png" medium="image" type="image/png" height="142" width="144"/>
+</item>
 <item>
   <title>ball dogs</title>
   <dc:creator>Cody </dc:creator>
