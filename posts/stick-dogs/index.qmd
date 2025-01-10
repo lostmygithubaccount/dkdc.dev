@@ -1,0 +1,14 @@
+---
+title: "stick dogs"
+author: "Cody"
+date: "2025-01-10"
+image: "thumbnail.png"
+categories: 
+    - dogs
+    - video
+---
+
+Morning routine pt 2:
+
+{{< video https://youtu.be/MkuDX-cafzo >}}
+
