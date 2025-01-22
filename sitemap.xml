@@ -2,78 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dkdc.dev/chalkboard-slides.html</loc>
-    <lastmod>2025-01-21T17:12:03.179Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/website/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.301Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.295Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/gnx-track-tier-list/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.191Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/murphy/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.211Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/stick-dogs/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.296Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/ban-advertisement/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/context-length-pain-pt2/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts.html</loc>
-    <lastmod>2025-01-21T17:12:03.184Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/about.html</loc>
-    <lastmod>2025-01-21T17:12:03.179Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/beware-the-metagame/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.190Z</lastmod>
-  </url>
-  <url>
-    <loc>https://dkdc.dev/posts/testing/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.298Z</lastmod>
+    <lastmod>2025-01-22T00:54:20.877Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/posts/context-length-pain/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.191Z</lastmod>
+    <lastmod>2025-01-22T00:54:20.889Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/ball-dogs/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.188Z</lastmod>
+    <loc>https://dkdc.dev/posts/murphy/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.910Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/grass-dog/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.192Z</lastmod>
+    <loc>https://dkdc.dev/posts/ban-advertisement/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.889Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/on-hurricanes/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.269Z</lastmod>
+    <loc>https://dkdc.dev/posts/beware-the-metagame/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.889Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/abolish-rag/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.184Z</lastmod>
+    <loc>https://dkdc.dev/posts/gnx-track-tier-list/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.890Z</lastmod>
   </url>
   <url>
-    <loc>https://dkdc.dev/posts/nix/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.215Z</lastmod>
+    <loc>https://dkdc.dev/posts/quoting-simon-willison-quoting-andrej-karpathy/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.996Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts.html</loc>
+    <lastmod>2025-01-22T00:54:20.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/about.html</loc>
+    <lastmod>2025-01-22T00:54:20.877Z</lastmod>
   </url>
   <url>
     <loc>https://dkdc.dev/index.html</loc>
-    <lastmod>2025-01-21T17:12:03.179Z</lastmod>
+    <lastmod>2025-01-22T00:54:20.877Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/grass-dog/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/stick-dogs/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.997Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/nix/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.914Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/ball-dogs/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/testing/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.999Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/on-hurricanes/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.969Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/abolish-rag/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.882Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/context-length-pain-pt2/index.html</loc>
+    <lastmod>2025-01-22T00:54:20.889Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dkdc.dev/posts/website/index.html</loc>
+    <lastmod>2025-01-22T00:54:21.002Z</lastmod>
   </url>
 </urlset>
