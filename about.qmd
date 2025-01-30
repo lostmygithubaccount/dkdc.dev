@@ -15,6 +15,8 @@ I care about (w.r.t. work):
 - OSS & scale
 - beautiful design
 - elegant engineering
+- delightful user experience
+- efficient engineering process
 
 ## website
 
