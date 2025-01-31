@@ -26,7 +26,7 @@ This is my personal website.
 
 ### GitHub
 
-You can tag on GitHub using [@lostmygithubaccount](https://github.com/lostmygithubaccount) to drastically improve the chance I see the notification and respond.
+You can tag on GitHub using [@lostmygithubaccount](https://github.com/lostmygithubaccount).
 
 ### personal
 
